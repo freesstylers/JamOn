@@ -1,0 +1,298 @@
+fileFormatVersion: 2
+guid: 92b559f54b9bc1340b14a451e72e94cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4514100601871795271
+    second: Mauricio Culto Dorado_0
+  - first:
+      213: -8819150535485284333
+    second: Mauricio Culto Dorado_1
+  - first:
+      213: -5158901933540696015
+    second: Mauricio Culto Dorado_2
+  - first:
+      213: 5972204249665779508
+    second: Mauricio Culto Dorado_3
+  - first:
+      213: -6325479988547148073
+    second: Mauricio Culto Dorado_4
+  - first:
+      213: -3955337655514742681
+    second: Mauricio Culto Dorado_5
+  - first:
+      213: 744371842446614389
+    second: Mauricio Culto Dorado_6
+  - first:
+      213: -4684809533288191432
+    second: Mauricio Culto Dorado_7
+  - first:
+      213: -8272360561954187583
+    second: Mauricio Culto Dorado_8
+  - first:
+      213: 69494292113444813
+    second: Mauricio Culto Dorado_9
+  - first:
+      213: -1054623001873493176
+    second: Mauricio Culto Dorado_10
+  - first:
+      213: -9013737027052001677
+    second: Mauricio Culto Dorado_11
+  - first:
+      213: 3315669361787386172
+    second: Mauricio Culto Dorado_12
+  - first:
+      213: -4229226280451794696
+    second: Mauricio Culto Dorado_13
+  - first:
+      213: -7942669813000636291
+    second: Mauricio Culto Dorado_14
+  - first:
+      213: -3498440891987045430
+    second: Mauricio Culto Dorado_15
+  - first:
+      213: -7998598258945736084
+    second: Mauricio Culto Dorado_16
+  - first:
+      213: 8176248460232513330
+    second: Mauricio Culto Dorado_17
+  - first:
+      213: 8062355473957327829
+    second: Mauricio Culto Dorado_18
+  - first:
+      213: 7084767276099384646
+    second: Mauricio Culto Dorado_19
+  - first:
+      213: -3398304795996083142
+    second: Mauricio Culto Dorado_20
+  - first:
+      213: -2836047838334666052
+    second: Mauricio Culto Dorado_21
+  - first:
+      213: -1451759535862649110
+    second: Mauricio Culto Dorado_22
+  - first:
+      213: -4050713731860453758
+    second: Mauricio Culto Dorado_23
+  - first:
+      213: -668557813730808557
+    second: Mauricio Culto Dorado_24
+  - first:
+      213: -4862520684232963221
+    second: Mauricio Culto Dorado_25
+  - first:
+      213: 4928521508505344184
+    second: Mauricio Culto Dorado_26
+  - first:
+      213: -2362150012523262692
+    second: Mauricio Culto Dorado_27
+  - first:
+      213: 6775210356961998172
+    second: Mauricio Culto Dorado_28
+  - first:
+      213: 6151129633169954653
+    second: Mauricio Culto Dorado_29
+  - first:
+      213: -328683155625950863
+    second: Mauricio Culto Dorado_30
+  - first:
+      213: -8855815869510657440
+    second: Mauricio Culto Dorado_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mauricio Culto Dorado_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74402f6a49e45ae30800000000000000
+      internalID: 4514100601871795271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Culto Dorado_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31024b750551c9580800000000000000
+      internalID: -8819150535485284333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Culto Dorado_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1302b344606e768b0800000000000000
+      internalID: -5158901933540696015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Culto Dorado_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437386b7f1881e250800000000000000
+      internalID: 5972204249665779508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
