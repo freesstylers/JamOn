@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3939609007388032294}
   - component: {fileID: 7004984006166322371}
-  - component: {fileID: 204865816816434527}
   m_Layer: 0
-  m_Name: FLechaDown
+  m_Name: FlechaDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 7
   m_Sprite: {fileID: 2319643638384702094, guid: 421c1d47110ecaf4aab5a3706bfefb72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -83,17 +82,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &204865816816434527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5871534169970100849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 481875c119193374b9ddb0d1078b8207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key_: 1
-  "mauri\xE7io_": {fileID: 0}
