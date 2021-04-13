@@ -25,35 +25,34 @@ public class TestColor : MonoBehaviour
         mColorSwapTex = colorSwapTex;
     }
 
-    public enum SwapIndex
-    {
-        Outline = 25,
-        SkinPrim = 255,
-        SkinSec = 254,
-        HandPrim = 235,
-        HandSec = 204,
-        ShirtPrim = 62,
-        ShirtSec = 70,
-        ShoePrim = 253,
-        ShoeSec = 248,
-        Pants = 72,
-    }
+    //public enum SwapIndex
+    //{
+    //    Uno = 07,
+    //    Dos = 38,       
+    //    Tres = 177,      
+    //}
 
-    public void SwapColor(SwapIndex index, Color color)
+    //public void SwapColor(SwapIndex index, Color color)
+    //{
+    //    mSpriteColors[(int)index] = color;
+    //    mColorSwapTex.SetPixel((int)index, 0, color);
+    //}
+    public void SwapColor(int index, Color color)
     {
-        mSpriteColors[(int)index] = color;
-        mColorSwapTex.SetPixel((int)index, 0, color);
+        mSpriteColors[index] = color;
+        mColorSwapTex.SetPixel(index, 0, color);
     }
 
     private void Start()
     {
         InitColorSwapTex();
-        SwapColor(SwapIndex.SkinPrim, new Color(45f, 45f, 45f));
-        //SwapColor(SwapIndex.SkinSec, Color.green);
-        //SwapColor(SwapIndex.ShirtPrim, Color.green);
-        //SwapColor(SwapIndex.ShirtSec, Color.green);
-        SwapColor(SwapIndex.Pants, Color.green);
+        for (int i=0; i<255; i++)
+        {
+            SwapColor(i, Random.ColorHSV());
+        }
+        //SwapColor(SwapIndex.Uno, new Color(45f, 45f, 45f));      
+        //SwapColor(SwapIndex.Tres, Color.yellow);      
+        //SwapColor(SwapIndex.Dos, Color.blue);
         mColorSwapTex.Apply();
-
     }
 }
