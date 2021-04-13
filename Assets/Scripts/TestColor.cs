@@ -46,13 +46,20 @@ public class TestColor : MonoBehaviour
     private void Start()
     {
         InitColorSwapTex();
-        for (int i=0; i<255; i++)
+
+        StartCoroutine(colorChange());
+    }
+
+    IEnumerator colorChange()
+    {
+        while (true)
         {
-            SwapColor(i, Random.ColorHSV());
+            yield return new WaitForSeconds(1);
+            for (int i = 0; i < 255; i++)
+            {
+                SwapColor(i, Random.ColorHSV());
+            }
+            mColorSwapTex.Apply();
         }
-        //SwapColor(SwapIndex.Uno, new Color(45f, 45f, 45f));      
-        //SwapColor(SwapIndex.Tres, Color.yellow);      
-        //SwapColor(SwapIndex.Dos, Color.blue);
-        mColorSwapTex.Apply();
     }
 }
