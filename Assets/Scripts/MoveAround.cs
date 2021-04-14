@@ -10,15 +10,20 @@ public class MoveAround : MonoBehaviour
 
     bool jumpin = false;
     bool sideForce = false;
+    bool animActive = false;
 
     float lastXPos;
     float lastAltitude;
     float time;
     float actualTime = 0;
+
+    float animTime;
+    public float totalAnimTime;
     
     Vector2 fin;
     Vector2 ini;
     SpriteRenderer sprite;
+    Animator animator;
     Rigidbody2D rb;
     
 
@@ -27,6 +32,7 @@ public class MoveAround : MonoBehaviour
         ini = new Vector2(transform.position.x, transform.parent.position.y);
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         NewPosition();
     }
 
@@ -57,6 +63,17 @@ public class MoveAround : MonoBehaviour
             lastAltitude = transform.position.y;
             jumpin = false;
  
+        }
+        if (animActive)
+        {
+            animTime += Time.deltaTime;
+            if(animTime >= totalAnimTime)
+            {
+                animActive = false;
+                animTime = 0;
+                animator.SetBool("Abajo", false);
+
+            }
         }
         
         if (actualTime >= time)
@@ -107,6 +124,11 @@ public class MoveAround : MonoBehaviour
             rb.AddForce(new Vector2(3, 1), ForceMode2D.Impulse);
             lastXPos = transform.position.x;
             sideForce = true;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            animActive = true;
+            animator.SetBool("Abajo", true);
         }
     }
 }

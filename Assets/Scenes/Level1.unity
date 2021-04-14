@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 707654254}
   - component: {fileID: 707654255}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MinionSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,14 +662,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7447f87250a516746b03fad8d2a5c317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minion:
-  - {fileID: 8300000, guid: d274e8a0499485e479da8867b713e64f, type: 3}
-  - {fileID: 8300000, guid: d7cb14834aa3f3a429d73ad6d206b067, type: 3}
-  - {fileID: 8300000, guid: fefe2ef192141b141992230b7614b89b, type: 3}
-  - {fileID: 8300000, guid: 7d65778e30b59244c9fe5c7b3ea5501c, type: 3}
-  - {fileID: 8300000, guid: c5a488f589727044bb62b1d277c79134, type: 3}
-  - {fileID: 8300000, guid: d52478ae6edef4a499aed10eac36d8db, type: 3}
-  - {fileID: 8300000, guid: 84170404c6622204b8c72a459a17aadc, type: 3}
+  minionDeath: []
+  minionScream:
+  - {fileID: 8300000, guid: b2c27f09b88126e41836f2782b08130f, type: 3}
+  - {fileID: 8300000, guid: c63f2fa487e7a8146bba93cb6798e834, type: 3}
+  - {fileID: 8300000, guid: 8db00f1bf2ff14648880cbd13e352585, type: 3}
+  - {fileID: 8300000, guid: 0f3c09cdc265e8f4082c4cd587ad69b6, type: 3}
+  - {fileID: 8300000, guid: 30fa8a9fabc58514480a349ba76d1784, type: 3}
 --- !u!82 &707654255
 AudioSource:
   m_ObjectHideFlags: 0
@@ -682,7 +681,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0

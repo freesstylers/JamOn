@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioClip[] minion;
+    public AudioClip[] minionDeath;
+    public AudioClip[] minionScream;
 
     float timeElapsed;
     float time;
@@ -21,18 +22,37 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
         timeElapsed += Time.deltaTime;
-        if (timeElapsed >= time)
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            source.clip = minionScream[0];
+            source.Play();
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            source.clip = minionScream[1];
+            source.Play();
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            source.clip = minionScream[2];
+            source.Play();
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            source.clip = minionScream[3];
+            source.Play();
+        }
+
+        else if (timeElapsed >= time)
         {
             timeElapsed = 0;
-            SelectRandomClip();
-            source.Play();
-            SelectRandomTime();
         }
     }
 
-    void SelectRandomClip()
+    void SelectRandomDeathClip()
     {
-        source.clip = minion[Random.Range(0, minion.Length)];
+        source.clip = minionDeath[Random.Range(0, minionDeath.Length)];
     }
 
     void SelectRandomTime()
