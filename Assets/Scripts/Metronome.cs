@@ -27,7 +27,7 @@ public class Metronome : MonoBehaviour
         _actualTime = (bpm / 60);
         if (_timer >= (1 / _actualTime))
         {
-            //GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().Play();
             //Debug.Log("Sound");
             _timer = 0f;
         }
