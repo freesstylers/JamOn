@@ -21,8 +21,11 @@ public class MoveBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        newXposition = Mathf.Repeat(Time.time * -moveSpeed, offset);
+        if (GameManager.GetInstance().GetPhase() == Phase.ADVANCE)
+        {
+            newXposition = Mathf.Repeat(Time.time * -moveSpeed, offset);
 
-        transform.position = startPosition + Vector2.right * newXposition;
+            transform.position = startPosition + Vector2.right * newXposition;
+        }
     }
 }

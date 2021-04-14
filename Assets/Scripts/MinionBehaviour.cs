@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CllectiveMovement : MonoBehaviour
+public class MinionBehaviour : MonoBehaviour
 {
     [Tooltip("Numero de esclavos con el que se empieza")]
     public int inicio;
