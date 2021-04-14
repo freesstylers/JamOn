@@ -29,12 +29,14 @@ public class GameManager : MonoBehaviour
         return _instancia;
     }
 
-
+    protected int BPM_;
     Phase phase_ = Phase.COMMANDING;
 
     public Phase GetPhase() { return phase_; }
     public void SetPhase(Phase phase) { phase_ = phase; }
 
+    public int getBPM() { return BPM_; }
+    public void SetBPM(int BPM) { BPM_ = BPM; }
 
     // Constructor
     // Lo ocultamos el constructor para no poder crear nuevos objetos "sin control"

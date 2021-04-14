@@ -8,7 +8,7 @@ public class SlidingBar : MonoBehaviour
 
     public bool sliding = false;
 
-    public float slideTime = 2.0f;
+    protected float slideTime_;
 
     float timer = 0.0f;
 
@@ -31,22 +31,21 @@ public class SlidingBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sliding)
-        {
-            if (timer <= slideTime)
-            {
-                bar.localPosition = Vector3.Lerp(startPos, endPos, timer / slideTime);
+    }
 
-                timer += Time.deltaTime;
-            }
-            else
-            {
-                bar.localPosition = endPos;
-                sliding = false;
-            }
+    public void UpdateSlidePosition (float t)
+    {
+        if (t <= slideTime_)
+        {
+            bar.localPosition = Vector3.Lerp(startPos, endPos, t / slideTime_);
+
+            //timer += Time.deltaTime;
         }
-        else if (Input.GetKeyDown(KeyCode.M))
-            StartSlide();
+        else
+        {
+            bar.localPosition = endPos;
+            //sliding = false;
+        }
     }
 
     public void StartSlide()
@@ -56,5 +55,15 @@ public class SlidingBar : MonoBehaviour
 
         if (bar)
             bar.localPosition = startPos;
+    }
+
+    public void setSlideTime(float SlideTime)
+    {
+        slideTime_ = SlideTime;
+    }
+
+    public float getSlideTime()
+    {
+        return slideTime_;
     }
 }
