@@ -8,6 +8,8 @@ public class Metronome : MonoBehaviour
     private float _actualTime;
     private float _timer;
 
+    public Sprite[] sprites;
+    public SpriteRenderer metronome;
     private Vector3 pointA;
     private Vector3 pointB;
 
@@ -25,11 +27,16 @@ public class Metronome : MonoBehaviour
     {
         _timer += Time.deltaTime;
         _actualTime = (bpm / 60);
+        if((1 / _actualTime) - _timer <= 0.1f)
+        {
+            metronome.sprite = sprites[1];
+        }
         if (_timer >= (1 / _actualTime))
         {
             GetComponent<AudioSource>().Play();
             //Debug.Log("Sound");
             _timer = 0f;
+            metronome.sprite = sprites[0];
         }
         float time = Mathf.PingPong(Time.time * _actualTime, 1);
         transform.localEulerAngles = Vector3.Lerp(pointA, pointB, time);
