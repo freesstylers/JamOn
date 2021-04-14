@@ -18,7 +18,7 @@ public class Pair<T, U>
 
 public class Mauriçio : MonoBehaviour
 {
-    enum Phase { COMMANDING, PLAYER, BATTLE }
+    //enum Phase { COMMANDING, PLAYER, BATTLE }
 
     public GameObject arrowL_;
     public GameObject arrowR_;
@@ -34,7 +34,7 @@ public class Mauriçio : MonoBehaviour
     List<Pair<int, float>> arrowsMauricio_ = new List<Pair<int, float>>();
     List<Pair<int, float>> arrowsPlayer_ = new List<Pair<int, float>>();
 
-    Phase phase_ = Phase.COMMANDING;
+    //Phase phase_ = Phase.COMMANDING;
     int num_;
     int numleft_;
     bool decided_ = false;
@@ -44,8 +44,9 @@ public class Mauriçio : MonoBehaviour
 
     void Update()
     {
-        textPhase_.text = phase_.ToString();
-        switch(phase_)
+        Phase phase = GameManager.GetInstance().GetPhase();
+        textPhase_.text = phase.ToString();
+        switch(phase)
         {
             case Phase.COMMANDING:
                 if(!decided_)
@@ -61,6 +62,10 @@ public class Mauriçio : MonoBehaviour
                 Player();
                 break;
             case Phase.BATTLE:
+
+                break;
+
+            case Phase.ADVANCE:
 
                 break;
         }
@@ -90,7 +95,7 @@ public class Mauriçio : MonoBehaviour
             numleft_--;
             arrowsPlayer_.Add(new Pair<int, float>(3, timer_));
         }
-        if (numleft_ == 0) phase_ = Phase.BATTLE;
+        if (numleft_ == 0) GameManager.GetInstance().SetPhase(Phase.BATTLE);
     }
 
     void Command()
@@ -125,7 +130,7 @@ public class Mauriçio : MonoBehaviour
             numleft_--;
             if (numleft_ == 0)
             {
-                phase_ = Phase.PLAYER;
+                GameManager.GetInstance().SetPhase(Phase.PLAYER);
                 numleft_ = num_;
             }
         }

@@ -33,10 +33,10 @@ public class MoveAround : MonoBehaviour
     void Update()
     {
         
+        sprite.sortingOrder = (int)(-transform.position.y * 10);
         if (!jumpin && !sideForce)
         {
             MoveMinionsWithKey();
-            sprite.sortingOrder = (int)(-transform.position.y * 10);
             actualTime += Time.deltaTime;
             transform.position = Vector2.Lerp(ini, fin, actualTime / time);
         }
