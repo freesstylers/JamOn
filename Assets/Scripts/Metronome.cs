@@ -13,6 +13,7 @@ public class Metronome : MonoBehaviour
     private Vector3 pointA;
     private Vector3 pointB;
 
+    public Animator[] animators;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,9 @@ public class Metronome : MonoBehaviour
             //Debug.Log("Sound");
             _timer = 0f;
             metronome.sprite = sprites[0];
+
+            foreach (Animator a in animators)
+                a.SetTrigger("Beat");
         }
         float time = Mathf.PingPong(Time.time * _actualTime, 1);
         transform.localEulerAngles = Vector3.Lerp(pointA, pointB, time);

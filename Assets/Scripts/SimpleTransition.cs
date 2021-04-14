@@ -7,7 +7,7 @@ public class SimpleTransition : MonoBehaviour
 {
     public string scene;
 
-    public void Go()
+    public void LoadScene()
     {
         SceneManager.LoadSceneAsync(scene);
     }
