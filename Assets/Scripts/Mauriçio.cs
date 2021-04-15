@@ -46,7 +46,11 @@ public class Mauriçio : MonoBehaviour
     float CommandTime;
 
     //Cosas gestion de input
-    float delay;
+    float delayCommandingPlayer;
+    float delayPlayerBattle = -2.5f; //Tiempo que va a estar en Battle
+    float delayBattleAdvance = -1.0f; //Tiempo que va a estar en Advance
+    float delayAdvanceCommanding = -1.0f; //Tiempo que va a estar en Commanding, pero esperando
+
     float margin = 0.3f;
 
     int vocal = 0;
@@ -54,54 +58,81 @@ public class Mauriçio : MonoBehaviour
 
     bool test = false;
 
+    int[] patrones;
+    int currentPatron = 0;
+
     private void Start()
     {
-        delay = -2.0f * (60.0f / bpm);
+        delayCommandingPlayer = -2.0f * (60.0f / bpm);
         timePatron_ = beats * (60.0f / bpm);
         Debug.Log("Porros: " + timePatron_);
+
+        patrones = GameManager.GetInstance().getLevelPatrons(GameManager.GetInstance().getLevel());
     }
+
     void Update()
     {
         if (!test && Input.GetKeyDown(KeyCode.M)) test = true;
 
         if (test)
         {
-            Phase phase = GameManager.GetInstance().GetPhase();
-
-            textPhase_.text = phase.ToString();
-
-            timer_ += Time.deltaTime;
-
-            if ( ( (decided_ && phase == Phase.COMMANDING) || phase != Phase.COMMANDING ) && timer_ >= 0.0f)
-                commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timer_);
-
-            switch (phase)
+            if (currentPatron < (patrones.Length - 1))
             {
-                case Phase.COMMANDING:
-                    if (!decided_)
-                    {
-                        decided_ = true;
-                        //actPatron_ = Patrones.Patron.Ataques1[Random.Range(0, 3)];
-                        actPatron_ = Patrones.Patron.Ataques1[0];
-                        num_ = actPatron_.Length;
-                        numleft_ = num_;
+                Phase phase = GameManager.GetInstance().GetPhase();
 
-                        commandBar_.gameObject.GetComponent<SlidingBar>().setSlideTime(timePatron_);
+                textPhase_.text = phase.ToString();
 
-                        commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timer_);
-                    }
-                    Command();
-                    break;
-                case Phase.PLAYER:
-                    if (timer_ >= 0)
-                        Player();
-                    break;
-                case Phase.BATTLE:
-                    //GameManager.GetInstance().SetPhase(Phase.ADVANCE);
-                    break;
-                case Phase.ADVANCE:
-                    break;
+                timer_ += Time.deltaTime;
+
+                if (((decided_ && phase == Phase.COMMANDING) || phase == Phase.PLAYER) && timer_ >= 0.0f)
+                    commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timer_);
+
+                switch (phase)
+                {
+                    case Phase.COMMANDING:
+                        if (timer_ > 0.0f)
+                        {
+                            if (!decided_)
+                            {
+                                decided_ = true;
+                                //actPatron_ = Patrones.Patron.Ataques1[Random.Range(0, 3)];
+                                actPatron_ = Patrones.Patron.Ataques1[0];
+                                num_ = actPatron_.Length;
+                                numleft_ = num_;
+
+                                commandBar_.gameObject.GetComponent<SlidingBar>().setSlideTime(timePatron_);
+
+                                commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timer_);
+                            }
+                            Command();
+                        }
+                        break;
+                    case Phase.PLAYER:
+                        if (decided_)
+                            decided_ = false;
+                        if (timer_ >= 0)
+                            Player();
+                        break;
+                    case Phase.BATTLE:
+                        if (timer_ > 0.0f)
+                        {
+                            timer_ = delayBattleAdvance;
+                            GameManager.GetInstance().SetPhase(Phase.ADVANCE);
+                        }
+                        break;
+                    case Phase.ADVANCE:
+                        if (timer_ > 0.0f)
+                        {
+                            currentPatron++;
+                            timer_ = delayAdvanceCommanding;
+                            GameManager.GetInstance().SetPhase(Phase.COMMANDING);
+                        }
+                        break;
+                }
             }
+
+            else
+                Debug.Log("No more patrones");
         }
     }
 
@@ -114,6 +145,7 @@ public class Mauriçio : MonoBehaviour
 
         if (inputsDone >= arrowsMauricio_.Count)
         {
+            timer_ = delayPlayerBattle;
             GameManager.GetInstance().SetPhase(Phase.BATTLE);
             return;
         }
@@ -153,12 +185,12 @@ public class Mauriçio : MonoBehaviour
                 }
                 else //Tecla erronea
                 {
-                    Debug.Log("Eres mas tonto que Grossi - Tecla incorrecta");
+                    //Debug.Log("Eres mas tonto que Grossi - Tecla incorrecta");
                 }
             }
             else //Fuera, y por tanto erronea
             {
-                Debug.Log("Eres mas tonto que Grossi - Tecla fuera de rango");
+                //Debug.Log("Eres mas tonto que Grossi - Tecla fuera de rango");
             }
 
             if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
@@ -168,6 +200,7 @@ public class Mauriçio : MonoBehaviour
         }
         else
         {
+            timer_ = delayPlayerBattle;
             GameManager.GetInstance().SetPhase(Phase.BATTLE);
         }
     }
@@ -201,12 +234,13 @@ public class Mauriçio : MonoBehaviour
             arrowsMauricio_.Add(new Pair<int, float>(aux, timer_));
             //timer_ = 0;
             numleft_--;
+
         }
 
         if (timer_ >= timePatron_)
         {
             GameManager.GetInstance().SetPhase(Phase.PLAYER);
-            timer_ = delay; //Reset para poder hacer inputs a cholon
+            timer_ = delayCommandingPlayer; //Reset para poder hacer inputs a cholon
             commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timePatron_);
             vocal = 0;
         }
