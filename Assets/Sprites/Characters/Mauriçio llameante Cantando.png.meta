@@ -1,0 +1,1693 @@
+fileFormatVersion: 2
+guid: 4aa40254948312042b697c12aa77d062
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4054773287421057915
+    second: "Mauri\xE7io llameante Cantando_0"
+  - first:
+      213: -3694569455824190071
+    second: "Mauri\xE7io llameante Cantando_1"
+  - first:
+      213: 506791252565471735
+    second: "Mauri\xE7io llameante Cantando_2"
+  - first:
+      213: -5623797981378420054
+    second: "Mauri\xE7io llameante Cantando_3"
+  - first:
+      213: 2659342508904464908
+    second: "Mauri\xE7io llameante Cantando_4"
+  - first:
+      213: -9022969912631173010
+    second: "Mauri\xE7io llameante Cantando_5"
+  - first:
+      213: 3800773475408689788
+    second: "Mauri\xE7io llameante Cantando_6"
+  - first:
+      213: 6445848554130178923
+    second: "Mauri\xE7io llameante Cantando_7"
+  - first:
+      213: -8593682890104447872
+    second: "Mauri\xE7io llameante Cantando_8"
+  - first:
+      213: 5021848737674887386
+    second: "Mauri\xE7io llameante Cantando_9"
+  - first:
+      213: 6253610686948879156
+    second: "Mauri\xE7io llameante Cantando_10"
+  - first:
+      213: -2773543022859834917
+    second: "Mauri\xE7io llameante Cantando_11"
+  - first:
+      213: 2327109954966318242
+    second: "Mauri\xE7io llameante Cantando_12"
+  - first:
+      213: -4797187328454296716
+    second: "Mauri\xE7io llameante Cantando_13"
+  - first:
+      213: 7181385549943380359
+    second: "Mauri\xE7io llameante Cantando_14"
+  - first:
+      213: 9166130185116541547
+    second: "Mauri\xE7io llameante Cantando_15"
+  - first:
+      213: 3384926799729151838
+    second: "Mauri\xE7io llameante Cantando_16"
+  - first:
+      213: 447218355496614966
+    second: "Mauri\xE7io llameante Cantando_17"
+  - first:
+      213: -1481239300916565081
+    second: "Mauri\xE7io llameante Cantando_18"
+  - first:
+      213: 5435842098866701490
+    second: "Mauri\xE7io llameante Cantando_19"
+  - first:
+      213: 4473091351091670820
+    second: "Mauri\xE7io llameante Cantando_20"
+  - first:
+      213: 9222238656537860898
+    second: "Mauri\xE7io llameante Cantando_21"
+  - first:
+      213: 546016114342275001
+    second: "Mauri\xE7io llameante Cantando_22"
+  - first:
+      213: -273219891591321182
+    second: "Mauri\xE7io llameante Cantando_23"
+  - first:
+      213: -5946299015147659494
+    second: "Mauri\xE7io llameante Cantando_24"
+  - first:
+      213: -1327826913308795311
+    second: "Mauri\xE7io llameante Cantando_25"
+  - first:
+      213: -5063184642224746201
+    second: "Mauri\xE7io llameante Cantando_26"
+  - first:
+      213: 45523620603620454
+    second: "Mauri\xE7io llameante Cantando_27"
+  - first:
+      213: -2143133680106535170
+    second: "Mauri\xE7io llameante Cantando_28"
+  - first:
+      213: -7164023431487831107
+    second: "Mauri\xE7io llameante Cantando_29"
+  - first:
+      213: -7306992504776307629
+    second: "Mauri\xE7io llameante Cantando_30"
+  - first:
+      213: 2515347950773821550
+    second: "Mauri\xE7io llameante Cantando_31"
+  - first:
+      213: 6095628465219675110
+    second: "Mauri\xE7io llameante Cantando_32"
+  - first:
+      213: 8845826477488880172
+    second: "Mauri\xE7io llameante Cantando_33"
+  - first:
+      213: -1956708191050858712
+    second: "Mauri\xE7io llameante Cantando_34"
+  - first:
+      213: 5138659770199055316
+    second: "Mauri\xE7io llameante Cantando_35"
+  - first:
+      213: 6288634290757490990
+    second: "Mauri\xE7io llameante Cantando_36"
+  - first:
+      213: -7625967648948303428
+    second: "Mauri\xE7io llameante Cantando_37"
+  - first:
+      213: 6840807159796024898
+    second: "Mauri\xE7io llameante Cantando_38"
+  - first:
+      213: -2218427006754801459
+    second: "Mauri\xE7io llameante Cantando_39"
+  - first:
+      213: 2167146186975700495
+    second: "Mauri\xE7io llameante Cantando_40"
+  - first:
+      213: 3842976309514949383
+    second: "Mauri\xE7io llameante Cantando_41"
+  - first:
+      213: -8155154843484848620
+    second: "Mauri\xE7io llameante Cantando_42"
+  - first:
+      213: 2589122812931384568
+    second: "Mauri\xE7io llameante Cantando_43"
+  - first:
+      213: 1559202594990075125
+    second: "Mauri\xE7io llameante Cantando_44"
+  - first:
+      213: 6563727588356367623
+    second: "Mauri\xE7io llameante Cantando_45"
+  - first:
+      213: -3229939504750516788
+    second: "Mauri\xE7io llameante Cantando_46"
+  - first:
+      213: -7913075855873844773
+    second: "Mauri\xE7io llameante Cantando_47"
+  - first:
+      213: 7119582351033185914
+    second: "Mauri\xE7io llameante Cantando_48"
+  - first:
+      213: 5393839325050078671
+    second: "Mauri\xE7io llameante Cantando_49"
+  - first:
+      213: -6879886574159392088
+    second: "Mauri\xE7io llameante Cantando_50"
+  - first:
+      213: -6411819197800471343
+    second: "Mauri\xE7io llameante Cantando_51"
+  - first:
+      213: -3879771844383728151
+    second: "Mauri\xE7io llameante Cantando_52"
+  - first:
+      213: 2587835300908537135
+    second: "Mauri\xE7io llameante Cantando_53"
+  - first:
+      213: -3765788508643306907
+    second: "Mauri\xE7io llameante Cantando_54"
+  - first:
+      213: -4418450865133657565
+    second: "Mauri\xE7io llameante Cantando_55"
+  - first:
+      213: -773322745526979839
+    second: "Mauri\xE7io llameante Cantando_56"
+  - first:
+      213: -8670573866900726349
+    second: "Mauri\xE7io llameante Cantando_57"
+  - first:
+      213: 3464437060157452853
+    second: "Mauri\xE7io llameante Cantando_58"
+  - first:
+      213: -7741534575373646443
+    second: "Mauri\xE7io llameante Cantando_59"
+  - first:
+      213: -9027757809839015080
+    second: "Mauri\xE7io llameante Cantando_60"
+  - first:
+      213: 425341883139737349
+    second: "Mauri\xE7io llameante Cantando_61"
+  - first:
+      213: -2202525331033018366
+    second: "Mauri\xE7io llameante Cantando_62"
+  - first:
+      213: -6445097653315544754
+    second: "Mauri\xE7io llameante Cantando_63"
+  - first:
+      213: 14981598480897680
+    second: "Mauri\xE7io llameante Cantando_64"
+  - first:
+      213: -4071235181827002082
+    second: "Mauri\xE7io llameante Cantando_65"
+  - first:
+      213: -247632780509103680
+    second: "Mauri\xE7io llameante Cantando_66"
+  - first:
+      213: 1881027302761278946
+    second: "Mauri\xE7io llameante Cantando_67"
+  - first:
+      213: 8396687236629143726
+    second: "Mauri\xE7io llameante Cantando_68"
+  - first:
+      213: 1967994729802476579
+    second: "Mauri\xE7io llameante Cantando_69"
+  - first:
+      213: 1988808355683285060
+    second: "Mauri\xE7io llameante Cantando_70"
+  - first:
+      213: 2182506933328221058
+    second: "Mauri\xE7io llameante Cantando_71"
+  - first:
+      213: -7475310911470067519
+    second: "Mauri\xE7io llameante Cantando_72"
+  - first:
+      213: 3187104254160207238
+    second: "Mauri\xE7io llameante Cantando_73"
+  - first:
+      213: 5109338505189702614
+    second: "Mauri\xE7io llameante Cantando_74"
+  - first:
+      213: 6067055671367704189
+    second: "Mauri\xE7io llameante Cantando_75"
+  - first:
+      213: 674821184972937054
+    second: "Mauri\xE7io llameante Cantando_76"
+  - first:
+      213: -6890650486287597886
+    second: "Mauri\xE7io llameante Cantando_77"
+  - first:
+      213: 1957861776915190273
+    second: "Mauri\xE7io llameante Cantando_78"
+  - first:
+      213: -4231704250743162035
+    second: "Mauri\xE7io llameante Cantando_79"
+  - first:
+      213: 2811237247990160405
+    second: "Mauri\xE7io llameante Cantando_80"
+  - first:
+      213: -8887479940534828486
+    second: "Mauri\xE7io llameante Cantando_81"
+  - first:
+      213: 6599868614334281180
+    second: "Mauri\xE7io llameante Cantando_82"
+  - first:
+      213: -3702974459468711497
+    second: "Mauri\xE7io llameante Cantando_83"
+  - first:
+      213: 305754967457480931
+    second: "Mauri\xE7io llameante Cantando_84"
+  - first:
+      213: 4241378048638597704
+    second: "Mauri\xE7io llameante Cantando_85"
+  - first:
+      213: -1294503329553154225
+    second: "Mauri\xE7io llameante Cantando_86"
+  - first:
+      213: -5727834527388068006
+    second: "Mauri\xE7io llameante Cantando_87"
+  - first:
+      213: -6366248214629259978
+    second: "Mauri\xE7io llameante Cantando_88"
+  - first:
+      213: 2290891138683806781
+    second: "Mauri\xE7io llameante Cantando_89"
+  - first:
+      213: -8899435526954094319
+    second: "Mauri\xE7io llameante Cantando_90"
+  - first:
+      213: -6497033720887171107
+    second: "Mauri\xE7io llameante Cantando_91"
+  - first:
+      213: -6102570693974121917
+    second: "Mauri\xE7io llameante Cantando_92"
+  - first:
+      213: 5062095741580610533
+    second: "Mauri\xE7io llameante Cantando_93"
+  - first:
+      213: 8956066637148607459
+    second: "Mauri\xE7io llameante Cantando_94"
+  - first:
+      213: -4132806287952608169
+    second: "Mauri\xE7io llameante Cantando_95"
+  - first:
+      213: 3815403324789209008
+    second: "Mauri\xE7io llameante Cantando_96"
+  - first:
+      213: -1385849297796334334
+    second: "Mauri\xE7io llameante Cantando_97"
+  - first:
+      213: 7376207222918442050
+    second: "Mauri\xE7io llameante Cantando_98"
+  - first:
+      213: -2921218641265438963
+    second: "Mauri\xE7io llameante Cantando_99"
+  - first:
+      213: -115898397980344549
+    second: "Mauri\xE7io llameante Cantando_100"
+  - first:
+      213: 5020034133041435691
+    second: "Mauri\xE7io llameante Cantando_101"
+  - first:
+      213: 8210829293552615223
+    second: "Mauri\xE7io llameante Cantando_102"
+  - first:
+      213: 6219941103434032702
+    second: "Mauri\xE7io llameante Cantando_103"
+  - first:
+      213: 6172921912870160107
+    second: "Mauri\xE7io llameante Cantando_104"
+  - first:
+      213: 5582387698355526429
+    second: "Mauri\xE7io llameante Cantando_105"
+  - first:
+      213: -7164339714340544284
+    second: "Mauri\xE7io llameante Cantando_106"
+  - first:
+      213: 3551525260734396102
+    second: "Mauri\xE7io llameante Cantando_107"
+  - first:
+      213: 7833998524084627555
+    second: "Mauri\xE7io llameante Cantando_108"
+  - first:
+      213: -1856470628129629912
+    second: "Mauri\xE7io llameante Cantando_109"
+  - first:
+      213: -5969570340234440703
+    second: "Mauri\xE7io llameante Cantando_110"
+  - first:
+      213: 1092025995329054527
+    second: "Mauri\xE7io llameante Cantando_111"
+  - first:
+      213: 8825510208611390034
+    second: "Mauri\xE7io llameante Cantando_112"
+  - first:
+      213: 1352671318941899687
+    second: "Mauri\xE7io llameante Cantando_113"
+  - first:
+      213: -7154930784933634550
+    second: "Mauri\xE7io llameante Cantando_114"
+  - first:
+      213: -2858497217321710504
+    second: "Mauri\xE7io llameante Cantando_115"
+  - first:
+      213: -6779336854159918966
+    second: "Mauri\xE7io llameante Cantando_116"
+  - first:
+      213: -2867739731868591489
+    second: "Mauri\xE7io llameante Cantando_117"
+  - first:
+      213: -8035019076244589193
+    second: "Mauri\xE7io llameante Cantando_118"
+  - first:
+      213: 1819398141793332039
+    second: "Mauri\xE7io llameante Cantando_119"
+  - first:
+      213: -5675570012609205092
+    second: "Mauri\xE7io llameante Cantando_120"
+  - first:
+      213: -6552255506860433939
+    second: "Mauri\xE7io llameante Cantando_121"
+  - first:
+      213: -8594677288669735041
+    second: "Mauri\xE7io llameante Cantando_122"
+  - first:
+      213: -7275233290528202277
+    second: "Mauri\xE7io llameante Cantando_123"
+  - first:
+      213: 5345997902912139868
+    second: "Mauri\xE7io llameante Cantando_124"
+  - first:
+      213: 3387359398582087344
+    second: "Mauri\xE7io llameante Cantando_125"
+  - first:
+      213: -1155821628117814818
+    second: "Mauri\xE7io llameante Cantando_126"
+  - first:
+      213: 7193002217908690053
+    second: "Mauri\xE7io llameante Cantando_127"
+  - first:
+      213: -8820498058677560669
+    second: "Mauri\xE7io llameante Cantando_128"
+  - first:
+      213: 2048026230276800848
+    second: "Mauri\xE7io llameante Cantando_129"
+  - first:
+      213: -2478336665675069483
+    second: "Mauri\xE7io llameante Cantando_130"
+  - first:
+      213: 4911634979595174880
+    second: "Mauri\xE7io llameante Cantando_131"
+  - first:
+      213: -829731616180688782
+    second: "Mauri\xE7io llameante Cantando_132"
+  - first:
+      213: 2794385391555354867
+    second: "Mauri\xE7io llameante Cantando_133"
+  - first:
+      213: -1120504839192586645
+    second: "Mauri\xE7io llameante Cantando_134"
+  - first:
+      213: -4682147569396417912
+    second: "Mauri\xE7io llameante Cantando_135"
+  - first:
+      213: -2697853331905233154
+    second: "Mauri\xE7io llameante Cantando_136"
+  - first:
+      213: 5527117076602765683
+    second: "Mauri\xE7io llameante Cantando_137"
+  - first:
+      213: -3369561267159866633
+    second: "Mauri\xE7io llameante Cantando_138"
+  - first:
+      213: 4852908677428826436
+    second: "Mauri\xE7io llameante Cantando_139"
+  - first:
+      213: 7178326078869044748
+    second: "Mauri\xE7io llameante Cantando_140"
+  - first:
+      213: 9204029193790040517
+    second: "Mauri\xE7io llameante Cantando_141"
+  - first:
+      213: -2443971381721144077
+    second: "Mauri\xE7io llameante Cantando_142"
+  - first:
+      213: -1988431083057562665
+    second: "Mauri\xE7io llameante Cantando_143"
+  - first:
+      213: 1822570377503771074
+    second: "Mauri\xE7io llameante Cantando_144"
+  - first:
+      213: -3374176839966138613
+    second: "Mauri\xE7io llameante Cantando_145"
+  - first:
+      213: -7934123099714075974
+    second: "Mauri\xE7io llameante Cantando_146"
+  - first:
+      213: -6785042987236321640
+    second: "Mauri\xE7io llameante Cantando_147"
+  - first:
+      213: 620920623798850265
+    second: "Mauri\xE7io llameante Cantando_148"
+  - first:
+      213: 5429095807024022495
+    second: "Mauri\xE7io llameante Cantando_149"
+  - first:
+      213: -4643952786652686010
+    second: "Mauri\xE7io llameante Cantando_150"
+  - first:
+      213: -7716382122204875619
+    second: "Mauri\xE7io llameante Cantando_151"
+  - first:
+      213: -3407622339154107105
+    second: "Mauri\xE7io llameante Cantando_152"
+  - first:
+      213: -7429931823959502921
+    second: "Mauri\xE7io llameante Cantando_153"
+  - first:
+      213: -8496706356988989209
+    second: "Mauri\xE7io llameante Cantando_154"
+  - first:
+      213: 1601082124313446684
+    second: "Mauri\xE7io llameante Cantando_155"
+  - first:
+      213: 5885110774576340518
+    second: "Mauri\xE7io llameante Cantando_156"
+  - first:
+      213: 8699725322745198595
+    second: "Mauri\xE7io llameante Cantando_157"
+  - first:
+      213: -4490184539271193067
+    second: "Mauri\xE7io llameante Cantando_158"
+  - first:
+      213: 7164316659318619572
+    second: "Mauri\xE7io llameante Cantando_159"
+  - first:
+      213: 4822841319546599316
+    second: "Mauri\xE7io llameante Cantando_160"
+  - first:
+      213: 5826809775021417426
+    second: "Mauri\xE7io llameante Cantando_161"
+  - first:
+      213: -5431635478367293831
+    second: "Mauri\xE7io llameante Cantando_162"
+  - first:
+      213: 7569219002110032580
+    second: "Mauri\xE7io llameante Cantando_163"
+  - first:
+      213: -2224390113150059762
+    second: "Mauri\xE7io llameante Cantando_164"
+  - first:
+      213: -2463774327371732379
+    second: "Mauri\xE7io llameante Cantando_165"
+  - first:
+      213: -6732038987845353093
+    second: "Mauri\xE7io llameante Cantando_166"
+  - first:
+      213: 8323601111466818660
+    second: "Mauri\xE7io llameante Cantando_167"
+  - first:
+      213: 7990717230530750522
+    second: "Mauri\xE7io llameante Cantando_168"
+  - first:
+      213: 836742654799298506
+    second: "Mauri\xE7io llameante Cantando_169"
+  - first:
+      213: 6698029532037326313
+    second: "Mauri\xE7io llameante Cantando_170"
+  - first:
+      213: -4558333257389505961
+    second: "Mauri\xE7io llameante Cantando_171"
+  - first:
+      213: -7810780344416754728
+    second: "Mauri\xE7io llameante Cantando_172"
+  - first:
+      213: -6311947592107986974
+    second: "Mauri\xE7io llameante Cantando_173"
+  - first:
+      213: -7570339778139878215
+    second: "Mauri\xE7io llameante Cantando_174"
+  - first:
+      213: 1907463374921067677
+    second: "Mauri\xE7io llameante Cantando_175"
+  - first:
+      213: 5579684211628266190
+    second: "Mauri\xE7io llameante Cantando_176"
+  - first:
+      213: -8262046233650841185
+    second: "Mauri\xE7io llameante Cantando_177"
+  - first:
+      213: 6127223317758947500
+    second: "Mauri\xE7io llameante Cantando_178"
+  - first:
+      213: 3883647154613802729
+    second: "Mauri\xE7io llameante Cantando_179"
+  - first:
+      213: -8518269294263874067
+    second: "Mauri\xE7io llameante Cantando_180"
+  - first:
+      213: -9154615819616425368
+    second: "Mauri\xE7io llameante Cantando_181"
+  - first:
+      213: -5972559031797362328
+    second: "Mauri\xE7io llameante Cantando_182"
+  - first:
+      213: 4761348777130867828
+    second: "Mauri\xE7io llameante Cantando_183"
+  - first:
+      213: 165941691463876863
+    second: "Mauri\xE7io llameante Cantando_184"
+  - first:
+      213: -4951446123251159952
+    second: "Mauri\xE7io llameante Cantando_185"
+  - first:
+      213: 3840032339016924323
+    second: "Mauri\xE7io llameante Cantando_186"
+  - first:
+      213: -5248175917472478720
+    second: "Mauri\xE7io llameante Cantando_187"
+  - first:
+      213: 293207951569701309
+    second: "Mauri\xE7io llameante Cantando_188"
+  - first:
+      213: -3173014999299273396
+    second: "Mauri\xE7io llameante Cantando_189"
+  - first:
+      213: -3038569993961501408
+    second: "Mauri\xE7io llameante Cantando_190"
+  - first:
+      213: -5190258438346694540
+    second: "Mauri\xE7io llameante Cantando_191"
+  - first:
+      213: -226438140551441624
+    second: "Mauri\xE7io llameante Cantando_192"
+  - first:
+      213: -6225709979544353531
+    second: "Mauri\xE7io llameante Cantando_193"
+  - first:
+      213: 3342220664562182930
+    second: "Mauri\xE7io llameante Cantando_194"
+  - first:
+      213: -6207282912787577336
+    second: "Mauri\xE7io llameante Cantando_195"
+  - first:
+      213: -5674970048857474857
+    second: "Mauri\xE7io llameante Cantando_196"
+  - first:
+      213: 6821766762947676213
+    second: "Mauri\xE7io llameante Cantando_197"
+  - first:
+      213: 5554270637895889563
+    second: "Mauri\xE7io llameante Cantando_198"
+  - first:
+      213: -4514831063958247465
+    second: "Mauri\xE7io llameante Cantando_199"
+  - first:
+      213: 1777608335316405348
+    second: "Mauri\xE7io llameante Cantando_200"
+  - first:
+      213: -6714499831897385613
+    second: "Mauri\xE7io llameante Cantando_201"
+  - first:
+      213: 3126277966920513804
+    second: "Mauri\xE7io llameante Cantando_202"
+  - first:
+      213: 1432257710647224600
+    second: "Mauri\xE7io llameante Cantando_203"
+  - first:
+      213: 7607462877784789499
+    second: "Mauri\xE7io llameante Cantando_204"
+  - first:
+      213: -6189076473016899281
+    second: "Mauri\xE7io llameante Cantando_205"
+  - first:
+      213: 7326627501903399846
+    second: "Mauri\xE7io llameante Cantando_206"
+  - first:
+      213: -7672719611912263060
+    second: "Mauri\xE7io llameante Cantando_207"
+  - first:
+      213: 214975694719322728
+    second: "Mauri\xE7io llameante Cantando_208"
+  - first:
+      213: -5661771793977319842
+    second: "Mauri\xE7io llameante Cantando_209"
+  - first:
+      213: -8277943353847879094
+    second: "Mauri\xE7io llameante Cantando_210"
+  - first:
+      213: 3972688041546944591
+    second: "Mauri\xE7io llameante Cantando_211"
+  - first:
+      213: 3683603055122901015
+    second: "Mauri\xE7io llameante Cantando_212"
+  - first:
+      213: -5986223956573573367
+    second: "Mauri\xE7io llameante Cantando_213"
+  - first:
+      213: 3539454430669349827
+    second: "Mauri\xE7io llameante Cantando_214"
+  - first:
+      213: -2614877076815966705
+    second: "Mauri\xE7io llameante Cantando_215"
+  - first:
+      213: 1286854243416428456
+    second: "Mauri\xE7io llameante Cantando_216"
+  - first:
+      213: -3968361243291876162
+    second: "Mauri\xE7io llameante Cantando_217"
+  - first:
+      213: -5976323900750297
+    second: "Mauri\xE7io llameante Cantando_218"
+  - first:
+      213: -2668501302810698136
+    second: "Mauri\xE7io llameante Cantando_219"
+  - first:
+      213: -8959673973081484207
+    second: "Mauri\xE7io llameante Cantando_220"
+  - first:
+      213: -7847337716621297786
+    second: "Mauri\xE7io llameante Cantando_221"
+  - first:
+      213: -493187140023406318
+    second: "Mauri\xE7io llameante Cantando_222"
+  - first:
+      213: 9080768733004192707
+    second: "Mauri\xE7io llameante Cantando_223"
+  - first:
+      213: 3695117594057586332
+    second: "Mauri\xE7io llameante Cantando_224"
+  - first:
+      213: -8782964199637129827
+    second: "Mauri\xE7io llameante Cantando_225"
+  - first:
+      213: -3725180980555590385
+    second: "Mauri\xE7io llameante Cantando_226"
+  - first:
+      213: 7656195405202982566
+    second: "Mauri\xE7io llameante Cantando_227"
+  - first:
+      213: 3740086787499460747
+    second: "Mauri\xE7io llameante Cantando_228"
+  - first:
+      213: 331534169080018296
+    second: "Mauri\xE7io llameante Cantando_229"
+  - first:
+      213: 4580671768962968461
+    second: "Mauri\xE7io llameante Cantando_230"
+  - first:
+      213: -5623710709595563562
+    second: "Mauri\xE7io llameante Cantando_231"
+  - first:
+      213: 1606229009349099991
+    second: "Mauri\xE7io llameante Cantando_232"
+  - first:
+      213: 7134487331054531225
+    second: "Mauri\xE7io llameante Cantando_233"
+  - first:
+      213: 4319248364798579538
+    second: "Mauri\xE7io llameante Cantando_234"
+  - first:
+      213: -2293975086940051430
+    second: "Mauri\xE7io llameante Cantando_235"
+  - first:
+      213: 5597605405278039576
+    second: "Mauri\xE7io llameante Cantando_236"
+  - first:
+      213: 2914196376855834826
+    second: "Mauri\xE7io llameante Cantando_237"
+  - first:
+      213: 4934532239363883328
+    second: "Mauri\xE7io llameante Cantando_238"
+  - first:
+      213: 3049790807073820647
+    second: "Mauri\xE7io llameante Cantando_239"
+  - first:
+      213: 3853032629370585291
+    second: "Mauri\xE7io llameante Cantando_240"
+  - first:
+      213: 4373252687562030221
+    second: "Mauri\xE7io llameante Cantando_241"
+  - first:
+      213: 2305816255479176419
+    second: "Mauri\xE7io llameante Cantando_242"
+  - first:
+      213: 281617709906097161
+    second: "Mauri\xE7io llameante Cantando_243"
+  - first:
+      213: -5365901049605067129
+    second: "Mauri\xE7io llameante Cantando_244"
+  - first:
+      213: -2857830118285816533
+    second: "Mauri\xE7io llameante Cantando_245"
+  - first:
+      213: 4055949740798720944
+    second: "Mauri\xE7io llameante Cantando_246"
+  - first:
+      213: 3104046447326797250
+    second: "Mauri\xE7io llameante Cantando_247"
+  - first:
+      213: -3165886161540197994
+    second: "Mauri\xE7io llameante Cantando_248"
+  - first:
+      213: -6303546006877515728
+    second: "Mauri\xE7io llameante Cantando_249"
+  - first:
+      213: 4154744500497061472
+    second: "Mauri\xE7io llameante Cantando_250"
+  - first:
+      213: -5161697932248310616
+    second: "Mauri\xE7io llameante Cantando_251"
+  - first:
+      213: 5159588301490907591
+    second: "Mauri\xE7io llameante Cantando_252"
+  - first:
+      213: 8303588874119908577
+    second: "Mauri\xE7io llameante Cantando_253"
+  - first:
+      213: 8572407039731050987
+    second: "Mauri\xE7io llameante Cantando_254"
+  - first:
+      213: 2637736121894719134
+    second: "Mauri\xE7io llameante Cantando_255"
+  - first:
+      213: 6889418470727816954
+    second: "Mauri\xE7io llameante Cantando_256"
+  - first:
+      213: -3914386721723024830
+    second: "Mauri\xE7io llameante Cantando_257"
+  - first:
+      213: 905149390679817321
+    second: "Mauri\xE7io llameante Cantando_258"
+  - first:
+      213: -9176944274042892087
+    second: "Mauri\xE7io llameante Cantando_259"
+  - first:
+      213: -3985760409429990892
+    second: "Mauri\xE7io llameante Cantando_260"
+  - first:
+      213: -2788913657010270921
+    second: "Mauri\xE7io llameante Cantando_261"
+  - first:
+      213: -5125253667094963388
+    second: "Mauri\xE7io llameante Cantando_262"
+  - first:
+      213: 8046723977817082219
+    second: "Mauri\xE7io llameante Cantando_263"
+  - first:
+      213: -4804978373172957559
+    second: "Mauri\xE7io llameante Cantando_264"
+  - first:
+      213: -3089331858391984958
+    second: "Mauri\xE7io llameante Cantando_265"
+  - first:
+      213: -8420964121318665514
+    second: "Mauri\xE7io llameante Cantando_266"
+  - first:
+      213: 649740217436734861
+    second: "Mauri\xE7io llameante Cantando_267"
+  - first:
+      213: 4301118552207878156
+    second: "Mauri\xE7io llameante Cantando_268"
+  - first:
+      213: -275217210755852059
+    second: "Mauri\xE7io llameante Cantando_269"
+  - first:
+      213: -225353581534211263
+    second: "Mauri\xE7io llameante Cantando_270"
+  - first:
+      213: 1713262988527078569
+    second: "Mauri\xE7io llameante Cantando_271"
+  - first:
+      213: 2969668981515515705
+    second: "Mauri\xE7io llameante Cantando_272"
+  - first:
+      213: 1239298304355124305
+    second: "Mauri\xE7io llameante Cantando_273"
+  - first:
+      213: 3265893884400276030
+    second: "Mauri\xE7io llameante Cantando_274"
+  - first:
+      213: 3340472154911389345
+    second: "Mauri\xE7io llameante Cantando_275"
+  - first:
+      213: 5643065405319449865
+    second: "Mauri\xE7io llameante Cantando_276"
+  - first:
+      213: -8266832121703542552
+    second: "Mauri\xE7io llameante Cantando_277"
+  - first:
+      213: -3247050519769445799
+    second: "Mauri\xE7io llameante Cantando_278"
+  - first:
+      213: -9011863642308055408
+    second: "Mauri\xE7io llameante Cantando_279"
+  - first:
+      213: -1193663328723567914
+    second: "Mauri\xE7io llameante Cantando_280"
+  - first:
+      213: 1511921257882443445
+    second: "Mauri\xE7io llameante Cantando_281"
+  - first:
+      213: -5915019903368300678
+    second: "Mauri\xE7io llameante Cantando_282"
+  - first:
+      213: -5600432250411271746
+    second: "Mauri\xE7io llameante Cantando_283"
+  - first:
+      213: 8762382598849075047
+    second: "Mauri\xE7io llameante Cantando_284"
+  - first:
+      213: -4110912847715384737
+    second: "Mauri\xE7io llameante Cantando_285"
+  - first:
+      213: 2463836978985121928
+    second: "Mauri\xE7io llameante Cantando_286"
+  - first:
+      213: 6849988019837435838
+    second: "Mauri\xE7io llameante Cantando_287"
+  - first:
+      213: 4044292067638528471
+    second: "Mauri\xE7io llameante Cantando_288"
+  - first:
+      213: -3991031990153973770
+    second: "Mauri\xE7io llameante Cantando_289"
+  - first:
+      213: 7898713841169398475
+    second: "Mauri\xE7io llameante Cantando_290"
+  - first:
+      213: 8823366164430255399
+    second: "Mauri\xE7io llameante Cantando_291"
+  - first:
+      213: 6025841979194900162
+    second: "Mauri\xE7io llameante Cantando_292"
+  - first:
+      213: -5407952781130248627
+    second: "Mauri\xE7io llameante Cantando_293"
+  - first:
+      213: -5827459836385803477
+    second: "Mauri\xE7io llameante Cantando_294"
+  - first:
+      213: 3350623034381819522
+    second: "Mauri\xE7io llameante Cantando_295"
+  - first:
+      213: 5568192232678690018
+    second: "Mauri\xE7io llameante Cantando_296"
+  - first:
+      213: 1433478041066183455
+    second: "Mauri\xE7io llameante Cantando_297"
+  - first:
+      213: -6707893026361693165
+    second: "Mauri\xE7io llameante Cantando_298"
+  - first:
+      213: 5696676343487025952
+    second: "Mauri\xE7io llameante Cantando_299"
+  - first:
+      213: 6743074994486481379
+    second: "Mauri\xE7io llameante Cantando_300"
+  - first:
+      213: 5854482460496060602
+    second: "Mauri\xE7io llameante Cantando_301"
+  - first:
+      213: -4613016238061108352
+    second: "Mauri\xE7io llameante Cantando_302"
+  - first:
+      213: -586294543872687023
+    second: "Mauri\xE7io llameante Cantando_303"
+  - first:
+      213: 2956976670083069626
+    second: "Mauri\xE7io llameante Cantando_304"
+  - first:
+      213: -5502664304119165684
+    second: "Mauri\xE7io llameante Cantando_305"
+  - first:
+      213: -7827576979479130625
+    second: "Mauri\xE7io llameante Cantando_306"
+  - first:
+      213: -927716527420029727
+    second: "Mauri\xE7io llameante Cantando_307"
+  - first:
+      213: 8923291405433481695
+    second: "Mauri\xE7io llameante Cantando_308"
+  - first:
+      213: 6016486246510246864
+    second: "Mauri\xE7io llameante Cantando_309"
+  - first:
+      213: -7482022200588116577
+    second: "Mauri\xE7io llameante Cantando_310"
+  - first:
+      213: 8954111165301788223
+    second: "Mauri\xE7io llameante Cantando_311"
+  - first:
+      213: 2757775978803546873
+    second: "Mauri\xE7io llameante Cantando_312"
+  - first:
+      213: -6562726866120287277
+    second: "Mauri\xE7io llameante Cantando_313"
+  - first:
+      213: -699462161223706673
+    second: "Mauri\xE7io llameante Cantando_314"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b997162d2754830800000000000000
+      internalID: 4054773287421057915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_1"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985479397a04abcc0800000000000000
+      internalID: -3694569455824190071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_2"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1b07885fb780700800000000000000
+      internalID: 506791252565471735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_3"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa26167388144f1b0800000000000000
+      internalID: -5623797981378420054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_4"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02c85b0ce1e7e420800000000000000
+      internalID: 2659342508904464908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_5"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60e4929ba8f7c280800000000000000
+      internalID: -9022969912631173010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_6"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a3679a65f0fb430800000000000000
+      internalID: 3800773475408689788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_7"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6305e0cb11447950800000000000000
+      internalID: 6445848554130178923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_8"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08cd8f651fa1db880800000000000000
+      internalID: -8593682890104447872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_9"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad00bdce1d031b540800000000000000
+      internalID: 5021848737674887386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_10"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43bac2769c949c650800000000000000
+      internalID: 6253610686948879156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_11"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd92d29c0556289d0800000000000000
+      internalID: -2773543022859834917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_12"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2acea0bac2e8b4020800000000000000
+      internalID: 2327109954966318242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_13"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47bf9769a87fc6db0800000000000000
+      internalID: -4797187328454296716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_14"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7899f7beb1869a360800000000000000
+      internalID: 7181385549943380359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_15"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b626bd0d6d2a43f70800000000000000
+      internalID: 9166130185116541547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_16"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f4e808dfca9fe20800000000000000
+      internalID: 3384926799729151838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_17"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63cf86099b6d43600800000000000000
+      internalID: 447218355496614966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_18"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab258924b4917be0800000000000000
+      internalID: -1481239300916565081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_19"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4401ea69dff6b40800000000000000
+      internalID: 5435842098866701490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_20"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fe0b562ec931e30800000000000000
+      internalID: 4473091351091670820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_21"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b90d45239fbff70800000000000000
+      internalID: 9222238656537860898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_22"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7a20953c6d39700800000000000000
+      internalID: 546016114342275001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_23"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9e028c4f3553cf0800000000000000
+      internalID: -273219891591321182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_24"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f5ed1fc808a7da0800000000000000
+      internalID: -5946299015147659494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_25"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e960d157c929de0800000000000000
+      internalID: -1327826913308795311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_26"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7211bffc464fbb9b0800000000000000
+      internalID: -5063184642224746201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_27"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ce7f2ed7bb1a000800000000000000
+      internalID: 45523620603620454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_28"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef60313d54f0242e0800000000000000
+      internalID: -2143133680106535170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Mauri\xE7io llameante Cantando_29"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3c79b45a6449c90800000000000000
+      internalID: -7164023431487831107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

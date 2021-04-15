@@ -53,6 +53,7 @@ public class Mauriçio : MonoBehaviour
 
     float margin = 0.3f;
 
+    int vocal = 0;
     int inputsDone = 0;
 
     bool test = false;
@@ -213,8 +214,9 @@ public class Mauriçio : MonoBehaviour
     {
         if (numleft_ > 0 && timer_ >= actPatron_[num_-numleft_] * (60.0f / bpm))
         {
-            int aux = Random.Range(0, 1);
+            int aux = Random.Range(0, 4);
             GameObject arrow;
+            vocal = aux + 1;
             switch (aux)
             {
                 case 0:
@@ -245,7 +247,10 @@ public class Mauriçio : MonoBehaviour
             GameManager.GetInstance().SetPhase(Phase.PLAYER);
             timer_ = delayCommandingPlayer; //Reset para poder hacer inputs a cholon
             commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timePatron_);
+            vocal = 0;
         }
-    }    
+    }
+    
+    public int getVocal() { return vocal; }
 }
 
