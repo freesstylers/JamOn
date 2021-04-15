@@ -366,8 +366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370b521292e51fb47b3c9d61996ba8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  offset: 35.91916
+  moveSpeed: 0
+  offset: 28.51
 --- !u!1 &561542387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  offset: 35.91916
+  offset: 28.51
 --- !u!212 &1037234306
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1291,7 +1291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.1
-  offset: 35.91916
+  offset: 28.51
 --- !u!212 &1512895896
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1831,7 +1831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.7
-  offset: 35.91916
+  offset: 28.51
 --- !u!1 &1843447372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.6
-  offset: 35.91916
+  offset: 28.51
 --- !u!212 &1843447374
 SpriteRenderer:
   m_ObjectHideFlags: 0

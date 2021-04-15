@@ -42,4 +42,15 @@ public class GameManager : MonoBehaviour
     // Lo ocultamos el constructor para no poder crear nuevos objetos "sin control"
     protected GameManager() {}
 
+    static public int[] level1 = { 2, 3, 3, 5, 2 };
+
+    static public int[][] levels = { level1 };
+
+    protected int level_ = 0; //0,1,2
+
+    public int[] getLevelPatrons (int level) { return levels[level];  }
+
+    public int getLevel()   {   return level_;    }
+    public void advanceLevel()   { level_++;    }
+
 }
