@@ -7,6 +7,7 @@ public class MoveAround : MonoBehaviour
 
     public float intervaloX, intervaloY;
     public float minTime, maxTime;
+    public bool isEnemy = false;
 
     bool jumpin = false;
     bool sideForce = false;
@@ -19,6 +20,7 @@ public class MoveAround : MonoBehaviour
 
     float animTime;
     public float totalAnimTime;
+    Transform battlePosition;
     
     Vector2 fin;
     Vector2 ini;
@@ -42,7 +44,8 @@ public class MoveAround : MonoBehaviour
         sprite.sortingOrder = (int)(-transform.position.y * 10);
         if (!jumpin && !sideForce)
         {
-            MoveMinionsWithKey();
+            if(!isEnemy)
+                MoveMinionsWithKey();
             actualTime += Time.deltaTime;
             transform.position = Vector2.Lerp(ini, fin, actualTime / time);
         }
@@ -87,14 +90,29 @@ public class MoveAround : MonoBehaviour
     void NewPosition()
     {
         NewTime();
-        float x = transform.parent.position.x;
-        float y = transform.parent.position.y;
+        float x = 0;
+        float y = 0;
+        if (GameManager.GetInstance().GetPhase() != Phase.BATTLE)
+        {
+            x = transform.parent.position.x;
+            y = transform.parent.position.y;
+        }
+        else
+        {
+            x = battlePosition.position.x;
+            y = battlePosition.position.y;
+        }
         fin = new Vector2(Random.Range(x - intervaloX, x + intervaloX), Random.Range(y - intervaloY, y + intervaloY));
     }
 
     void NewTime()
     {
         time = Random.Range(minTime, maxTime);
+    }
+
+    public void setBattlePosition (Transform pos)
+    {
+        battlePosition = pos;
     }
 
     void MoveMinionsWithKey()

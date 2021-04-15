@@ -33,6 +33,8 @@ public class Mauriçio : MonoBehaviour
     List<Pair<int, float>> arrowsMauricio_ = new List<Pair<int, float>>();
     List<Pair<int, float>> arrowsPlayer_ = new List<Pair<int, float>>();
 
+    public float beats = 4.0f;
+    public float bpm = 135.0f;
     float timePatron_ = 2.0f;
     //Phase phase_ = Phase.COMMANDING;
     int num_;
@@ -44,13 +46,19 @@ public class Mauriçio : MonoBehaviour
     float CommandTime;
 
     //Cosas gestion de input
-    float delay = -0.5f;
+    float delay;
     float margin = 0.3f;
 
     int inputsDone = 0;
 
     bool test = false;
 
+    private void Start()
+    {
+        delay = -2.0f * (60.0f / bpm);
+        timePatron_ = beats * (60.0f / bpm);
+        Debug.Log("Porros: " + timePatron_);
+    }
     void Update()
     {
         if (!test && Input.GetKeyDown(KeyCode.M)) test = true;

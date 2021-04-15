@@ -8,6 +8,8 @@ public class MinionBehaviour : MonoBehaviour
     public int inicio;
     [Tooltip("Esbirro que se spawnea en el colectivo")]
     public GameObject esbirro;
+    [Tooltip("Lugar de pelea del esbirro")]
+    public Transform battlePosition;
     public int hp = 3;
 
     List<GameObject> colectivo = new List<GameObject>();
@@ -16,6 +18,7 @@ public class MinionBehaviour : MonoBehaviour
         for (int i = 0; i < inicio; i++)
         {
             GameObject obj = Instantiate(esbirro, transform);
+            obj.GetComponent<MoveAround>().setBattlePosition(battlePosition);
             colectivo.Add(obj);
         }
     }
