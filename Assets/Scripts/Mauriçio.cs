@@ -45,6 +45,8 @@ public class Mauriçio : MonoBehaviour
 
     float CommandTime;
 
+    List<GameObject> arrowObjects = new List<GameObject>();
+
     //Cosas gestion de input
     float delayCommandingPlayer; //Tiempo entre Commanding y Player
     float delayPlayerBattle; //Tiempo que va a estar en Battle
@@ -60,6 +62,8 @@ public class Mauriçio : MonoBehaviour
 
     int[] patrones;
     int currentPatron = 0;
+
+    Color barBackup;
 
     private void Start()
     {
@@ -81,7 +85,7 @@ public class Mauriçio : MonoBehaviour
 
         if (test)
         {
-            if (currentPatron < (patrones.Length - 1))
+            if (currentPatron < patrones.Length)
             {
                 Phase phase = GameManager.GetInstance().GetPhase();
 
@@ -129,6 +133,10 @@ public class Mauriçio : MonoBehaviour
                         if (timer_ > 0.0f)
                         {
                             currentPatron++;
+                            arrowsMauricio_.Clear();
+
+                            commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color = barBackup;
+
                             timer_ = delayAdvanceCommanding;
                             GameManager.GetInstance().SetPhase(Phase.COMMANDING);
                         }
@@ -150,9 +158,7 @@ public class Mauriçio : MonoBehaviour
 
         if (inputsDone >= arrowsMauricio_.Count)
         {
-            timer_ = delayPlayerBattle;
-            GameManager.GetInstance().SetPhase(Phase.BATTLE);
-            return;
+            ExitPlayerState();
         }
 
         if (timer_ < timePatron_)
@@ -205,9 +211,27 @@ public class Mauriçio : MonoBehaviour
         }
         else
         {
-            timer_ = delayPlayerBattle;
-            GameManager.GetInstance().SetPhase(Phase.BATTLE);
+            ExitPlayerState();
         }
+    }
+
+    void ExitPlayerState()
+    {
+        Color c = new Color( 0, 0, 0, 0 );
+        barBackup = commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color;
+
+        commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color = c;
+
+        foreach (GameObject a in arrowObjects)
+        {
+            Destroy(a);
+        }
+
+        arrowObjects.Clear();
+
+        timer_ = delayPlayerBattle;
+        GameManager.GetInstance().SetPhase(Phase.BATTLE);
+        return;
     }
 
     void Command()
@@ -215,7 +239,7 @@ public class Mauriçio : MonoBehaviour
         if (numleft_ > 0 && timer_ >= actPatron_[num_-numleft_] * (60.0f / bpm))
         {
             int aux = Random.Range(0, 4);
-            GameObject arrow;
+            GameObject arrow = new GameObject(); ;
             vocal = aux + 1;
             switch (aux)
             {
@@ -237,6 +261,7 @@ public class Mauriçio : MonoBehaviour
                     break;
             }
             arrowsMauricio_.Add(new Pair<int, float>(aux, timer_));
+            arrowObjects.Add(arrow);
             //timer_ = 0;
             numleft_--;
 
