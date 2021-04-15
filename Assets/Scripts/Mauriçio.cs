@@ -173,7 +173,7 @@ public class Mauriçio : MonoBehaviour
 
     void Command()
     {
-        if (numleft_ > 0 && timer_ >= actPatron_[num_-numleft_])
+        if (numleft_ > 0 && timer_ >= actPatron_[num_-numleft_] * (60.0f / bpm))
         {
             int aux = Random.Range(0, 1);
             GameObject arrow;

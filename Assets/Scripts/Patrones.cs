@@ -7,7 +7,7 @@ namespace Patrones
     {
         static float[] TiemposPosibles = {2.0f, 3.0f, 4.0f, 5.0f};
 
-        static float[] Basico = {0.5f, 1.0f, 1.5f, 2.0f, 2.5f};
+        static float[] Basico = {0.0f, 2.0f, 3.0f};
         static float[] Basico2 = { 0.3f, 0.4f, 1.0f };
         static float[] Basico3 = { 1f, 1.5f, 1.7f };
         static float[] Basico4 = { 0.57f,  1.14f, 1.71f };
