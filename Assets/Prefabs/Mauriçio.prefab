@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5495819561934809341}
   - component: {fileID: 5495819561934809331}
   - component: {fileID: 6212101492764669120}
+  - component: {fileID: 2050019466603883203}
   m_Layer: 0
   m_Name: "Mauri\xE7io"
   m_TagString: Untagged
@@ -101,9 +102,9 @@ MonoBehaviour:
   arrowU_: {fileID: 6912411355187454612, guid: 4dbef10f2db910b45b80d56ab5c55f0c, type: 3}
   arrowD_: {fileID: 5871534169970100849, guid: d67cf86ce200ff240b08cf0c1ae272d5, type: 3}
   textPhase_: {fileID: 0}
-  bpm_: 60
   commandBar_: {fileID: 0}
-  offSet_: 1
+  beats: 4
+  bpm: 135
 --- !u!95 &6212101492764669120
 Animator:
   serializedVersion: 3
@@ -123,3 +124,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2050019466603883203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495819561934809342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b035cfd9e6af74d87c467f71bfbf88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 5495819561934809331}
+  anim: {fileID: 6212101492764669120}
