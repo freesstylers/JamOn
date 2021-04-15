@@ -49,41 +49,50 @@ public class Mauriçio : MonoBehaviour
 
     int inputsDone = 0;
 
+    bool test = false;
+
     void Update()
     {
-        Phase phase = GameManager.GetInstance().GetPhase();
-        
-        textPhase_.text = phase.ToString();
+        if (!test && Input.GetKeyDown(KeyCode.M)) test = true;
 
-        timer_ += Time.deltaTime;
-
-        if (timer_ >= 0.0f)
-            commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timer_);
-
-        switch (phase)
+        if (test)
         {
-            case Phase.COMMANDING:
-                if(!decided_)
-                {
-                    decided_ = true;
-                    //actPatron_ = Patrones.Patron.Ataques1[Random.Range(0, 3)];
-                    actPatron_ = Patrones.Patron.Ataques1[0];
-                    num_ = actPatron_.Length;
-                    numleft_ = num_;
+            Phase phase = GameManager.GetInstance().GetPhase();
 
-                    commandBar_.gameObject.GetComponent<SlidingBar>().setSlideTime(timePatron_);
-                }
-                Command();
-                break;
-            case Phase.PLAYER:
-                if (timer_ >= 0)
-                    Player();
-                break;
-            case Phase.BATTLE:
-                //GameManager.GetInstance().SetPhase(Phase.ADVANCE);
-                break;
-            case Phase.ADVANCE:
-                break;
+            textPhase_.text = phase.ToString();
+
+            timer_ += Time.deltaTime;
+
+            if ( ( (decided_ && phase == Phase.COMMANDING) || phase != Phase.COMMANDING ) && timer_ >= 0.0f)
+                commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timer_);
+
+            switch (phase)
+            {
+                case Phase.COMMANDING:
+                    if (!decided_)
+                    {
+                        decided_ = true;
+                        //actPatron_ = Patrones.Patron.Ataques1[Random.Range(0, 3)];
+                        actPatron_ = Patrones.Patron.Ataques1[0];
+                        num_ = actPatron_.Length;
+                        numleft_ = num_;
+
+                        commandBar_.gameObject.GetComponent<SlidingBar>().setSlideTime(timePatron_);
+
+                        commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timer_);
+                    }
+                    Command();
+                    break;
+                case Phase.PLAYER:
+                    if (timer_ >= 0)
+                        Player();
+                    break;
+                case Phase.BATTLE:
+                    //GameManager.GetInstance().SetPhase(Phase.ADVANCE);
+                    break;
+                case Phase.ADVANCE:
+                    break;
+            }
         }
     }
 
