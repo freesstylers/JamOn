@@ -33,6 +33,7 @@ public class Mauriçio : MonoBehaviour
     List<Pair<int, float>> arrowsMauricio_ = new List<Pair<int, float>>();
     List<Pair<int, float>> arrowsPlayer_ = new List<Pair<int, float>>();
 
+    float timePatron_ = 2.0f;
     //Phase phase_ = Phase.COMMANDING;
     int num_;
     int numleft_;
@@ -70,7 +71,7 @@ public class Mauriçio : MonoBehaviour
                     num_ = actPatron_.Length;
                     numleft_ = num_;
 
-                    commandBar_.gameObject.GetComponent<SlidingBar>().setSlideTime(2.0f);
+                    commandBar_.gameObject.GetComponent<SlidingBar>().setSlideTime(timePatron_);
                 }
                 Command();
                 break;
@@ -99,7 +100,7 @@ public class Mauriçio : MonoBehaviour
             return;
         }
 
-        if (timer_ < 2.0f)
+        if (timer_ < timePatron_)
         {
             Pair<int, float> p = new Pair<int, float>();
 
@@ -183,11 +184,11 @@ public class Mauriçio : MonoBehaviour
             numleft_--;
         }
 
-        if (timer_ >= 2.0f)
+        if (timer_ >= timePatron_)
         {
             GameManager.GetInstance().SetPhase(Phase.PLAYER);
             timer_ = delay; //Reset para poder hacer inputs a cholon
-            commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(2.0f);
+            commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timePatron_);
         }
     }    
 }
