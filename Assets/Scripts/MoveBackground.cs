@@ -16,7 +16,7 @@ public class MoveBackground : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-        offset = Mathf.Abs(startPosition.x);
+        //offset = Mathf.Abs(startPosition.x);
     }
 
     // Update is called once per frame

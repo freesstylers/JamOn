@@ -46,10 +46,10 @@ public class Mauriçio : MonoBehaviour
     float CommandTime;
 
     //Cosas gestion de input
-    float delayCommandingPlayer;
-    float delayPlayerBattle = -2.5f; //Tiempo que va a estar en Battle
-    float delayBattleAdvance = -1.0f; //Tiempo que va a estar en Advance
-    float delayAdvanceCommanding = -1.0f; //Tiempo que va a estar en Commanding, pero esperando
+    float delayCommandingPlayer; //Tiempo entre Commanding y Player
+    float delayPlayerBattle; //Tiempo que va a estar en Battle
+    float delayBattleAdvance; //Tiempo que va a estar en Advance
+    float delayAdvanceCommanding; //Tiempo que va a estar en Commanding, pero esperando
 
     float margin = 0.3f;
 
@@ -63,10 +63,15 @@ public class Mauriçio : MonoBehaviour
     private void Start()
     {
         delayCommandingPlayer = -2.0f * (60.0f / bpm);
-        timePatron_ = beats * (60.0f / bpm);
-        Debug.Log("Porros: " + timePatron_);
+        delayPlayerBattle = -10.0f * (60.0f / bpm); ;
+        delayBattleAdvance = -5.0f * (60.0f / bpm); ;
+        delayAdvanceCommanding = -4.0f * (60.0f / bpm);
 
-        patrones = GameManager.GetInstance().getLevelPatrons(GameManager.GetInstance().getLevel());
+        timePatron_ = beats * (60.0f / bpm);
+
+        Debug.Log("Tiempo de patron: " + timePatron_);
+
+        patrones = GameManager.GetInstance().getLevelPatrons(GameManager.GetInstance().getLevel()); //Con esto se sacan la lista de notas que tendrá cada patron del nivel
     }
 
     void Update()
@@ -95,7 +100,7 @@ public class Mauriçio : MonoBehaviour
                             {
                                 decided_ = true;
                                 //actPatron_ = Patrones.Patron.Ataques1[Random.Range(0, 3)];
-                                actPatron_ = Patrones.Patron.Ataques1[0];
+                                actPatron_ = Patrones.Patron.getArray(patrones[currentPatron]); //Con esto se saca un array del numero de notas que marque currentPatron
                                 num_ = actPatron_.Length;
                                 numleft_ = num_;
 
