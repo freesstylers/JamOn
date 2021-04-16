@@ -84,11 +84,11 @@ public class Mauriçio : MonoBehaviour
     {
         bpm = GameManager.GetInstance().getBPM(level_);
 
-        delayCommandingPlayer = -2.0f * (60.0f / bpm);
-        delayPlayerBattle = -10.0f * (60.0f / bpm); ;
-        delayBattleAdvance = -5.0f * (60.0f / bpm); ;
-        delayAdvanceCommanding = -4.0f * (60.0f / bpm);
-        delayTransitionPlayerBattle = -2.0f * (60.0f / bpm);
+        delayCommandingPlayer = -1.0f * (60.0f / bpm);
+        delayPlayerBattle = -8.0f * (60.0f / bpm); ;
+        delayBattleAdvance = -4.0f * (60.0f / bpm); ;
+        delayAdvanceCommanding = -0.0f * (60.0f / bpm);
+        delayTransitionPlayerBattle = -0.0f * (60.0f / bpm);
 
         margin = 0.3f * (60.0f / bpm);
 
@@ -305,7 +305,7 @@ public class Mauriçio : MonoBehaviour
         {
             int aux = Random.Range(0, 4);
             GameObject arrow = new GameObject(); ;
-            vocal = aux + 1;
+            vocal = aux;
             switch (aux)
             {
                 case 0:
@@ -325,6 +325,7 @@ public class Mauriçio : MonoBehaviour
                     arrow.transform.position = new Vector3(commandBar_.GetChild(0).transform.position.x, commandBar_.position.y, commandBar_.position.z);
                     break;
             }
+            gameObject.SendMessage("Sing", vocal);
             arrowsMauricio_.Add(new Pair<int, float>(aux, timer_));
             arrowObjects.Add(arrow);
             //timer_ = 0;
@@ -337,10 +338,9 @@ public class Mauriçio : MonoBehaviour
             GameManager.GetInstance().SetPhase(Phase.PLAYER);
             timer_ = delayCommandingPlayer; //Reset para poder hacer inputs a cholon
             commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timePatron_);
-            vocal = 0;
+            vocal = -1;
+            gameObject.SendMessage("Sing", vocal);
         }
     }
-    
-    public int getVocal() { return vocal; }
 }
 

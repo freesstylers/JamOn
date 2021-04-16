@@ -6,10 +6,25 @@ public class MauricioSing : MonoBehaviour
 {
     public Mauriçio manager;
     public Animator anim;
+    public AudioClip[] vowels;
 
-    // Update is called once per frame
-    void Update()
+    AudioSource src;
+    private void Start()
     {
-        anim.SetInteger("Vocal", manager.getVocal());
+        src = GetComponent<AudioSource>();
+        if (src == null)
+            Debug.Log("No tengo AudioSource");
     }
+    // Update is called once per frame
+    void Sing(int vocal)
+    {
+        anim.SetInteger("Vocal", vocal);
+        if (vocal != -1)
+        {
+            int rnd = Random.Range(0, 4);
+            src.clip = vowels[vocal];
+            src.Play();
+        }
+    }
+
 }
