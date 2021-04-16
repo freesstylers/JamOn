@@ -80,7 +80,7 @@ public class Mauriçio : MonoBehaviour
         delayAdvanceCommanding = -4.0f * (60.0f / bpm);
         delayTransitionPlayerBattle = -2.0f * (60.0f / bpm);
 
-        margin = 0.3f * (60.0f / bpm);
+        margin = 0.4f * (60.0f / bpm);
 
         timePatron_ = beats * (60.0f / bpm);
 
@@ -201,24 +201,25 @@ public class Mauriçio : MonoBehaviour
 
                     float distance = Mathf.Abs(p.Second - arrowsMauricio_[inputsDone].Second);
 
+                    Debug.Log("Distancia: " + distance + " Margen: " + margin);
                     if (distance <= margin) //Está dentro
                     {
                         if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
                         {
                             Debug.Log("Ole");
-                            arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 1);
+                            arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Acierto");
                         }
                         else //Tecla erronea
                         {
                             Debug.Log("Tecla incorrecta");
-                            arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
+                            arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
 
                         }
                     }
                     else //Fuera, y por tanto erronea
                     {
                         Debug.Log("Fuera de rango");
-                        arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
+                        arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
                     }
 
                     inputsDone++;
@@ -229,7 +230,7 @@ public class Mauriçio : MonoBehaviour
                     if (timer_ > (arrowsMauricio_[inputsDone].Second + margin))
                     {
                         Debug.Log("No pulsaste a tiempo");
-                        arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
+                        arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
 
                         //Error
 

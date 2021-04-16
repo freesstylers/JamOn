@@ -129,7 +129,7 @@ public class MoveAround : MonoBehaviour
 
     void MoveMinionsWithKey()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             lastAltitude = transform.position.y;
@@ -137,7 +137,7 @@ public class MoveAround : MonoBehaviour
             rb.AddForce(new Vector2(0,3), ForceMode2D.Impulse);
             jumpin = true;
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.velocity = new Vector2(0, 0);
@@ -146,7 +146,7 @@ public class MoveAround : MonoBehaviour
             lastXPos = transform.position.x;
             sideForce = true;
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.velocity = new Vector2(0, 0);
@@ -155,7 +155,7 @@ public class MoveAround : MonoBehaviour
             lastXPos = transform.position.x;
             sideForce = true;
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             animActive = true;
             animator.SetBool("Abajo", true);

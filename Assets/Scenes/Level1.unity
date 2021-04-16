@@ -2090,11 +2090,11 @@ PrefabInstance:
     - target: {fileID: 5495819561934809331, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
       propertyPath: arrowR_
       value: 
-      objectReference: {fileID: 1627307472213931429, guid: 7ccec7088c9e5e047b413c3240c06cf9, type: 3}
+      objectReference: {fileID: 1627307472213931429, guid: bb9002a3dd644b84d806e32b56dea1ee, type: 3}
     - target: {fileID: 5495819561934809331, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
       propertyPath: arrowL_
       value: 
-      objectReference: {fileID: 4363553105533531484, guid: bb9002a3dd644b84d806e32b56dea1ee, type: 3}
+      objectReference: {fileID: 4363553105533531484, guid: 7ccec7088c9e5e047b413c3240c06cf9, type: 3}
     - target: {fileID: 5495819561934809340, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
