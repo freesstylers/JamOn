@@ -172,53 +172,68 @@ public class Mauriçio : MonoBehaviour
 
         if (timer_ < timePatron_)
         {
-            Pair<int, float> p = new Pair<int, float>();
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) //Si hay input
+            {
+                Pair<int, float> p = new Pair<int, float>();
 
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                p.First = 0;
-                p.Second = timer_;
-            }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                p.First = 1;
-                p.Second = timer_;
-            }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                p.First = 2;
-                p.Second = timer_;
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                p.First = 3;
-                p.Second = timer_;
-            }
-
-            float distance = Mathf.Abs(p.Second - arrowsMauricio_[inputsDone].Second);
-
-            if (distance <= margin) //Está dentro
-            {
-                if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
+                if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
-                    Debug.Log("Ole");
-                    arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 1);
+                    p.First = 0;
+                    p.Second = timer_;
                 }
-                else //Tecla erronea
+                else if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
-                    Debug.Log("Puta mierda");
+                    p.First = 1;
+                    p.Second = timer_;
+                }
+                else if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    p.First = 2;
+                    p.Second = timer_;
+                }
+                else if (Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    p.First = 3;
+                    p.Second = timer_;
+                }
+
+                float distance = Mathf.Abs(p.Second - arrowsMauricio_[inputsDone].Second);
+
+                if (distance <= margin) //Está dentro
+                {
+                    if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
+                    {
+                        Debug.Log("Ole");
+                        arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 1);
+                    }
+                    else //Tecla erronea
+                    {
+                        Debug.Log("Tecla incorrecta");
+                        arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
+
+                    }
+                }
+                else //Fuera, y por tanto erronea
+                {
+                    Debug.Log("Fuera de rango");
                     arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
                 }
-            }
-            else //Fuera, y por tanto erronea
-            {
-                //Debug.Log("Eres mas tonto que Grossi - Tecla fuera de rango");
-            }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
-            {
                 inputsDone++;
             }
+            else //Si no hay input
+            {
+                if (timer_ > arrowsMauricio_[inputsDone].Second)
+                {
+                    Debug.Log("No pulsaste a tiempo");
+                    arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
+
+                    //Error
+
+                    inputsDone++;
+                }
+            }
+
         }
         else
         {
