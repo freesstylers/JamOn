@@ -319,7 +319,8 @@ public class Mauriçio : MonoBehaviour
             inputsDone = 0;
             TransitionPlayerToBattle = false;
             timer_ = delayPlayerBattle;
-            GameManager.GetInstance().SetPhase(Phase.BATTLE);
+            enemySpawner.Kill();
+            GameManager.GetInstance().SetPhase(Phase.ADVANCE);
         }
         return;
     }

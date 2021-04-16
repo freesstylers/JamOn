@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 9171904029142300482, guid: 3735d24baff8aee419434c80e5e410a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.32, y: 0.32}
@@ -117,8 +117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intervaloX: 1
   intervaloY: 0.1
-  intervaloXB: 0.1
+  intervaloXB: 0.2
   intervaloYB: 0.5
   timeSpawn: 1
-  timeBattle: 2
+  timeBattle: 1
+  timeDying: 1
   totalAnimTime: 0.5

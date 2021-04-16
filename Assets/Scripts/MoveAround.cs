@@ -7,6 +7,7 @@ public class MoveAround : MonoBehaviour
 
     public float intervaloX, intervaloY, intervaloXB, intervaloYB;
     public float minTime, maxTime, timeBattle;
+    public float timeDying;
 
     bool jumpin = false;
     bool sideForce = false;
@@ -28,6 +29,7 @@ public class MoveAround : MonoBehaviour
     Rigidbody2D rb;
 
     Phase myPhase;
+    bool dead = false;
     
 
     void Start()
@@ -42,7 +44,7 @@ public class MoveAround : MonoBehaviour
 
     void Update()
     {
-        
+        if (dead) return;
         sprite.sortingOrder = (int)(-transform.position.y * 10);
         
         if (!jumpin && !sideForce)
@@ -115,7 +117,7 @@ public class MoveAround : MonoBehaviour
             y = transform.parent.position.y;
             fin = new Vector2(Random.Range(x + intervaloX, x + 2 * intervaloX), Random.Range(y - intervaloY, y + intervaloY));
         }
-        else if (GameManager.GetInstance().GetPhase() == Phase.BATTLE)
+        else if(GameManager.GetInstance().GetPhase() == Phase.PLAYER)
         {
             time = timeBattle;
             x = battlePosition.position.x;
@@ -179,5 +181,17 @@ public class MoveAround : MonoBehaviour
         copy.maxTime = maxTime;
         copy.timeBattle = timeBattle;
         copy.totalAnimTime = totalAnimTime;
+    }
+
+    public void Kill()
+    {
+        dead = true;
+        GetComponent<Animator>().SetTrigger("Dead");
+        Invoke("DestroyGameObject", timeDying);
+    }
+
+    private void DestroyGameObject()
+    {
+        Destroy(gameObject);
     }
 }

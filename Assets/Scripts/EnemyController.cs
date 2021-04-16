@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public float intervaloX, intervaloY, intervaloXB, intervaloYB;
-    public float timeSpawn, timeBattle;
+    public float timeSpawn, timeBattle, timeDying;
     float time;
     float actualTime = 0;
 
@@ -15,6 +15,9 @@ public class EnemyController : MonoBehaviour
     Vector2 fin;
     Vector2 ini;
     SpriteRenderer sprite;
+
+    bool dead = false;
+    Phase myPhase;
 
 
     void Start()
@@ -26,20 +29,20 @@ public class EnemyController : MonoBehaviour
         fin = new Vector2(Random.Range(x - intervaloX, x + intervaloX), Random.Range(y - intervaloY, y + intervaloY));
         time = timeSpawn;
     }
-
+    
     void Update()
     {
+        if (dead) return;
         sprite.sortingOrder = (int)(-transform.position.y * 10);
         transform.position = Vector2.Lerp(ini, fin, actualTime / time);
 
         actualTime += Time.deltaTime;
 
-        if (actualTime >= time)
+        if (actualTime >= time || myPhase != GameManager.GetInstance().GetPhase())
         {
             actualTime = 0;
             ini = new Vector2(fin.x, fin.y);
             NewPosition();
-            //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Acierto2");
         }
     }
 
@@ -47,8 +50,8 @@ public class EnemyController : MonoBehaviour
     {
         float x = 0;
         float y = 0;
-
-        if (GameManager.GetInstance().GetPhase() == Phase.BATTLE)
+        myPhase = GameManager.GetInstance().GetPhase();
+        if (GameManager.GetInstance().GetPhase() == Phase.PLAYER)
         {
             time = timeBattle;
             x = battlePosition.position.x;
@@ -70,8 +73,13 @@ public class EnemyController : MonoBehaviour
 
     public void Kill()
     {
-        //TODO: Cambiar a animacion de muerte y que pase lo que sea (Destroy)
+        dead = true;
+        GetComponent<Animator>().SetTrigger("Dead");
+        Invoke("DestroyGameObject", timeDying);
+    }
 
+    private void DestroyGameObject()
+    {
         Destroy(gameObject);
     }
 }

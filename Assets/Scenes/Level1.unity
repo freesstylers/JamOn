@@ -413,7 +413,8 @@ MonoBehaviour:
   battlePosition: {fileID: 2096142637}
   enemyPrefabs:
   - {fileID: 218962751561571694, guid: 9ac6e3bc45d5e9040ad24102de5c1a00, type: 3}
-  enemy: 0
+  - {fileID: 6348013675020906088, guid: 2a2b4c6ccb8e208438fefe246466f243, type: 3}
+  enemy: 1
   minionBehaviour: {fileID: 1038455809}
 --- !u!4 &99198084
 Transform:
@@ -1584,6 +1585,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b98d8cf321f77746bbe81ba59aac0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelScenes:
+  - Level1
+  - Level2
+  - Level3
 --- !u!4 &1538637022
 Transform:
   m_ObjectHideFlags: 0
