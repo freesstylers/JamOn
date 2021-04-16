@@ -34,7 +34,6 @@ public class Mauriçio : MonoBehaviour
     float timer_;
 
     List<Pair<int, float>> arrowsMauricio_ = new List<Pair<int, float>>();
-    List<Pair<int, float>> arrowsPlayer_ = new List<Pair<int, float>>();
 
     [Header("Tiempos de cancion")]
     public float beats = 4.0f;
@@ -54,15 +53,18 @@ public class Mauriçio : MonoBehaviour
     //Cosas gestion de input
     float delayCommandingPlayer; //Tiempo entre Commanding y Player
     float delayPlayerBattle; //Tiempo que va a estar en Battle
+    float delayTransitionPlayerBattle; //Tiempo que se queda en Battle sin empezar, para que las notas no se borren inmediatamente
     float delayBattleAdvance; //Tiempo que va a estar en Advance
     float delayAdvanceCommanding; //Tiempo que va a estar en Commanding, pero esperando
 
-    float margin = 0.3f;
+    float margin;
 
     int vocal = 0;
     int inputsDone = 0;
 
     bool test = false;
+
+    bool TransitionPlayerToBattle = false;
 
     int[] patrones;
     int currentPatron = 0;
@@ -76,6 +78,9 @@ public class Mauriçio : MonoBehaviour
         delayPlayerBattle = -10.0f * (60.0f / bpm); ;
         delayBattleAdvance = -5.0f * (60.0f / bpm); ;
         delayAdvanceCommanding = -4.0f * (60.0f / bpm);
+        delayTransitionPlayerBattle = -2.0f * (60.0f / bpm);
+
+        margin = 0.3f * (60.0f / bpm);
 
         timePatron_ = beats * (60.0f / bpm);
 
@@ -165,72 +170,71 @@ public class Mauriçio : MonoBehaviour
             return;
         }
 
-        if (inputsDone >= arrowsMauricio_.Count)
+        if (timer_ < timePatron_ )
         {
-            ExitPlayerState();
-        }
-
-        if (timer_ < timePatron_)
-        {
-            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) //Si hay input
+            if (inputsDone < arrowsMauricio_.Count)
             {
-                Pair<int, float> p = new Pair<int, float>();
+                if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) //Si hay input
+                {
+                    Pair<int, float> p = new Pair<int, float>();
 
-                if (Input.GetKeyDown(KeyCode.UpArrow))
-                {
-                    p.First = 0;
-                    p.Second = timer_;
-                }
-                else if (Input.GetKeyDown(KeyCode.DownArrow))
-                {
-                    p.First = 1;
-                    p.Second = timer_;
-                }
-                else if (Input.GetKeyDown(KeyCode.LeftArrow))
-                {
-                    p.First = 2;
-                    p.Second = timer_;
-                }
-                else if (Input.GetKeyDown(KeyCode.RightArrow))
-                {
-                    p.First = 3;
-                    p.Second = timer_;
-                }
-
-                float distance = Mathf.Abs(p.Second - arrowsMauricio_[inputsDone].Second);
-
-                if (distance <= margin) //Está dentro
-                {
-                    if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
+                    if (Input.GetKeyDown(KeyCode.UpArrow))
                     {
-                        Debug.Log("Ole");
-                        arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 1);
+                        p.First = 0;
+                        p.Second = timer_;
                     }
-                    else //Tecla erronea
+                    else if (Input.GetKeyDown(KeyCode.DownArrow))
                     {
-                        Debug.Log("Tecla incorrecta");
+                        p.First = 1;
+                        p.Second = timer_;
+                    }
+                    else if (Input.GetKeyDown(KeyCode.LeftArrow))
+                    {
+                        p.First = 2;
+                        p.Second = timer_;
+                    }
+                    else if (Input.GetKeyDown(KeyCode.RightArrow))
+                    {
+                        p.First = 3;
+                        p.Second = timer_;
+                    }
+
+                    float distance = Mathf.Abs(p.Second - arrowsMauricio_[inputsDone].Second);
+
+                    if (distance <= margin) //Está dentro
+                    {
+                        if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
+                        {
+                            Debug.Log("Ole");
+                            arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 1);
+                        }
+                        else //Tecla erronea
+                        {
+                            Debug.Log("Tecla incorrecta");
+                            arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
+
+                        }
+                    }
+                    else //Fuera, y por tanto erronea
+                    {
+                        Debug.Log("Fuera de rango");
                         arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
-
                     }
-                }
-                else //Fuera, y por tanto erronea
-                {
-                    Debug.Log("Fuera de rango");
-                    arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
-                }
-
-                inputsDone++;
-            }
-            else //Si no hay input
-            {
-                if (timer_ > arrowsMauricio_[inputsDone].Second)
-                {
-                    Debug.Log("No pulsaste a tiempo");
-                    arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
-
-                    //Error
 
                     inputsDone++;
+                }
+
+                else //Si no hay input
+                {
+                    if (timer_ > (arrowsMauricio_[inputsDone].Second + margin))
+                    {
+                        Debug.Log("No pulsaste a tiempo");
+                        arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
+
+                        //Error
+
+                        inputsDone++;
+                    }
                 }
             }
 
@@ -245,15 +249,26 @@ public class Mauriçio : MonoBehaviour
     {
         commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color = transparent;
 
-        foreach (GameObject a in arrowObjects)
+        if (!TransitionPlayerToBattle)
         {
-            Destroy(a);
+            TransitionPlayerToBattle = true;
+            timer_ = delayTransitionPlayerBattle;
         }
 
-        arrowObjects.Clear();
-        inputsDone = 0;
-        timer_ = delayPlayerBattle;
-        GameManager.GetInstance().SetPhase(Phase.BATTLE);
+        if (timer_ > 0.0f)
+        {
+            foreach (GameObject a in arrowObjects)
+            {
+                Destroy(a);
+            }
+
+            arrowObjects.Clear();
+
+            inputsDone = 0;
+            TransitionPlayerToBattle = false;
+            timer_ = delayPlayerBattle;
+            GameManager.GetInstance().SetPhase(Phase.BATTLE);
+        }
         return;
     }
 
