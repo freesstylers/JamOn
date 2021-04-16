@@ -57,7 +57,7 @@ public class MinionBehaviour : MonoBehaviour
     {
         foreach(GameObject e in enemies)
         {
-            e.GetComponent<SpriteRenderer>().flipX = true;
+            e.GetComponent<SpriteRenderer>().flipX = !e.GetComponent<SpriteRenderer>().flipX;
             e.transform.parent = gameObject.transform;
             e.AddComponent<Rigidbody2D>().isKinematic = true;
             Destroy(e.GetComponent<EnemyController>());
