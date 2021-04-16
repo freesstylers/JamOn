@@ -52,4 +52,20 @@ public class MinionBehaviour : MonoBehaviour
             colectivo.Add(obj);
         }
     }
+
+    public void AddMinions(List<GameObject> enemies)
+    {
+        foreach(GameObject e in enemies)
+        {
+            e.GetComponent<SpriteRenderer>().flipX = true;
+            e.transform.parent = gameObject.transform;
+            e.AddComponent<Rigidbody2D>().isKinematic = true;
+            Destroy(e.GetComponent<EnemyController>());
+            MoveAround m = e.GetComponent<MoveAround>();
+            colectivo[0].GetComponent<MoveAround>().SetVaribles(m);
+            m.enabled = true;
+            m.setBattlePosition(battlePosition);
+            colectivo.Add(e);
+        }
+    }
 }

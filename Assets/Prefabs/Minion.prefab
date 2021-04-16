@@ -99,8 +99,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intervaloX: 3
   intervaloY: 0.2
+  intervaloXB: 0.3
+  intervaloYB: 0.5
   minTime: 1
   maxTime: 3
+  timeBattle: 2
   totalAnimTime: 0.5
 --- !u!95 &8120452552753745601
 Animator:

@@ -5,8 +5,8 @@ using UnityEngine;
 public class MoveAround : MonoBehaviour
 {
 
-    public float intervaloX, intervaloY;
-    public float minTime, maxTime;
+    public float intervaloX, intervaloY, intervaloXB, intervaloYB;
+    public float minTime, maxTime, timeBattle;
 
     bool jumpin = false;
     bool sideForce = false;
@@ -37,7 +37,7 @@ public class MoveAround : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         NewPosition();
-        NewTime();
+        NewTime();        
     }
 
     void Update()
@@ -110,10 +110,10 @@ public class MoveAround : MonoBehaviour
         }
         else if(GameManager.GetInstance().GetPhase() == Phase.BATTLE)
         {
-            NewTime();
+            time = timeBattle;
             x = battlePosition.position.x;
             y = battlePosition.position.y;
-            fin = new Vector2(Random.Range(x - 1, x + 1), Random.Range(y - intervaloY, y + intervaloY));
+            fin = new Vector2(Random.Range(x - intervaloXB, x + intervaloXB), Random.Range(y - intervaloYB, y + intervaloYB));
         }
     }
 
@@ -160,5 +160,17 @@ public class MoveAround : MonoBehaviour
             animActive = true;
             animator.SetBool("Abajo", true);
         }
+    }
+
+    public void SetVaribles(MoveAround copy)
+    {
+        copy.intervaloX = intervaloX;
+        copy.intervaloY = intervaloY;
+        copy.intervaloXB = intervaloXB;
+        copy.intervaloYB = intervaloYB;
+        copy.minTime = minTime;
+        copy.maxTime = maxTime;
+        copy.timeBattle = timeBattle;
+        copy.totalAnimTime = totalAnimTime;
     }
 }
