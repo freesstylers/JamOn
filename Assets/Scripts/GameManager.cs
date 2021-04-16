@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     protected int BPM_;
     Phase phase_ = Phase.ADVANCE;
 
+    float patronPerformance = 0.0f;
     float[] scores_ = { 0.0f, 0.0f, 0.0f };
     int[] bpm_ = { 135, 135, 135 };
 
@@ -53,9 +54,9 @@ public class GameManager : MonoBehaviour
     // Lo ocultamos el constructor para no poder crear nuevos objetos "sin control"
     protected GameManager() {}
 
-    static public int[] level1 = { 2, 3};
-    static public int[] level2 = { 2, 3};
-    static public int[] level3 = { 2, 3};
+    static public int[] level1 = { 2, 2, 2, 2, 3, 3, 3};
+    static public int[] level2 = { 2, 2, 3, 3, 3, 4, 4, 4, 5};
+    static public int[] level3 = { 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5};
 
     static public int[][] levels = { level1, level2, level3 };
 
@@ -67,6 +68,16 @@ public class GameManager : MonoBehaviour
     public int GetCombo() { return combo_; }
     public void AddCombo() { combo_++; }
     public void ResetCombo() { combo_ = 1; }
+
+    public float GetPatronPerformance() { return patronPerformance; }
+    public void SetPatronPerformance(float perf) {
+        if (patronPerformance == 0.0f) patronPerformance = perf;
+        else if (perf == 0.0f) patronPerformance = 0.0f;
+        else
+        {
+            patronPerformance = (patronPerformance + perf) / 2;
+        }
+    }
 
     public int[] getLevelPatrons (int level) { return levels[level];  }
 

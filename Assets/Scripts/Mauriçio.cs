@@ -246,8 +246,10 @@ public class Mauriçio : MonoBehaviour
                         if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
                         {
                             float points;
+                            float percentage = (1.0f - (distance / margin)) * 100.0f;
+                            GameManager.GetInstance().SetPatronPerformance(percentage);
                             if (distance == 0.0f) points = 100.0f * GameManager.GetInstance().GetCombo();
-                            else points = (1.0f - (distance / margin)) * 100.0f * GameManager.GetInstance().GetCombo();
+                            else points = percentage * GameManager.GetInstance().GetCombo();
                             comboCounter_++;
                             GameManager.GetInstance().AddScore(level_, points);
                             Debug.Log("Ole");
