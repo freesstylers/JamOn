@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1992474544648420663}
   - component: {fileID: 3693740907325911895}
   m_Layer: 0
-  m_Name: flechaputa
+  m_Name: FlechaLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4363553105533531484}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 40f3aefd460e99a4695d61a62a7e47f1, type: 2}
   m_CullingMode: 0

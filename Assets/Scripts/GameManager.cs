@@ -32,11 +32,21 @@ public class GameManager : MonoBehaviour
     protected int BPM_;
     Phase phase_ = Phase.ADVANCE;
 
+    float[] scores_ = { 0.0f, 0.0f, 0.0f };
+    int[] bpm_ = { 135, 135, 135 };
+
+    public void AddScore(int level, float points) { scores_[level] += points; }
+    public float GetFinalScore() {
+        float res = scores_[0] + scores_[1] + scores_[2];
+        if (PlayerPrefs.GetFloat("bestScore") < res) PlayerPrefs.SetFloat("bestScore", res);
+        return res; 
+    }
+    public float GetLevelScore(int level) { return scores_[level]; }
+
     public Phase GetPhase() { return phase_; }
     public void SetPhase(Phase phase) { phase_ = phase; }
 
-    public int getBPM() { return BPM_; }
-    public void SetBPM(int BPM) { BPM_ = BPM; }
+    public int getBPM(int level) { return bpm_[level]; }
 
     // Constructor
     // Lo ocultamos el constructor para no poder crear nuevos objetos "sin control"
@@ -47,6 +57,11 @@ public class GameManager : MonoBehaviour
     static public int[][] levels = { level1 };
 
     protected int level_ = 0; //0,1,2
+
+    protected int combo_ = 1;
+    public int GetCombo() { return combo_; }
+    public void AddCombo() { combo_++; }
+    public void ResetCombo() { combo_ = 1; }
 
     public int[] getLevelPatrons (int level) { return levels[level];  }
 
