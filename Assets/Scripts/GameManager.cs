@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Phase { COMMANDING, PLAYER, BATTLE, ADVANCE }
+public enum Phase { COMMANDING, PLAYER, BATTLE, ADVANCE, ENDLEVEL }
 
 // ------------------------
 // Clase Game Manager
@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     float[] scores_ = { 0.0f, 0.0f, 0.0f };
     int[] bpm_ = { 135, 135, 135 };
 
+    int currentPatron = -1;
     public void AddScore(int level, float points) { scores_[level] += points; }
     public float GetFinalScore() {
         float res = scores_[0] + scores_[1] + scores_[2];
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
     // Lo ocultamos el constructor para no poder crear nuevos objetos "sin control"
     protected GameManager() {}
 
-    static public int[] level1 = { 2, 3, 4, 5};
+    static public int[] level1 = { 2, 3};
 
     static public int[][] levels = { level1 };
 
@@ -68,4 +69,18 @@ public class GameManager : MonoBehaviour
     public int getLevel()   {   return level_;    }
     public void advanceLevel()   { level_++;    }
 
+    public void setCurrentPatron(int value)
+    {
+        currentPatron = value;
+    }
+
+    public bool patronsLeft()
+    {
+        if (currentPatron < levels[level_].Length)
+            return true;
+        else
+            return false;
+    }
+
+    
 }

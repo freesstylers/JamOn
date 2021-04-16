@@ -18,6 +18,9 @@ public class Pair<T, U>
 
 public class Mauriçio : MonoBehaviour
 {
+    public GameObject Cartel;
+    public Transform MauriçiusJr;
+
     public Sprite[] arrowsCorrect;
 
     public Sprite[] arrowsError;
@@ -73,7 +76,7 @@ public class Mauriçio : MonoBehaviour
     bool TransitionPlayerToBattle = false;
 
     int[] patrones;
-    int currentPatron = 0;
+    int currentPatron = -1;
 
     Color barBackup;
     Color transparent = new Color(0, 0, 0, 0);
@@ -99,6 +102,8 @@ public class Mauriçio : MonoBehaviour
         barBackup = commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color;
 
         patrones = GameManager.GetInstance().getLevelPatrons(GameManager.GetInstance().getLevel()); //Con esto se sacan la lista de notas que tendrá cada patron del nivel
+
+        GameManager.GetInstance().setCurrentPatron(0);
     }
 
     void Update()
@@ -156,6 +161,9 @@ public class Mauriçio : MonoBehaviour
                         if (timer_ > 0.0f)
                         {
                             currentPatron++;
+
+                            GameManager.GetInstance().setCurrentPatron(currentPatron);
+
                             arrowsMauricio_.Clear();
 
                             commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color = barBackup;
@@ -169,7 +177,20 @@ public class Mauriçio : MonoBehaviour
             }
 
             else
-                Debug.Log("No more patrones");
+            {
+                if (GameManager.GetInstance().GetPhase() != Phase.ADVANCE)
+                    GameManager.GetInstance().SetPhase(Phase.ADVANCE);
+
+                Debug.Log(GameManager.GetInstance().GetPhase());
+                if (Cartel.transform.position.x > 1.69)
+                    Cartel.transform.Translate(new Vector3(-1 * Time.deltaTime, 0, 0));
+                else
+                {
+                    gameObject.transform.Translate(new Vector3(1 * Time.deltaTime, 0, 0));
+                    MauriçiusJr.Translate(new Vector3(1 * Time.deltaTime, 0, 0));
+                }
+                    //new Vector3(Cartel.transform.position.x - , Cartel.transform.position.y, Cartel.transform.position.z);
+            }
         }
     }
 

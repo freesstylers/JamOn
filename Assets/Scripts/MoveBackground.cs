@@ -23,7 +23,7 @@ public class MoveBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.GetInstance().GetPhase() == Phase.ADVANCE)
+        if (GameManager.GetInstance().GetPhase() >= Phase.ADVANCE) //Para Advance y EndLevel
         {
             newXposition = Mathf.Repeat(t * -moveSpeed, offset);
 
