@@ -18,6 +18,10 @@ public class Pair<T, U>
 
 public class Mauriçio : MonoBehaviour
 {
+    public Sprite[] arrowsCorrect;
+
+    public Sprite[] arrowsError;
+
     [Header("UI")]
     public GameObject arrowL_;
     public GameObject arrowR_;
@@ -211,23 +215,25 @@ public class Mauriçio : MonoBehaviour
                         if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
                         {
                             float points;
-                            if (distance != 0.0f) points = 100.0f;
+                            if (distance == 0.0f) points = 100.0f;
                             else points = (1.0f - (distance / margin)) * 100.0f;
                             GameManager.GetInstance().AddScore(level_, points);
                             Debug.Log("Ole");
-                            arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Acierto2");
+                            //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Acierto2");
+                            arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsCorrect[arrowsMauricio_[inputsDone].First];
                         }
                         else //Tecla erronea
                         {
                             Debug.Log("Tecla incorrecta");
-                            arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
-
+                            //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
+                            arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
                         }
                     }
                     else //Fuera, y por tanto erronea
                     {
                         Debug.Log("Fuera de rango");
-                        arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
+                        //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
+                        arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
                     }
 
                     inputsDone++;
@@ -239,8 +245,8 @@ public class Mauriçio : MonoBehaviour
                     if (timer_ > (arrowsMauricio_[inputsDone].Second + margin))
                     {
                         Debug.Log("No pulsaste a tiempo");
-                        arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
-
+                        //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
+                        arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
                         //Error
 
                         inputsDone++;
@@ -251,6 +257,7 @@ public class Mauriçio : MonoBehaviour
         else
         {
             ExitPlayerState();
+            Debug.Log(GameManager.GetInstance().GetLevelScore(level_) + " puntos");
         }
     }
 
