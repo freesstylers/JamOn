@@ -29,8 +29,6 @@ public class Mauriçio : MonoBehaviour
 
     int level_ = 0;
 
-    List<Pair<int, float>> arrowsMauricio_ = new List<Pair<int, float>>();
-    List<float> playerPoints = new List<float>();
     [Header("Enemy control")]
     [SerializeField]
     EnemySpawner enemySpawner;
@@ -79,6 +77,7 @@ public class Mauriçio : MonoBehaviour
     private void Start()
     {
         bpm = GameManager.GetInstance().getBPM(level_);
+
         delayCommandingPlayer = -2.0f * (60.0f / bpm);
         delayPlayerBattle = -10.0f * (60.0f / bpm); ;
         delayBattleAdvance = -5.0f * (60.0f / bpm); ;
@@ -175,7 +174,7 @@ public class Mauriçio : MonoBehaviour
             return;
         }
 
-        if (timer_ < timePatron_ )
+        if (timer_ < timePatron_)
         {
             if (inputsDone < arrowsMauricio_.Count)
             {
@@ -211,6 +210,10 @@ public class Mauriçio : MonoBehaviour
                     {
                         if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
                         {
+                            float points;
+                            if (distance != 0.0f) points = 100.0f;
+                            else points = (1.0f - (distance / margin)) * 100.0f;
+                            GameManager.GetInstance().AddScore(level_, points);
                             Debug.Log("Ole");
                             arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Acierto2");
                         }
@@ -227,16 +230,8 @@ public class Mauriçio : MonoBehaviour
                         arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
                     }
 
-            if (distance <= margin) //Está dentro
-            {
-                if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
-                {
-                    float points;
-                    if (distance != 0.0f) points = 100.0f;
-                    else points = (1.0f-(distance/margin)) * 100.0f;
-                    GameManager.GetInstance().AddScore(level_, points);
-                    Debug.Log("Ole");
                     inputsDone++;
+
                 }
 
                 else //Si no hay input
@@ -252,7 +247,6 @@ public class Mauriçio : MonoBehaviour
                     }
                 }
             }
-
         }
         else
         {
