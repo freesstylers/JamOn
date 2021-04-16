@@ -28,15 +28,16 @@ public class Mauriçio : MonoBehaviour
 
     public Transform commandBar_;
 
+    int level_ = 0;
     float timer_;
 
     List<Pair<int, float>> arrowsMauricio_ = new List<Pair<int, float>>();
-    List<Pair<int, float>> arrowsPlayer_ = new List<Pair<int, float>>();
+    List<float> playerPoints = new List<float>();
 
     public float beats = 4.0f;
     public float bpm = 135.0f;
     float timePatron_ = 2.0f;
-    //Phase phase_ = Phase.COMMANDING;
+
     int num_;
     int numleft_;
     bool decided_ = false;
@@ -55,6 +56,7 @@ public class Mauriçio : MonoBehaviour
 
     private void Start()
     {
+        bpm = GameManager.GetInstance().getBPM(level_);
         delay = -2.0f * (60.0f / bpm);
         timePatron_ = beats * (60.0f / bpm);
         Debug.Log("Porros: " + timePatron_);
@@ -148,6 +150,10 @@ public class Mauriçio : MonoBehaviour
             {
                 if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
                 {
+                    float points;
+                    if (distance != 0.0f) points = 100.0f;
+                    else points = (1.0f-(distance/margin)) * 100.0f;
+                    GameManager.GetInstance().AddScore(level_, points);
                     Debug.Log("Ole");
                 }
                 else //Tecla erronea
