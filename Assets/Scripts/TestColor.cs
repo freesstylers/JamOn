@@ -47,7 +47,7 @@ public class TestColor : MonoBehaviour
     {
         InitColorSwapTex();
 
-        StartCoroutine(colorChange());
+        //StartCoroutine(colorChange());
     }
 
     IEnumerator colorChange()

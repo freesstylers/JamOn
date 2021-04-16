@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     }
 
     protected int BPM_;
-    Phase phase_ = Phase.COMMANDING;
+    Phase phase_ = Phase.ADVANCE;
 
     float[] scores_ = { 0.0f, 0.0f, 0.0f };
     int[] bpm_ = { 135, 135, 135 };
@@ -50,5 +50,16 @@ public class GameManager : MonoBehaviour
     // Constructor
     // Lo ocultamos el constructor para no poder crear nuevos objetos "sin control"
     protected GameManager() {}
+
+    static public int[] level1 = { 2, 3, 4, 5};
+
+    static public int[][] levels = { level1 };
+
+    protected int level_ = 0; //0,1,2
+
+    public int[] getLevelPatrons (int level) { return levels[level];  }
+
+    public int getLevel()   {   return level_;    }
+    public void advanceLevel()   { level_++;    }
 
 }

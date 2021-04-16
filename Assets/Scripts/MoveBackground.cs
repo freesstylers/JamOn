@@ -12,10 +12,12 @@ public class MoveBackground : MonoBehaviour
     private Vector2 startPosition;
     private float newXposition;
 
+    float t = 0;
     // Start is called before the first frame update
     void Start()
     {
         startPosition = transform.position;
+        //offset = Mathf.Abs(startPosition.x);
     }
 
     // Update is called once per frame
@@ -23,9 +25,11 @@ public class MoveBackground : MonoBehaviour
     {
         if (GameManager.GetInstance().GetPhase() == Phase.ADVANCE)
         {
-            newXposition = Mathf.Repeat(Time.time * -moveSpeed, offset);
+            newXposition = Mathf.Repeat(t * -moveSpeed, offset);
 
             transform.position = startPosition + Vector2.right * newXposition;
+
+            t += Time.deltaTime;
         }
     }
 }

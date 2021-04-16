@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: 974a2fc3cbd0fa14faac00eb453dc322
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2687542552428279092
+    second: Mauricio Enemigos Muerte_0
+  - first:
+      213: 4554786256309226235
+    second: Mauricio Enemigos Muerte_1
+  - first:
+      213: 496288330128909817
+    second: Mauricio Enemigos Muerte_2
+  - first:
+      213: 2638793639364182049
+    second: Mauricio Enemigos Muerte_3
+  - first:
+      213: -1514183184015831603
+    second: Mauricio Enemigos Muerte_4
+  - first:
+      213: -7995043277829906530
+    second: Mauricio Enemigos Muerte_5
+  - first:
+      213: -2377225073965667956
+    second: Mauricio Enemigos Muerte_6
+  - first:
+      213: 5826812712115982928
+    second: Mauricio Enemigos Muerte_7
+  - first:
+      213: -571841237227985321
+    second: Mauricio Enemigos Muerte_8
+  - first:
+      213: -5138893117100750186
+    second: Mauricio Enemigos Muerte_9
+  - first:
+      213: 2323485193921081665
+    second: Mauricio Enemigos Muerte_10
+  - first:
+      213: 6894414553613281424
+    second: Mauricio Enemigos Muerte_0
+  - first:
+      213: -5598782863736526816
+    second: Mauricio Enemigos Muerte_1
+  - first:
+      213: 1064431194785019691
+    second: Mauricio Enemigos Muerte_2
+  - first:
+      213: 7072538750470429573
+    second: Mauricio Enemigos Muerte_3
+  - first:
+      213: -2279110148730877052
+    second: Mauricio Enemigos Muerte_4
+  - first:
+      213: 8971765000347152046
+    second: Mauricio Enemigos Muerte_5
+  - first:
+      213: -6513593173713436466
+    second: Mauricio Enemigos Muerte_6
+  - first:
+      213: 7011570825501356870
+    second: Mauricio Enemigos Muerte_7
+  - first:
+      213: -8339756008175721270
+    second: Mauricio Enemigos Muerte_8
+  - first:
+      213: -5635752755835712006
+    second: Mauricio Enemigos Muerte_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +104,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -111,7 +174,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mauricio Enemigos Muerte_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09827622281edaf50800000000000000
+      internalID: 6894414553613281424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Enemigos Muerte_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028a07826a02d42b0800000000000000
+      internalID: -5598782863736526816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Enemigos Muerte_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b277105388e95ce00800000000000000
+      internalID: 1064431194785019691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Enemigos Muerte_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b99f98584b62260800000000000000
+      internalID: 7072538750470429573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Enemigos Muerte_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b88ec1569fe50e0800000000000000
+      internalID: -2279110148730877052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Enemigos Muerte_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae69fdbbbc128c70800000000000000
+      internalID: 8971765000347152046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Enemigos Muerte_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0c66dd4811b95a0800000000000000
+      internalID: -6513593173713436466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Enemigos Muerte_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6433083548a1e4160800000000000000
+      internalID: 7011570825501356870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Enemigos Muerte_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4a143b81c334c80800000000000000
+      internalID: -8339756008175721270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mauricio Enemigos Muerte_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afdcb726ab8c9c1b0800000000000000
+      internalID: -5635752755835712006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

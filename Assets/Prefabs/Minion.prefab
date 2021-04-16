@@ -100,7 +100,7 @@ MonoBehaviour:
   intervaloX: 3
   intervaloY: 0.2
   minTime: 1
-  maxTime: 5
+  maxTime: 3
   totalAnimTime: 0.5
 --- !u!95 &8120452552753745601
 Animator:
