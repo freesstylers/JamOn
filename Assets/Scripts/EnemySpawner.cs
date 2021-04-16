@@ -38,6 +38,7 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < inicio; i++)
         {
             GameObject obj = Instantiate(enemyPrefabs[enemy], transform);
+            obj.AddComponent<MoveAround>().enabled = false;
             obj.GetComponent<EnemyController>().setBattlePosition(battlePosition);
             enemies.Add(obj);
         }
@@ -45,13 +46,16 @@ public class EnemySpawner : MonoBehaviour
 
     public void Kill()
     {
-        minionBehaviour.AddMinions(5);
-        int bucle = enemies.Count;
+        //TOOD: hacer que algunos enemigos se unan a la causa KEKW
+        int bucle = enemies.Count * 2/3;
         for (int i = 0; i < bucle; i++)
         {
             GameObject obj = enemies[0];
             enemies.RemoveAt(0);
             obj.GetComponent<EnemyController>().Kill();
         }
+        minionBehaviour.AddMinions(enemies);
+        bucle = enemies.Count;
+        enemies.Clear();
     }
 }

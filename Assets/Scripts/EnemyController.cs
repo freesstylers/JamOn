@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float intervaloX, intervaloY;
-    public float minTime, maxTime;
+    public float intervaloX, intervaloY, intervaloXB, intervaloYB;
+    public float timeSpawn, timeBattle;
     float time;
     float actualTime = 0;
 
@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour
         float y = transform.parent.position.y;
         ini = new Vector2(transform.position.x, transform.parent.position.y);
         fin = new Vector2(Random.Range(x - intervaloX, x + intervaloX), Random.Range(y - intervaloY, y + intervaloY));
-        time = minTime;
+        time = timeSpawn;
     }
 
     void Update()
@@ -49,16 +49,11 @@ public class EnemyController : MonoBehaviour
 
         if (GameManager.GetInstance().GetPhase() == Phase.BATTLE)
         {
-            NewTime();
+            time = timeBattle;
             x = battlePosition.position.x;
             y = battlePosition.position.y;
-            fin = new Vector2(Random.Range(x - 1, x + 1), Random.Range(y - intervaloY, y + intervaloY));
+            fin = new Vector2(Random.Range(x - intervaloXB, x + intervaloXB), Random.Range(y - intervaloYB, y + intervaloYB));
         }
-    }
-
-    void NewTime()
-    {
-        time = Random.Range(minTime, maxTime);
     }
 
     public void setBattlePosition(Transform pos)
