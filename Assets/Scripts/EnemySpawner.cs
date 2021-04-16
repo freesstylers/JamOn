@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Enemies { BASE, LEGS }
 public class EnemySpawner : MonoBehaviour
 {
     [Tooltip("Numero de enemigos")]
@@ -12,7 +13,7 @@ public class EnemySpawner : MonoBehaviour
     [Tooltip("Prefabs de enemigos spwneables")]
     public GameObject[] enemyPrefabs;
     [Tooltip("Enemigo a seleccionar")]
-    public int enemy;
+    public Enemies enemy;
 
     public MinionBehaviour minionBehaviour;
 
@@ -37,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < inicio; i++)
         {
-            GameObject obj = Instantiate(enemyPrefabs[enemy], transform);
+            GameObject obj = Instantiate(enemyPrefabs[(int)enemy], transform);
             obj.AddComponent<MoveAround>().enabled = false;
             obj.GetComponent<EnemyController>().setBattlePosition(battlePosition);
             enemies.Add(obj);
