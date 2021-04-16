@@ -189,7 +189,6 @@ public class Mauriçio : MonoBehaviour
                     gameObject.transform.Translate(new Vector3(1 * Time.deltaTime, 0, 0));
                     MauriçiusJr.Translate(new Vector3(1 * Time.deltaTime, 0, 0));
                 }
-                    //new Vector3(Cartel.transform.position.x - , Cartel.transform.position.y, Cartel.transform.position.z);
             }
         }
     }
@@ -205,26 +204,26 @@ public class Mauriçio : MonoBehaviour
         {
             if (inputsDone < arrowsMauricio_.Count)
             {
-                if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) //Si hay input
+                if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) //Si hay input
                 {
                     Pair<int, float> p = new Pair<int, float>();
 
-                    if (Input.GetKeyDown(KeyCode.UpArrow))
+                    if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
                     {
                         p.First = 0;
                         p.Second = timer_;
                     }
-                    else if (Input.GetKeyDown(KeyCode.DownArrow))
+                    else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
                     {
                         p.First = 1;
                         p.Second = timer_;
                     }
-                    else if (Input.GetKeyDown(KeyCode.LeftArrow))
+                    else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
                     {
                         p.First = 2;
                         p.Second = timer_;
                     }
-                    else if (Input.GetKeyDown(KeyCode.RightArrow))
+                    else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
                     {
                         p.First = 3;
                         p.Second = timer_;
@@ -243,7 +242,6 @@ public class Mauriçio : MonoBehaviour
                             comboCounter_++;
                             GameManager.GetInstance().AddScore(level_, points);
                             Debug.Log("Ole");
-                            //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Acierto2");
                             arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsCorrect[arrowsMauricio_[inputsDone].First];
                         }
                         else //Tecla erronea
@@ -251,7 +249,6 @@ public class Mauriçio : MonoBehaviour
                             Debug.Log("Tecla incorrecta");
                             comboCounter_ = 0;
                             GameManager.GetInstance().ResetCombo();
-                            //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
                             arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
                         }
                     }
@@ -260,7 +257,6 @@ public class Mauriçio : MonoBehaviour
                         Debug.Log("Fuera de rango");
                         comboCounter_ = 0;
                         GameManager.GetInstance().ResetCombo();
-                        //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
                         arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
                     }
 
@@ -275,7 +271,6 @@ public class Mauriçio : MonoBehaviour
                         Debug.Log("No pulsaste a tiempo");
                         comboCounter_ = 0;
                         GameManager.GetInstance().ResetCombo();
-                        //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
                         arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
                         //Error
 
