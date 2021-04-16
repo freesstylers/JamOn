@@ -68,6 +68,7 @@ public class Mauriçio : MonoBehaviour
     int currentPatron = 0;
 
     Color barBackup;
+    Color transparent = new Color(0, 0, 0, 0);
 
     private void Start()
     {
@@ -79,6 +80,8 @@ public class Mauriçio : MonoBehaviour
         timePatron_ = beats * (60.0f / bpm);
 
         Debug.Log("Tiempo de patron: " + timePatron_);
+
+        barBackup = commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color;
 
         patrones = GameManager.GetInstance().getLevelPatrons(GameManager.GetInstance().getLevel()); //Con esto se sacan la lista de notas que tendrá cada patron del nivel
     }
@@ -223,10 +226,7 @@ public class Mauriçio : MonoBehaviour
 
     void ExitPlayerState()
     {
-        Color c = new Color( 0, 0, 0, 0 );
-        barBackup = commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color;
-
-        commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color = c;
+        commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color = transparent;
 
         foreach (GameObject a in arrowObjects)
         {
