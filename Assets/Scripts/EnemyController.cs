@@ -39,6 +39,7 @@ public class EnemyController : MonoBehaviour
             actualTime = 0;
             ini = new Vector2(fin.x, fin.y);
             NewPosition();
+            //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Acierto2");
         }
     }
 
@@ -53,6 +54,12 @@ public class EnemyController : MonoBehaviour
             x = battlePosition.position.x;
             y = battlePosition.position.y;
             fin = new Vector2(Random.Range(x - intervaloXB, x + intervaloXB), Random.Range(y - intervaloYB, y + intervaloYB));
+
+            GetComponent<Animator>().SetBool("Idle", false);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("Idle", true);
         }
     }
 
