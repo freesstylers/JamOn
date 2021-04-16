@@ -80,7 +80,7 @@ public class Mauriçio : MonoBehaviour
         delayAdvanceCommanding = -4.0f * (60.0f / bpm);
         delayTransitionPlayerBattle = -2.0f * (60.0f / bpm);
 
-        margin = 0.4f * (60.0f / bpm);
+        margin = 0.3f * (60.0f / bpm);
 
         timePatron_ = beats * (60.0f / bpm);
 
@@ -207,7 +207,7 @@ public class Mauriçio : MonoBehaviour
                         if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
                         {
                             Debug.Log("Ole");
-                            arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Acierto");
+                            arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Acierto2");
                         }
                         else //Tecla erronea
                         {
