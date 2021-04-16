@@ -58,6 +58,11 @@ public class GameManager : MonoBehaviour
 
     protected int level_ = 0; //0,1,2
 
+    protected int combo_ = 1;
+    public int GetCombo() { return combo_; }
+    public void AddCombo() { combo_++; }
+    public void ResetCombo() { combo_ = 1; }
+
     public int[] getLevelPatrons (int level) { return levels[level];  }
 
     public int getLevel()   {   return level_;    }

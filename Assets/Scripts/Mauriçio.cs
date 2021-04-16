@@ -78,6 +78,8 @@ public class Mauriçio : MonoBehaviour
     Color barBackup;
     Color transparent = new Color(0, 0, 0, 0);
 
+    int comboCounter_ = 0;
+
     private void Start()
     {
         bpm = GameManager.GetInstance().getBPM(level_);
@@ -215,8 +217,9 @@ public class Mauriçio : MonoBehaviour
                         if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
                         {
                             float points;
-                            if (distance == 0.0f) points = 100.0f;
-                            else points = (1.0f - (distance / margin)) * 100.0f;
+                            if (distance == 0.0f) points = 100.0f * GameManager.GetInstance().GetCombo();
+                            else points = (1.0f - (distance / margin)) * 100.0f * GameManager.GetInstance().GetCombo();
+                            comboCounter_++;
                             GameManager.GetInstance().AddScore(level_, points);
                             Debug.Log("Ole");
                             //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Acierto2");
@@ -225,6 +228,8 @@ public class Mauriçio : MonoBehaviour
                         else //Tecla erronea
                         {
                             Debug.Log("Tecla incorrecta");
+                            comboCounter_ = 0;
+                            GameManager.GetInstance().ResetCombo();
                             //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
                             arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
                         }
@@ -232,6 +237,8 @@ public class Mauriçio : MonoBehaviour
                     else //Fuera, y por tanto erronea
                     {
                         Debug.Log("Fuera de rango");
+                        comboCounter_ = 0;
+                        GameManager.GetInstance().ResetCombo();
                         //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
                         arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
                     }
@@ -245,6 +252,8 @@ public class Mauriçio : MonoBehaviour
                     if (timer_ > (arrowsMauricio_[inputsDone].Second + margin))
                     {
                         Debug.Log("No pulsaste a tiempo");
+                        comboCounter_ = 0;
+                        GameManager.GetInstance().ResetCombo();
                         //arrowObjects[inputsDone].GetComponent<Animator>().SetTrigger("Fallo");
                         arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
                         //Error
@@ -257,6 +266,8 @@ public class Mauriçio : MonoBehaviour
         else
         {
             ExitPlayerState();
+            if (comboCounter_ == arrowsMauricio_.Count) GameManager.GetInstance().AddCombo();
+            comboCounter_ = 0;
             Debug.Log(GameManager.GetInstance().GetLevelScore(level_) + " puntos");
         }
     }
