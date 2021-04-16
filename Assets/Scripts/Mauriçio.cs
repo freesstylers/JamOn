@@ -202,10 +202,12 @@ public class Mauriçio : MonoBehaviour
                 if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
                 {
                     Debug.Log("Ole");
+                    arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 1);
                 }
                 else //Tecla erronea
                 {
-                    //Debug.Log("Eres mas tonto que Grossi - Tecla incorrecta");
+                    Debug.Log("Puta mierda");
+                    arrowObjects[inputsDone].GetComponent<Animator>().SetInteger("Acierto", 2);
                 }
             }
             else //Fuera, y por tanto erronea
@@ -234,7 +236,7 @@ public class Mauriçio : MonoBehaviour
         }
 
         arrowObjects.Clear();
-
+        inputsDone = 0;
         timer_ = delayPlayerBattle;
         GameManager.GetInstance().SetPhase(Phase.BATTLE);
         return;
