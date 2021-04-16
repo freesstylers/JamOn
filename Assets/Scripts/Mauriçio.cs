@@ -18,8 +18,7 @@ public class Pair<T, U>
 
 public class Mauriçio : MonoBehaviour
 {
-    //enum Phase { COMMANDING, PLAYER, BATTLE }
-
+    [Header("UI")]
     public GameObject arrowL_;
     public GameObject arrowR_;
     public GameObject arrowU_;
@@ -28,15 +27,20 @@ public class Mauriçio : MonoBehaviour
 
     public Transform commandBar_;
 
+    [Header("Enemy control")]
+    [SerializeField]
+    EnemySpawner enemySpawner;
+
     float timer_;
 
     List<Pair<int, float>> arrowsMauricio_ = new List<Pair<int, float>>();
     List<Pair<int, float>> arrowsPlayer_ = new List<Pair<int, float>>();
 
+    [Header("Tiempos de cancion")]
     public float beats = 4.0f;
     public float bpm = 135.0f;
     float timePatron_ = 2.0f;
-    //Phase phase_ = Phase.COMMANDING;
+
     int num_;
     int numleft_;
     bool decided_ = false;
@@ -126,6 +130,7 @@ public class Mauriçio : MonoBehaviour
                         if (timer_ > 0.0f)
                         {
                             timer_ = delayBattleAdvance;
+                            enemySpawner.Kill();
                             GameManager.GetInstance().SetPhase(Phase.ADVANCE);
                         }
                         break;
@@ -138,6 +143,7 @@ public class Mauriçio : MonoBehaviour
                             commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color = barBackup;
 
                             timer_ = delayAdvanceCommanding;
+                            enemySpawner.Spawn();
                             GameManager.GetInstance().SetPhase(Phase.COMMANDING);
                         }
                         break;

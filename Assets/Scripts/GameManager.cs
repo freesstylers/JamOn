@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     }
 
     protected int BPM_;
-    Phase phase_ = Phase.COMMANDING;
+    Phase phase_ = Phase.ADVANCE;
 
     public Phase GetPhase() { return phase_; }
     public void SetPhase(Phase phase) { phase_ = phase; }

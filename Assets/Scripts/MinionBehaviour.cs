@@ -42,4 +42,14 @@ public class MinionBehaviour : MonoBehaviour
         }
         hp--;
     }
+
+    public void AddMinions(int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            GameObject obj = Instantiate(esbirro, transform);
+            obj.GetComponent<MoveAround>().setBattlePosition(battlePosition);
+            colectivo.Add(obj);
+        }
+    }
 }

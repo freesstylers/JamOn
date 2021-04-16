@@ -7,7 +7,6 @@ public class MoveAround : MonoBehaviour
 
     public float intervaloX, intervaloY;
     public float minTime, maxTime;
-    public bool isEnemy = false;
 
     bool jumpin = false;
     bool sideForce = false;
@@ -27,6 +26,8 @@ public class MoveAround : MonoBehaviour
     SpriteRenderer sprite;
     Animator animator;
     Rigidbody2D rb;
+
+    Phase myPhase;
     
 
     void Start()
@@ -36,16 +37,17 @@ public class MoveAround : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         NewPosition();
+        NewTime();
     }
 
     void Update()
     {
         
         sprite.sortingOrder = (int)(-transform.position.y * 10);
+        
         if (!jumpin && !sideForce)
         {
-            if(!isEnemy)
-                MoveMinionsWithKey();
+            MoveMinionsWithKey();
             actualTime += Time.deltaTime;
             transform.position = Vector2.Lerp(ini, fin, actualTime / time);
         }
@@ -79,30 +81,40 @@ public class MoveAround : MonoBehaviour
             }
         }
         
-        if (actualTime >= time)
+        if (actualTime >= time || myPhase != GameManager.GetInstance().GetPhase())
         {
             actualTime = 0;
-            ini = new Vector2(fin.x, fin.y);
+            ini = actualTime >= time ? new Vector2(fin.x, fin.y) : new Vector2(transform.position.x, transform.position.y);
             NewPosition();            
         }
+
+        //if (myPhase != GameManager.GetInstance().GetPhase())
+        //{
+        //    ini = new Vector2(transform.position.x, transform.position.y);
+        //    actualTime = 0;
+        //    NewPosition();
+        //}
     }
 
     void NewPosition()
     {
-        NewTime();
         float x = 0;
         float y = 0;
-        if (GameManager.GetInstance().GetPhase() != Phase.BATTLE)
+        myPhase = GameManager.GetInstance().GetPhase();
+        if (GameManager.GetInstance().GetPhase() == Phase.ADVANCE)
         {
+            NewTime();
             x = transform.parent.position.x;
             y = transform.parent.position.y;
+            fin = new Vector2(Random.Range(x - intervaloX, x + intervaloX), Random.Range(y - intervaloY, y + intervaloY));
         }
-        else
+        else if(GameManager.GetInstance().GetPhase() == Phase.BATTLE)
         {
+            NewTime();
             x = battlePosition.position.x;
             y = battlePosition.position.y;
+            fin = new Vector2(Random.Range(x - 1, x + 1), Random.Range(y - intervaloY, y + intervaloY));
         }
-        fin = new Vector2(Random.Range(x - intervaloX, x + intervaloX), Random.Range(y - intervaloY, y + intervaloY));
     }
 
     void NewTime()
