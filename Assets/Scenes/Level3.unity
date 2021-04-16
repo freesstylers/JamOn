@@ -1584,6 +1584,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b98d8cf321f77746bbe81ba59aac0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelScenes:
+  - Level1
+  - Level2
+  - Level3
 --- !u!4 &1538637022
 Transform:
   m_ObjectHideFlags: 0
@@ -2213,10 +2217,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1038455812, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 70028080607517558, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.88

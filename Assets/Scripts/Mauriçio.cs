@@ -45,7 +45,7 @@ public class Mauriçio : MonoBehaviour
     List<Pair<int, float>> arrowsMauricio_ = new List<Pair<int, float>>();
 
     [Header("Tiempos de cancion")]
-    public float beats = 4.0f;
+    public float beats = 0.0f;
     public float bpm = 135.0f;
     float timePatron_ = 2.0f;
 
@@ -60,7 +60,7 @@ public class Mauriçio : MonoBehaviour
     List<GameObject> arrowObjects = new List<GameObject>();
 
     //Cosas gestion de input
-    float delayCommandingPlayer; //Tiempo entre Commanding y Player
+    float delayCommandingPlayer; //Tiempo de espera entre Player y Battle
     float delayPlayerBattle; //Tiempo que va a estar en Battle
     float delayTransitionPlayerBattle; //Tiempo que se queda en Battle sin empezar, para que las notas no se borren inmediatamente
     float delayBattleAdvance; //Tiempo que va a estar en Advance
@@ -87,15 +87,15 @@ public class Mauriçio : MonoBehaviour
     {
         bpm = GameManager.GetInstance().getBPM(level_);
 
-        delayCommandingPlayer = -1.0f * (60.0f / bpm);
-        delayPlayerBattle = -8.0f * (60.0f / bpm); ;
-        delayBattleAdvance = -4.0f * (60.0f / bpm); ;
-        delayAdvanceCommanding = -0.0f * (60.0f / bpm);
-        delayTransitionPlayerBattle = -0.0f * (60.0f / bpm);
+        delayCommandingPlayer = -1.0f * (60.0f / bpm); //Espera en estado player que hay desde que sale de Commanding hasta que empieza el ciclo de notas
+        delayPlayerBattle = -1.0f * (60.0f / bpm); //Tiempo que se queda en player antes de saltar a Battle
+        delayBattleAdvance = -1.0f * (60.0f / bpm); //Tiempo que va a estar en Advance
+        delayAdvanceCommanding = -1.0f * (60.0f / bpm); //Tiempo que está en Commanding antes de que empiece el ciclo de notas
+        delayTransitionPlayerBattle = -1.0f * (60.0f / bpm); //Tiempo de transicion entre Player y Battle
+        timePatron_ = beats * (60.0f / bpm); //Tiempo de Commanding y Player
 
         margin = 0.3f * (60.0f / bpm);
 
-        timePatron_ = beats * (60.0f / bpm);
 
         Debug.Log("Tiempo de patron: " + timePatron_);
 
@@ -169,8 +169,14 @@ public class Mauriçio : MonoBehaviour
                             commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color = barBackup;
 
                             timer_ = delayAdvanceCommanding;
-                            enemySpawner.Spawn();
-                            GameManager.GetInstance().SetPhase(Phase.COMMANDING);
+
+                            if (currentPatron < patrones.Length)
+                            {
+                                enemySpawner.Spawn();
+                                GameManager.GetInstance().SetPhase(Phase.COMMANDING);
+                            }
+                            else
+                                GameManager.GetInstance().SetPhase(Phase.ENDLEVEL1);
                         }
                         break;
                 }
@@ -178,16 +184,19 @@ public class Mauriçio : MonoBehaviour
 
             else
             {
-                if (GameManager.GetInstance().GetPhase() != Phase.ADVANCE)
-                    GameManager.GetInstance().SetPhase(Phase.ADVANCE);
-
-                Debug.Log(GameManager.GetInstance().GetPhase());
-                if (Cartel.transform.position.x > 1.69)
-                    Cartel.transform.Translate(new Vector3(-1 * Time.deltaTime, 0, 0));
-                else
+                if (GameManager.GetInstance().GetPhase() == Phase.ENDLEVEL1)
                 {
-                    gameObject.transform.Translate(new Vector3(1 * Time.deltaTime, 0, 0));
-                    MauriçiusJr.Translate(new Vector3(1 * Time.deltaTime, 0, 0));
+                    if (Cartel.transform.position.x > 5)
+                        Cartel.transform.Translate(new Vector3(-1.5f * Time.deltaTime, 0, 0));
+                    else
+                    {
+                        GameManager.GetInstance().SetPhase(Phase.ENDLEVEL2);
+                    }
+                }
+                else if (GameManager.GetInstance().GetPhase() == Phase.ENDLEVEL2)
+                {
+                    gameObject.transform.Translate(new Vector3(2.0f * Time.deltaTime, 0, 0));
+                    MauriçiusJr.Translate(new Vector3(2.0f * Time.deltaTime, 0, 0));
                 }
             }
         }

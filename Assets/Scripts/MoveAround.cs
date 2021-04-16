@@ -108,7 +108,14 @@ public class MoveAround : MonoBehaviour
             y = transform.parent.position.y;
             fin = new Vector2(Random.Range(x - intervaloX, x + intervaloX), Random.Range(y - intervaloY, y + intervaloY));
         }
-        else if(GameManager.GetInstance().GetPhase() == Phase.BATTLE)
+        else if (GameManager.GetInstance().GetPhase() > Phase.ADVANCE)
+        {
+            NewTime();
+            x = transform.parent.position.x;
+            y = transform.parent.position.y;
+            fin = new Vector2(Random.Range(x + intervaloX, x + 2 * intervaloX), Random.Range(y - intervaloY, y + intervaloY));
+        }
+        else if (GameManager.GetInstance().GetPhase() == Phase.BATTLE)
         {
             time = timeBattle;
             x = battlePosition.position.x;

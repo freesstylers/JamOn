@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Phase { COMMANDING, PLAYER, BATTLE, ADVANCE, ENDLEVEL }
+public enum Phase { COMMANDING, PLAYER, BATTLE, ADVANCE, ENDLEVEL1, ENDLEVEL2 }
 
 // ------------------------
 // Clase Game Manager
@@ -54,8 +54,12 @@ public class GameManager : MonoBehaviour
     protected GameManager() {}
 
     static public int[] level1 = { 2, 3};
+    static public int[] level2 = { 2, 3};
+    static public int[] level3 = { 2, 3};
 
-    static public int[][] levels = { level1 };
+    static public int[][] levels = { level1, level2, level3 };
+
+    public string[] levelScenes = { "Level1", "Level2", "Level3"};
 
     protected int level_ = 0; //0,1,2
 
@@ -69,10 +73,7 @@ public class GameManager : MonoBehaviour
     public int getLevel()   {   return level_;    }
     public void advanceLevel()   { level_++;    }
 
-    public void setCurrentPatron(int value)
-    {
-        currentPatron = value;
-    }
+    public void setCurrentPatron(int value) { currentPatron = value; }
 
     public bool patronsLeft()
     {
@@ -82,5 +83,9 @@ public class GameManager : MonoBehaviour
             return false;
     }
 
+    public string getLevelScene(int level)
+    {
+        return levelScenes[level];
+    }
     
 }
