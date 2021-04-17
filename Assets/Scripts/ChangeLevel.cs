@@ -24,7 +24,7 @@ public class ChangeLevel : MonoBehaviour
         GameManager.GetInstance().setCurrentPatron(-1); //Reset de patron
         GameManager.GetInstance().SetPhase(Phase.ADVANCE); //Reset de fase
 
-        if (GameManager.GetInstance().getLevel() < 3)
+        if (GameManager.GetInstance().getLevel() < 2)
         {
             GameManager.GetInstance().advanceLevel(); //Avanza el nivel
             SceneManager.LoadSceneAsync(GameManager.GetInstance().getLevelScene(GameManager.GetInstance().getLevel()));
@@ -33,6 +33,7 @@ public class ChangeLevel : MonoBehaviour
         {
             //SceneManager.LoadSceneAsync(sceneToTransitionTo)
             //Escena final?
+            Debug.Log("final de juego");
         }
 
     }

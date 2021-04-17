@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     float patronPerformance = 0.0f;
     float[] scores_ = { 0.0f, 0.0f, 0.0f };
-    int[] bpm_ = { 135, 135, 135 };
+    int[] bpm_ = { 135, 125, 110 };
 
     int currentPatron = -1;
     public void AddScore(int level, float points) { scores_[level] += points; }
