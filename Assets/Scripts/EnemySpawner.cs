@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Enemies { BASE, LEGS, MONJE, MOSCA }
+public enum Enemies { BASE, LEGS, MONJE, MOSCA, FRANCESCO }
 public class EnemySpawner : MonoBehaviour
 {
     [Tooltip("Numero de enemigos")]
