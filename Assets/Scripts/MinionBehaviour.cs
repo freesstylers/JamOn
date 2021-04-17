@@ -10,7 +10,7 @@ public class MinionBehaviour : MonoBehaviour
     public GameObject esbirro;
     [Tooltip("Lugar de pelea del esbirro")]
     public Transform battlePosition;
-    public int hp = 3;
+    public int hp;
 
     List<GameObject> colectivo = new List<GameObject>();
     void Start()
@@ -27,7 +27,22 @@ public class MinionBehaviour : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Damage();
+            Damage(1);
+        }
+    }
+
+    public void Damage(int dmg)
+    {
+        if(colectivo.Count < dmg)
+        {
+            dmg = colectivo.Count;
+        }
+
+        for (int i = 0; i < dmg; i++)
+        {
+            GameObject obj = colectivo[0];
+            colectivo.RemoveAt(0);
+            obj.GetComponent<MoveAround>().Kill();
         }
     }
 
@@ -38,11 +53,12 @@ public class MinionBehaviour : MonoBehaviour
         {
             GameObject obj = colectivo[0];
             colectivo.RemoveAt(0);
-            Destroy(obj);
+            obj.GetComponent<MoveAround>().Kill();
         }
         hp--;
     }
 
+    // Añade n minions del mismo tipo (el basico)
     public void AddMinions(int n)
     {
         for (int i = 0; i < n; i++)
@@ -53,6 +69,7 @@ public class MinionBehaviour : MonoBehaviour
         }
     }
 
+    // Añade la lista de enemigos como aliados
     public void AddMinions(List<GameObject> enemies)
     {
         foreach(GameObject e in enemies)

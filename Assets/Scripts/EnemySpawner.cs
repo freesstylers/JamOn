@@ -19,6 +19,8 @@ public class EnemySpawner : MonoBehaviour
 
     List<GameObject> enemies = new List<GameObject>();
 
+    int waveHP = 3;
+
     void Start()
     {
         //Spawn();
@@ -45,6 +47,19 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    public void Kill(int rounds, int reclutar)
+    {
+        // TODO: reclutar indica el numero de esbirros que se reclutan
+
+        int bucle = inicio / rounds;
+        for (int i = 0; i < bucle; i++)
+        {
+            GameObject obj = enemies[0];
+            enemies.RemoveAt(0);
+            obj.GetComponent<EnemyController>().Kill();
+        }
+    }
+
     public void Kill()
     {
         //TOOD: hacer que algunos enemigos se unan a la causa KEKW
@@ -59,7 +74,6 @@ public class EnemySpawner : MonoBehaviour
             obj.GetComponent<EnemyController>().Kill();
         }
         minionBehaviour.AddMinions(enemies);
-        bucle = enemies.Count;
         enemies.Clear();
     }
 }

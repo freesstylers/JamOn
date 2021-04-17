@@ -60,6 +60,10 @@ public class Mauriçio : MonoBehaviour
     public float bpm = 135.0f;
     float timePatron_ = 2.0f;
 
+    [Header("Gameplay Control")]
+    [Tooltip("Numero maximo de veces que se repetiran las fases COMMANDING - PLAYER")]
+    public int commandsPerBattle; 
+
     int num_;
     int numleft_;
     bool decided_ = false;
@@ -72,7 +76,7 @@ public class Mauriçio : MonoBehaviour
 
     //Cosas gestion de input
     float delayCommandingPlayer; //Tiempo de espera entre Player y Battle
-    float delayPlayerBattle; //Tiempo que va a estar en Battle
+    float advanceTime; //Tiempo que va a estar en Battle
     float delayTransitionPlayerBattle; //Tiempo que se queda en Battle sin empezar, para que las notas no se borren inmediatamente
     float delayBattleAdvance; //Tiempo que va a estar en Advance
     float delayAdvanceCommanding; //Tiempo que va a estar en Commanding, pero esperando
@@ -94,12 +98,14 @@ public class Mauriçio : MonoBehaviour
 
     int comboCounter_ = 0;
 
+    int numCommands = 0;
+
     private void Start()
     {
         bpm = GameManager.GetInstance().getBPM(level_);
-
+        
         delayCommandingPlayer = -1.0f * (60.0f / bpm); //Espera en estado player que hay desde que sale de Commanding hasta que empieza el ciclo de notas
-        delayPlayerBattle = -1.0f * (60.0f / bpm); //Tiempo que se queda en player antes de saltar a Battle
+        advanceTime = -6.0f * (60.0f / bpm); //Tiempo que se queda en player antes de saltar a Battle
         delayBattleAdvance = -1.0f * (60.0f / bpm); //Tiempo que va a estar en Advance
         delayAdvanceCommanding = -1.0f * (60.0f / bpm); //Tiempo que está en Commanding antes de que empiece el ciclo de notas
         delayTransitionPlayerBattle = -1.0f * (60.0f / bpm); //Tiempo de transicion entre Player y Battle
@@ -160,6 +166,7 @@ public class Mauriçio : MonoBehaviour
                         if (timer_ >= 0)
                             Player();
                         break;
+                    // Este comando ya no se hace
                     case Phase.BATTLE:
                         if (timer_ > 0.0f)
                         {
@@ -315,11 +322,51 @@ public class Mauriçio : MonoBehaviour
         }
         else
         {
-            ExitPlayerState();
+            numCommands++;
+            if (numCommands >= commandsPerBattle)
+                ExitPlayerState();
+            else
+                PrepareCommandFromPlayer();
+                
             if (comboCounter_ == arrowsMauricio_.Count) GameManager.GetInstance().AddCombo();
             comboCounter_ = 0;
             Debug.Log(GameManager.GetInstance().GetLevelScore(level_) + " puntos");
         }
+    }
+
+    // Despues de meter los comandos se llama a este metodo
+    // para volver a la fase de COMMANDING
+    void PrepareCommandFromPlayer()
+    {
+        if (timer_ > 0.0f)
+        {
+            ClearPlayerState();
+            enemySpawner.Kill(commandsPerBattle, 0);
+
+            arrowsMauricio_.Clear();
+
+            commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color = barBackup;
+
+            timer_ = delayAdvanceCommanding;
+
+            //enemySpawner.Spawn();
+            GameManager.GetInstance().SetPhase(Phase.COMMANDING);
+        }
+    }
+
+    // Limpia las modificaciones del estado PLAYER
+    void ClearPlayerState()
+    {
+        foreach (GameObject a in arrowObjects)
+        {
+            Destroy(a);
+        }
+
+        arrowObjects.Clear();
+
+        inputsDone = 0;
+        TransitionPlayerToBattle = false;
+        timer_ = advanceTime;
     }
 
     void ExitPlayerState()
@@ -334,16 +381,8 @@ public class Mauriçio : MonoBehaviour
 
         if (timer_ > 0.0f)
         {
-            foreach (GameObject a in arrowObjects)
-            {
-                Destroy(a);
-            }
-
-            arrowObjects.Clear();
-
-            inputsDone = 0;
-            TransitionPlayerToBattle = false;
-            timer_ = delayPlayerBattle;
+            numCommands = 0;
+            ClearPlayerState();
             enemySpawner.Kill();
             GameManager.GetInstance().SetPhase(Phase.ADVANCE);
         }

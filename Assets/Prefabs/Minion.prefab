@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intervaloX: 3
   intervaloY: 0.2
-  intervaloXB: 0.3
+  intervaloXB: 1.5
   intervaloYB: 0.5
   minTime: 1
   maxTime: 2
