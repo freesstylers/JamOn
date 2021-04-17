@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863748763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9, y: 0, z: 0}
+  m_LocalPosition: {x: 1.618, y: -0.175, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 70028080607517558}
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inicio: 10
   esbirro: {fileID: 4623740032819590958, guid: 361fe977d74e46c42958aefd1c8992e0, type: 3}
-  battlePosition: {fileID: 0}
+  battlePosition: {fileID: 863748764}
   hp: 3
 --- !u!212 &2861258962484884966
 SpriteRenderer:

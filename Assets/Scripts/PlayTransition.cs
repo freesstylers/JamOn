@@ -10,7 +10,8 @@ public class PlayTransition : SimpleTransition
 
     float t = 0.0f;
 
-    public Image[] buttons;
+    public Text[] textToFade;
+    public Image[] buttonsToFade;
 
     public Transform throne;
     public Transform cultist1;
@@ -19,11 +20,17 @@ public class PlayTransition : SimpleTransition
 
     AnimState state = AnimState.NONE;
 
+    public AudioSource knock;
+    public AudioSource wake;
+    public AudioSource open;
+    public AudioSource walkk;
+    public AudioSource throneup;
+
     public void Go()
     {
-        if (buttons.Length > 0) state++;
+        if (buttonsToFade.Length > 0) state++;
 
-        foreach (Image i in buttons)
+        foreach (Image i in buttonsToFade)
             i.gameObject.GetComponent<Button>().interactable = false;
 
         t = 0;
@@ -35,10 +42,59 @@ public class PlayTransition : SimpleTransition
         switch(state)
         {
             case AnimState.FADING:
-                FadeOut(); break;
+                FadeOut();
+                break;
+
+            case AnimState.KNOCK:
+                knock.Play();
+                state++;
+                break;
+
+            case AnimState.WAKE:
+                if(!knock.isPlaying)
+                {
+                    wake.Play();
+                    state++;
+                }
+                break;
+
+            case AnimState.OPENDOOR:
+                if (!wake.isPlaying)
+                {
+                    open.Play();
+                    state++;
+                }
+                break;
+
+            case AnimState.COMEIN:
+                if (!open.isPlaying)
+                {
+                    walkk.Play();
+                    state++;
+                }
+                break;
+
+            case AnimState.THRONEUP:
+                if (!walkk.isPlaying)
+                {
+                    throneup.Play();
+                    state++;
+                }
+                break;
+
+            case AnimState.COMEOUT:
+                if (!throneup.isPlaying)
+                {
+                    walkk.Play();
+                    state++;
+                }
+                break;
 
             case AnimState.END:
-                LoadScene();
+                if (!walkk.isPlaying)
+                {
+                    LoadScene();
+                }
                 break;
 
             default: break;
@@ -52,7 +108,10 @@ public class PlayTransition : SimpleTransition
 
         Color c = new Color(1, 1, 1, (1 - (t / fadeTime)));
 
-        foreach (Image i in buttons)
+        foreach (Image i in buttonsToFade)
+            i.color = c;
+
+        foreach (Text i in textToFade)
             i.color = c;
 
         if (t >= fadeTime)

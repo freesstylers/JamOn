@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2855296962331959734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.48, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 631.8151, y: 631.8151, z: 157.95378}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -133,6 +133,7 @@ MonoBehaviour:
   enemySpawner: {fileID: 0}
   beats: 4
   bpm: 135
+  commandsPerBattle: 3
 --- !u!95 &2855296962331959737
 Animator:
   serializedVersion: 3
@@ -200,7 +201,7 @@ AudioSource:
   m_GameObject: {fileID: 2855296962331959734}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8959139249086802953, guid: 1b868a2bebe3ff541962edeb45e375a2, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
