@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
 
     protected int combo_ = 1;
     public int GetCombo() { return combo_; }
-    public void AddCombo() { combo_++; }
+    public void AddCombo() { if (combo_ < 10) combo_++; }
     public void ResetCombo() { combo_ = 1; }
 
     public float GetPatronPerformance() { return patronPerformance; }
