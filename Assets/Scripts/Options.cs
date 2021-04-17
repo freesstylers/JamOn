@@ -14,6 +14,6 @@ public class Options : MonoBehaviour
             optionsCanvas.SetActive(!optionsCanvas.activeSelf);
 
         foreach (Button b in buttons)
-            b.interactable = !b.interactable;
+            b.interactable = !optionsCanvas.activeSelf;
     }
 }
