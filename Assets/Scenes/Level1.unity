@@ -2288,6 +2288,22 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsA.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsO.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsE.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsI.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
       propertyPath: vowels.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 90c162d1161c5e34a82e325f10fc8bec, type: 3}
@@ -2307,6 +2323,54 @@ PrefabInstance:
       propertyPath: vowels.Array.data[4]
       value: 
       objectReference: {fileID: 8300000, guid: 989f0fb15eecc5046bfc68d9f7f67894, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsA.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1905fbb65a964624aa0d39cf3c361c9a, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsA.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 674cd8fa9573fc946be134608a15499a, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsA.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 762c94dfdbda2764bb88ba34fdb88758, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsE.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bd9e7fe611b3f34dabf8a72a7338d09, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsE.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 98ce22a08a3fc00408d803a164764e65, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsE.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: d5f589a1058009a43a003e61cbf3bd5c, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsI.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 71d9da81a87793e4ca4dee6f2bc9eff6, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsI.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: b49ffbcffb98dae4289bca6ed512b6c3, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsI.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: e3481e1287a168c408f3e0841568e0c9, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsO.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b3f961c48838f074d965496709bbb7cd, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsO.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f8c0f571165454468af0b2be46bc307, type: 3}
+    - target: {fileID: 2050019466603883203, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: vowelsO.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 42520ea57fb8886449d58b60c620033c, type: 3}
     - target: {fileID: 5495819561934809331, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
       propertyPath: arrowsCorrect.Array.size
       value: 4

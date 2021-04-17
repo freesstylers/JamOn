@@ -6,7 +6,10 @@ public class MauricioSing : MonoBehaviour
 {
     public Mauriçio manager;
     public Animator anim;
-    public AudioClip[] vowels;
+    public AudioClip[] vowelsA;
+    public AudioClip[] vowelsO;
+    public AudioClip[] vowelsE;
+    public AudioClip[] vowelsI;
 
     AudioSource src;
     private void Start()
@@ -21,8 +24,9 @@ public class MauricioSing : MonoBehaviour
         anim.SetInteger("Vocal", vocal);
         if (vocal != -1)
         {
-            int rnd = Random.Range(0, 4);
-            src.clip = vowels[vocal];
+            AudioClip[][] vowels = { vowelsA, vowelsO, vowelsE, vowelsI };
+            int rnd = Random.Range(0, 3);
+            src.clip = vowels[vocal][rnd];
             src.Play();
         }
     }
