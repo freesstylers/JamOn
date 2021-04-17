@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4623740032819590957}
   - component: {fileID: 4623740032819590955}
   - component: {fileID: 8174717488207463007}
+  - component: {fileID: 6779935110296733606}
   m_Layer: 0
   m_Name: Minion
   m_TagString: Untagged
@@ -209,6 +210,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &6779935110296733606
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4623740032819590958}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a81f28b402650343a10833e84157e74, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5938532448575636836
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,4 +273,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2405356fdf362514baea11abec4a5f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 4611468154285546243}

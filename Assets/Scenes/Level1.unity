@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inicio: 10
-  battlePosition: {fileID: 2096142637}
+  battlePosition: {fileID: 1979649521}
   enemyPrefabs:
   - {fileID: 218962751561571694, guid: 9ac6e3bc45d5e9040ad24102de5c1a00, type: 3}
   - {fileID: 6348013675020906088, guid: 2a2b4c6ccb8e208438fefe246466f243, type: 3}
@@ -531,6 +531,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   offset: 19.2
+--- !u!4 &466778875 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 863748764, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
+  m_PrefabInstance: {fileID: 70028082303777919}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &561542387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,7 +1906,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979649520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: -4.69, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 99198084}
@@ -2023,6 +2028,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 863748764, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 863748764, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.871
+      objectReference: {fileID: 0}
     - target: {fileID: 1038455812, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
       propertyPath: m_Offset.x
       value: 0.8
@@ -2074,7 +2087,7 @@ PrefabInstance:
     - target: {fileID: 70028080607517559, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
       propertyPath: battlePosition
       value: 
-      objectReference: {fileID: 2096142637}
+      objectReference: {fileID: 466778875}
     - target: {fileID: 70028080607517560, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
       propertyPath: m_Name
       value: Mauricius Jr
