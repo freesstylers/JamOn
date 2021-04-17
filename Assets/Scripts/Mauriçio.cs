@@ -394,17 +394,21 @@ public class Mauriçio : MonoBehaviour
         if (numleft_ > 0 && timer_ >= actPatron_[num_-numleft_] * (60.0f / bpm))
         {
             int aux = Random.Range(0, 4);
-            GameObject arrow = new GameObject(); ;
+            //GameObject arrow;// = new GameObject();
+            GameObject arrow;
+
             vocal = aux;
             switch (aux)
             {
                 case 0:
+
                     if (GameManager.GetInstance().getMiauMode())
                         arrow = Instantiate(arrowU_Miau, commandBar_);
                     else
                         arrow = Instantiate(arrowU_, commandBar_);
 
                     arrow.transform.position = new Vector3(commandBar_.GetChild(0).transform.position.x, commandBar_.position.y, commandBar_.position.z);
+                    arrowObjects.Add(arrow);
                     break;
                 case 1:
                     if (GameManager.GetInstance().getMiauMode())
@@ -413,6 +417,7 @@ public class Mauriçio : MonoBehaviour
                         arrow = Instantiate(arrowD_, commandBar_);
 
                     arrow.transform.position = new Vector3(commandBar_.GetChild(0).transform.position.x, commandBar_.position.y, commandBar_.position.z);
+                    arrowObjects.Add(arrow);
                     break;
                 case 2:
                     if (GameManager.GetInstance().getMiauMode())
@@ -420,6 +425,7 @@ public class Mauriçio : MonoBehaviour
                     else
                         arrow = Instantiate(arrowL_, commandBar_);
                     arrow.transform.position = new Vector3(commandBar_.GetChild(0).transform.position.x, commandBar_.position.y, commandBar_.position.z);
+                    arrowObjects.Add(arrow);
                     break;
                 case 3:
                     if (GameManager.GetInstance().getMiauMode())
@@ -428,15 +434,14 @@ public class Mauriçio : MonoBehaviour
                         arrow = Instantiate(arrowR_, commandBar_);
 
                     arrow.transform.position = new Vector3(commandBar_.GetChild(0).transform.position.x, commandBar_.position.y, commandBar_.position.z);
+                    arrowObjects.Add(arrow);
                     break;
             }
 
             gameObject.SendMessage("Sing", vocal);
             arrowsMauricio_.Add(new Pair<int, float>(aux, timer_));
-            arrowObjects.Add(arrow);
             //timer_ = 0;
             numleft_--;
-
         }
 
         if (timer_ >= timePatron_)

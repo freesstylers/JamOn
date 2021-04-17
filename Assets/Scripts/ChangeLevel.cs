@@ -27,7 +27,7 @@ public class ChangeLevel : MonoBehaviour
         if (GameManager.GetInstance().getLevel() < 2)
         {
             GameManager.GetInstance().advanceLevel(); //Avanza el nivel
-            SceneManager.LoadSceneAsync(GameManager.GetInstance().getLevelScene(GameManager.GetInstance().getLevel()));
+            SceneManager.LoadSceneAsync(GameManager.GetInstance().getLevelScene(GameManager.GetInstance().getCinematica()));
         }
         else
         {

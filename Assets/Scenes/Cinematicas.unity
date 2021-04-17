@@ -555,11 +555,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4aafc333c84938a4f9a6908f58d08e2e, type: 3}
   - {fileID: 8300000, guid: c5da62e435fcfbc42b9cff38ac8d09bb, type: 3}
   - {fileID: 8300000, guid: b9d3676c9997f87498f1ba9afc171444, type: 3}
-  images:
-  - {fileID: 21300000, guid: 5ed67ecf05c426741b49ad591cd96c0f, type: 3}
-  - {fileID: 21300000, guid: 5cf0e4412de7bb34099099b6a9e59779, type: 3}
+  ImagesToChangeText1:
+  - {fileID: -5309348272279094335, guid: ec15af6290d4c404aacf8c9dd3a0c5a7, type: 3}
   - {fileID: 21300000, guid: 89909b90139c8af41983dcc6a59bd22f, type: 3}
-  textToChangeImage: 01000000
+  ImagesToChangeText2:
+  - {fileID: -5309348272279094335, guid: ec15af6290d4c404aacf8c9dd3a0c5a7, type: 3}
+  - {fileID: -4725491025774242730, guid: 203bc96de21cda442be6a58eccbbee14, type: 3}
+  ImagesToChangeText3:
+  - {fileID: -5309348272279094335, guid: ec15af6290d4c404aacf8c9dd3a0c5a7, type: 3}
+  - {fileID: -2146698560858037115, guid: f627e687cc4850b4b8dae5590d3dca46, type: 3}
+  ImagesToChangeText4:
+  - {fileID: -5309348272279094335, guid: ec15af6290d4c404aacf8c9dd3a0c5a7, type: 3}
+  - {fileID: 6019434976583685362, guid: 07d117e75819ff347875b8ecfef588f9, type: 3}
   currentImage: 0
   screenText: {fileID: 416794204}
   screenImage: {fileID: 1935602512}
