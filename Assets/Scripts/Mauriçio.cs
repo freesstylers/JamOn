@@ -86,8 +86,6 @@ public class Mauriçio : MonoBehaviour
     int vocal = 0;
     int inputsDone = 0;
 
-    bool test = false;
-
     bool TransitionPlayerToBattle = false;
 
     int[] patrones;
@@ -113,9 +111,6 @@ public class Mauriçio : MonoBehaviour
 
         margin = 0.3f * (60.0f / bpm);
 
-
-        Debug.Log("Tiempo de patron: " + timePatron_);
-
         barBackup = commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color;
 
         patrones = GameManager.GetInstance().getLevelPatrons(GameManager.GetInstance().getLevel()); //Con esto se sacan la lista de notas que tendrá cada patron del nivel
@@ -125,97 +120,92 @@ public class Mauriçio : MonoBehaviour
 
     void Update()
     {
-        if (!test && Input.GetKeyDown(KeyCode.M)) test = true;
-
-        if (test)
+        if (currentPatron < patrones.Length)
         {
-            if (currentPatron < patrones.Length)
+            Phase phase = GameManager.GetInstance().GetPhase();
+
+            textPhase_.text = phase.ToString();
+
+            timer_ += Time.deltaTime;
+
+            if (((decided_ && phase == Phase.COMMANDING) || phase == Phase.PLAYER) && timer_ >= 0.0f)
+                commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timer_);
+
+            switch (phase)
             {
-                Phase phase = GameManager.GetInstance().GetPhase();
+                case Phase.COMMANDING:
+                    if (timer_ > 0.0f)
+                    {
+                        if (!decided_)
+                        {
+                            decided_ = true;
+                            //actPatron_ = Patrones.Patron.Ataques1[Random.Range(0, 3)];
+                            actPatron_ = Patrones.Patron.getArray(patrones[currentPatron]); //Con esto se saca un array del numero de notas que marque currentPatron
+                            num_ = actPatron_.Length;
+                            numleft_ = num_;
 
-                textPhase_.text = phase.ToString();
+                            commandBar_.gameObject.GetComponent<SlidingBar>().setSlideTime(timePatron_);
 
-                timer_ += Time.deltaTime;
+                            commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timer_);
+                        }
+                        Command();
+                    }
+                    break;
+                case Phase.PLAYER:
+                    if (decided_)
+                        decided_ = false;
+                    if (timer_ >= 0)
+                        Player();
+                    break;
+                // Este comando ya no se hace
+                case Phase.BATTLE:
+                    if (timer_ > 0.0f)
+                    {
+                        timer_ = delayBattleAdvance;
+                        enemySpawner.Kill();
+                        GameManager.GetInstance().SetPhase(Phase.ADVANCE);
+                    }
+                    break;
+                case Phase.ADVANCE:
+                    if (timer_ > 0.0f)
+                    {
+                        currentPatron++;
 
-                if (((decided_ && phase == Phase.COMMANDING) || phase == Phase.PLAYER) && timer_ >= 0.0f)
-                    commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timer_);
+                        GameManager.GetInstance().setCurrentPatron(currentPatron);
 
-                switch (phase)
+                        arrowsMauricio_.Clear();
+
+                        commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color = barBackup;
+
+                        timer_ = delayAdvanceCommanding;
+
+                        if (currentPatron < patrones.Length)
+                        {
+                            enemySpawner.Spawn();
+                            GameManager.GetInstance().SetPhase(Phase.COMMANDING);
+                        }
+                        else
+                            GameManager.GetInstance().SetPhase(Phase.ENDLEVEL1);
+                    }
+                    break;
+            }
+        }
+
+        else
+        {
+            if (GameManager.GetInstance().GetPhase() == Phase.ENDLEVEL1)
+            {
+                if (Cartel.transform.position.x > 5)
+                    Cartel.transform.Translate(new Vector3(-1.5f * Time.deltaTime, 0, 0));
+                else
                 {
-                    case Phase.COMMANDING:
-                        if (timer_ > 0.0f)
-                        {
-                            if (!decided_)
-                            {
-                                decided_ = true;
-                                //actPatron_ = Patrones.Patron.Ataques1[Random.Range(0, 3)];
-                                actPatron_ = Patrones.Patron.getArray(patrones[currentPatron]); //Con esto se saca un array del numero de notas que marque currentPatron
-                                num_ = actPatron_.Length;
-                                numleft_ = num_;
-
-                                commandBar_.gameObject.GetComponent<SlidingBar>().setSlideTime(timePatron_);
-
-                                commandBar_.gameObject.GetComponent<SlidingBar>().UpdateSlidePosition(timer_);
-                            }
-                            Command();
-                        }
-                        break;
-                    case Phase.PLAYER:
-                        if (decided_)
-                            decided_ = false;
-                        if (timer_ >= 0)
-                            Player();
-                        break;
-                    // Este comando ya no se hace
-                    case Phase.BATTLE:
-                        if (timer_ > 0.0f)
-                        {
-                            timer_ = delayBattleAdvance;
-                            enemySpawner.Kill();
-                            GameManager.GetInstance().SetPhase(Phase.ADVANCE);
-                        }
-                        break;
-                    case Phase.ADVANCE:
-                        if (timer_ > 0.0f)
-                        {
-                            currentPatron++;
-
-                            GameManager.GetInstance().setCurrentPatron(currentPatron);
-
-                            arrowsMauricio_.Clear();
-
-                            commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color = barBackup;
-
-                            timer_ = delayAdvanceCommanding;
-
-                            if (currentPatron < patrones.Length)
-                            {
-                                enemySpawner.Spawn();
-                                GameManager.GetInstance().SetPhase(Phase.COMMANDING);
-                            }
-                            else
-                                GameManager.GetInstance().SetPhase(Phase.ENDLEVEL1);
-                        }
-                        break;
+                    GameManager.GetInstance().SetPhase(Phase.ENDLEVEL2);
                 }
             }
-
-            else
+            else if (GameManager.GetInstance().GetPhase() == Phase.ENDLEVEL2)
             {
-                if (GameManager.GetInstance().GetPhase() == Phase.ENDLEVEL1)
-                {
-                    if (Cartel.transform.position.x > 5)
-                        Cartel.transform.Translate(new Vector3(-1.5f * Time.deltaTime, 0, 0));
-                    else
-                    {
-                        GameManager.GetInstance().SetPhase(Phase.ENDLEVEL2);
-                    }
-                }
-                else if (GameManager.GetInstance().GetPhase() == Phase.ENDLEVEL2)
-                {
-                    gameObject.transform.Translate(new Vector3(2.0f * Time.deltaTime, 0, 0));
-                    MauriçiusJr.Translate(new Vector3(2.0f * Time.deltaTime, 0, 0));
-                }
+                gameObject.transform.Translate(new Vector3(2.0f * Time.deltaTime, 0, 0));
+                MauriçiusJr.Translate(new Vector3(2.0f * Time.deltaTime, 0, 0));
             }
         }
     }
@@ -258,7 +248,6 @@ public class Mauriçio : MonoBehaviour
 
                     float distance = Mathf.Abs(p.Second - arrowsMauricio_[inputsDone].Second);
 
-                    Debug.Log("Distancia: " + distance + " Margen: " + margin);
                     if (distance <= margin) //Está dentro
                     {
                         if (p.First == arrowsMauricio_[inputsDone].First) //Tecla correcta
@@ -270,7 +259,6 @@ public class Mauriçio : MonoBehaviour
                             else points = percentage * GameManager.GetInstance().GetCombo();
                             comboCounter_++;
                             GameManager.GetInstance().AddScore(level_, points);
-                            Debug.Log("Ole");
 
                             if (GameManager.GetInstance().getMiauMode())
                                 arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsCorrectMiau[arrowsMauricio_[inputsDone].First];
@@ -279,7 +267,6 @@ public class Mauriçio : MonoBehaviour
                         }
                         else //Tecla erronea
                         {
-                            Debug.Log("Tecla incorrecta");
                             comboCounter_ = 0;
                             GameManager.GetInstance().ResetCombo();
 
@@ -291,7 +278,6 @@ public class Mauriçio : MonoBehaviour
                     }
                     else //Fuera, y por tanto erronea
                     {
-                        Debug.Log("Fuera de rango");
                         comboCounter_ = 0;
                         GameManager.GetInstance().ResetCombo();
 
@@ -309,7 +295,6 @@ public class Mauriçio : MonoBehaviour
                 {
                     if (timer_ > (arrowsMauricio_[inputsDone].Second + margin))
                     {
-                        Debug.Log("No pulsaste a tiempo");
                         comboCounter_ = 0;
                         GameManager.GetInstance().ResetCombo();
                         arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
@@ -330,7 +315,6 @@ public class Mauriçio : MonoBehaviour
                 
             if (comboCounter_ == arrowsMauricio_.Count) GameManager.GetInstance().AddCombo();
             comboCounter_ = 0;
-            Debug.Log(GameManager.GetInstance().GetLevelScore(level_) + " puntos");
         }
     }
 

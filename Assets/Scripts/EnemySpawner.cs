@@ -26,14 +26,6 @@ public class EnemySpawner : MonoBehaviour
         //Spawn();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Kill();
-        }
-    }
-
     // Puede que necesitemos un entero de entrada para controlar 
     // el enemigo que debemos spawnear y la cantidad
     public void Spawn()

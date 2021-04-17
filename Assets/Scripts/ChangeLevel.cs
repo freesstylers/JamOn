@@ -19,8 +19,6 @@ public class ChangeLevel : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("CAMBIO NIVEL");
-
         GameManager.GetInstance().setCurrentPatron(-1); //Reset de patron
         GameManager.GetInstance().SetPhase(Phase.ADVANCE); //Reset de fase
 
@@ -33,7 +31,6 @@ public class ChangeLevel : MonoBehaviour
         {
             //SceneManager.LoadSceneAsync(sceneToTransitionTo)
             //Escena final?
-            Debug.Log("final de juego");
         }
 
     }
