@@ -19,9 +19,22 @@ public class ScreenResolutions : MonoBehaviour
 
         resolutions = resolutions.OrderByDescending(r => r.width).ToList();
 
-        dropdownMenu.onValueChanged.AddListener(delegate { Screen.SetResolution(resolutions[dropdownMenu.value].width, resolutions[dropdownMenu.value].height, false); });
+        dropdownMenu.onValueChanged.AddListener(delegate {
+            Screen.SetResolution(resolutions[dropdownMenu.value].width, resolutions[dropdownMenu.value].height, PlayerPrefs.GetInt("FullScreen", Screen.fullScreen ? 1 : 0) == 1, resolutions[dropdownMenu.value].refreshRate);
 
-        Resolution currentRes = Screen.currentResolution;
+            PlayerPrefs.SetInt("ScreenWidth", resolutions[dropdownMenu.value].width);
+            PlayerPrefs.SetInt("ScreenHeight", resolutions[dropdownMenu.value].height);
+            PlayerPrefs.SetInt("ScreenRefresh", resolutions[dropdownMenu.value].refreshRate);
+
+            PlayerPrefs.Save();
+        });
+
+        Resolution currentRes = new Resolution();
+
+        currentRes.width = PlayerPrefs.GetInt("ScreenWidth", Screen.currentResolution.width);
+        currentRes.height = PlayerPrefs.GetInt("ScreenHeight", Screen.currentResolution.height);
+        currentRes.refreshRate = PlayerPrefs.GetInt("ScreenRefresh", Screen.currentResolution.refreshRate);
+
         int i = 0;
 
         foreach (Resolution r in resolutions)

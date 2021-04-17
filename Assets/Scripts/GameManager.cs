@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public enum Phase { COMMANDING, PLAYER, BATTLE, ADVANCE, ENDLEVEL1, ENDLEVEL2 }
 
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
             go.AddComponent<GameManager>();
             _instancia = go.GetComponent<GameManager>();
             DontDestroyOnLoad(go);
+
+            _instancia.SetValues();
         }
 
         // devolvemos la instancia
@@ -119,10 +122,51 @@ public class GameManager : MonoBehaviour
     public void setMiauMode(bool value)
     {
         miauMode = value;
+        PlayerPrefs.SetInt("MiauMode", value ? 1 : 0);
+        PlayerPrefs.Save();
     }
 
     public bool getMiauMode()
     {
         return miauMode;
+    }
+
+    protected bool discoMode = true;
+
+    public void setDiscoMode(bool value)
+    {
+        discoMode = value;
+        PlayerPrefs.SetInt("DiscoMode", value ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    public bool getDiscoMode()
+    {
+        return discoMode;
+    }
+
+    public AudioMixer mixer;
+
+    private void SetValues()
+    {
+        mixer = Resources.Load<AudioMixer>("Mixer");
+
+        miauMode = PlayerPrefs.GetInt("MiauMode", 0) == 1 ? true : false;
+        discoMode = PlayerPrefs.GetInt("DiscoMode", 0) == 1 ? true : false;
+
+        int w = PlayerPrefs.GetInt("ScreenWidth", Screen.currentResolution.width);
+
+        Screen.SetResolution(w, PlayerPrefs.GetInt("ScreenHeight", Screen.currentResolution.height), PlayerPrefs.GetInt("FullScreen", Screen.fullScreen ? 1 : 0) == 1, PlayerPrefs.GetInt("ScreenRefresh", Screen.currentResolution.refreshRate));
+
+        if (mixer)
+        {
+            mixer.SetFloat("MusicVol", PlayerPrefs.GetFloat("MusicVol", 0.75f));
+            mixer.SetFloat("SFXVol", PlayerPrefs.GetFloat("SFXVol", 0.75f));
+        }
+    }
+
+    private void Awake()
+    {
+        //if (!_instancia) GetInstance();
     }
 }

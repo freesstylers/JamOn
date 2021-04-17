@@ -1383,7 +1383,7 @@ AudioSource:
   m_GameObject: {fileID: 6683929499928984096}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8959139249086802953, guid: 1b868a2bebe3ff541962edeb45e375a2, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3098d7ead5b035b4e9b26b77659b4b3e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1479,7 +1479,7 @@ AudioSource:
   m_GameObject: {fileID: 6683929499928984096}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8959139249086802953, guid: 1b868a2bebe3ff541962edeb45e375a2, type: 2}
   m_audioClip: {fileID: 8300000, guid: 7507a03726e082f4bb78e4cfcbb65ca7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -3105,6 +3105,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6683929501335557228}
     m_Modifications:
+    - target: {fileID: 84211512, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8db00f1bf2ff14648880cbd13e352585, type: 3}
     - target: {fileID: 22756806182109258, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3197,21 +3201,9 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3656896229764651185, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -90
-      objectReference: {fileID: 0}
     - target: {fileID: 4024208777215574568, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5528858750513375563, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 5528858750513375563, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
@@ -3227,6 +3219,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6683929501335557228}
     m_Modifications:
+    - target: {fileID: 84211511, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
+      propertyPath: mixerVar
+      value: SFXVol
+      objectReference: {fileID: 0}
+    - target: {fileID: 84211512, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8959139249086802953, guid: 1b868a2bebe3ff541962edeb45e375a2, type: 2}
     - target: {fileID: 22756806182109258, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

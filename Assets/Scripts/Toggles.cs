@@ -15,6 +15,8 @@ public class Toggles : MonoBehaviour
     public AudioSource miau;
     public AudioSource blub;
 
+    bool isStarting = true;
+
     private void Start()
     {
         if (!toggle) return;
@@ -24,7 +26,7 @@ public class Toggles : MonoBehaviour
             default: break;
 
             case ToggleTypes.FULLSCREEN:
-                toggle.isOn = Screen.fullScreen;
+                toggle.isOn = PlayerPrefs.GetInt("FullScreen", Screen.fullScreen ? 1 : 0) == 1;
                 break;
 
             case ToggleTypes.CATMODE:
@@ -32,14 +34,18 @@ public class Toggles : MonoBehaviour
                 break;
 
             case ToggleTypes.DISCOMODE:
-
+                toggle.isOn = GameManager.GetInstance().getDiscoMode();
                 break;
         }
+
+        isStarting = false;
     }
 
     public void Toggle(bool isOn)
     {
         if (!toggle) return;
+
+        GameManager gm = GameManager.GetInstance();
 
         switch (type)
         {
@@ -47,17 +53,18 @@ public class Toggles : MonoBehaviour
 
             case ToggleTypes.FULLSCREEN:
                 Screen.fullScreen = isOn;
+                PlayerPrefs.SetInt("FullScreen", isOn ? 1 : 0);
+                PlayerPrefs.Save();
                 break;
 
             case ToggleTypes.CATMODE:
-                GameManager gm = GameManager.GetInstance();
                 gm.setMiauMode(isOn);
-                if (isOn && miau) miau.Play();
-                else if(!isOn && blub) blub.Play();
+                if (!isStarting && isOn && miau) miau.Play();
+                else if(!isStarting && !isOn && blub) blub.Play();
                 break;
 
             case ToggleTypes.DISCOMODE:
-
+                gm.setDiscoMode(isOn);
                 break;
         }
     }
