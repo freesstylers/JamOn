@@ -5,7 +5,7 @@ using UnityEngine;
 public class TestColor : MonoBehaviour
 {
     public SpriteRenderer mSpriteRenderer;
-
+  
     Texture2D mColorSwapTex;
     Color[] mSpriteColors;
 
@@ -25,18 +25,7 @@ public class TestColor : MonoBehaviour
         mColorSwapTex = colorSwapTex;
     }
 
-    //public enum SwapIndex
-    //{
-    //    Uno = 07,
-    //    Dos = 38,       
-    //    Tres = 177,      
-    //}
-
-    //public void SwapColor(SwapIndex index, Color color)
-    //{
-    //    mSpriteColors[(int)index] = color;
-    //    mColorSwapTex.SetPixel((int)index, 0, color);
-    //}
+    
     public void SwapColor(int index, Color color)
     {
         mSpriteColors[index] = color;
@@ -44,10 +33,11 @@ public class TestColor : MonoBehaviour
     }
 
     private void Start()
-    {
+    {       
+
         InitColorSwapTex();
 
-        //StartCoroutine(colorChange());
+        StartCoroutine(colorChange());
     }
 
     IEnumerator colorChange()

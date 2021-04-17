@@ -42,6 +42,5 @@ public class BotonAnim : MonoBehaviour
     public void ResumeEnd()
     {
         countDown.SetActive(true);
-    }
-    
+    }   
 }
