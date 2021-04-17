@@ -1416,6 +1416,7 @@ MonoBehaviour:
   - Level1
   - Level2
   - Level3
+  mixer: {fileID: 0}
 --- !u!4 &1538637022
 Transform:
   m_ObjectHideFlags: 0
@@ -2262,6 +2263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 4917069718193026291, guid: 5e5911d3a81550542bdd1fda1c03e526, type: 3}
+      propertyPath: songs_.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b4e577bf9f69f24897e62c0cf00fb96, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e5911d3a81550542bdd1fda1c03e526, type: 3}
 --- !u!1001 &5659275099178631221
