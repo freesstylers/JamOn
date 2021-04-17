@@ -10,6 +10,7 @@ public class MauricioSing : MonoBehaviour
     public AudioClip[] vowelsO;
     public AudioClip[] vowelsE;
     public AudioClip[] vowelsI;
+    public AudioClip[] miaus;
 
     AudioSource src;
     private void Start()
@@ -24,10 +25,19 @@ public class MauricioSing : MonoBehaviour
         anim.SetInteger("Vocal", vocal);
         if (vocal != -1)
         {
-            AudioClip[][] vowels = { vowelsA, vowelsO, vowelsE, vowelsI };
-            int rnd = Random.Range(0, 3);
-            src.clip = vowels[vocal][rnd];
-            src.Play();
+            if (GameManager.GetInstance().getMiauMode())
+            {
+                int rnd = Random.Range(0, miaus.Length);
+                src.clip = miaus[rnd];
+                src.Play();
+            }
+            else
+            {
+                AudioClip[][] vowels = { vowelsA, vowelsO, vowelsE, vowelsI };
+                int rnd = Random.Range(0, 3);
+                src.clip = vowels[vocal][rnd];
+                src.Play();
+            }
         }
     }
 

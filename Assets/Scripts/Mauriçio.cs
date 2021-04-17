@@ -25,11 +25,22 @@ public class Mauriçio : MonoBehaviour
 
     public Sprite[] arrowsError;
 
+    public Sprite[] arrowsCorrectMiau;
+
+    public Sprite[] arrowsErrorMiau;
     [Header("UI")]
+    [Header("Normal")]
     public GameObject arrowL_;
     public GameObject arrowR_;
     public GameObject arrowU_;
     public GameObject arrowD_;
+
+    [Header("Miau")]
+    public GameObject arrowL_Miau;
+    public GameObject arrowR_Miau;
+    public GameObject arrowU_Miau;
+    public GameObject arrowD_Miau;
+
     public Text textPhase_;
 
     public Transform commandBar_;
@@ -253,14 +264,22 @@ public class Mauriçio : MonoBehaviour
                             comboCounter_++;
                             GameManager.GetInstance().AddScore(level_, points);
                             Debug.Log("Ole");
-                            arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsCorrect[arrowsMauricio_[inputsDone].First];
+
+                            if (GameManager.GetInstance().getMiauMode())
+                                arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsCorrectMiau[arrowsMauricio_[inputsDone].First];
+                            else
+                                arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsCorrect[arrowsMauricio_[inputsDone].First];
                         }
                         else //Tecla erronea
                         {
                             Debug.Log("Tecla incorrecta");
                             comboCounter_ = 0;
                             GameManager.GetInstance().ResetCombo();
-                            arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
+
+                            if (GameManager.GetInstance().getMiauMode())
+                                arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsErrorMiau[arrowsMauricio_[inputsDone].First];
+                            else
+                                arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
                         }
                     }
                     else //Fuera, y por tanto erronea
@@ -268,7 +287,11 @@ public class Mauriçio : MonoBehaviour
                         Debug.Log("Fuera de rango");
                         comboCounter_ = 0;
                         GameManager.GetInstance().ResetCombo();
-                        arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
+
+                        if (GameManager.GetInstance().getMiauMode())
+                            arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsErrorMiau[arrowsMauricio_[inputsDone].First];
+                        else
+                            arrowObjects[inputsDone].GetComponent<SpriteRenderer>().sprite = arrowsError[arrowsMauricio_[inputsDone].First];
                     }
 
                     inputsDone++;
@@ -337,22 +360,38 @@ public class Mauriçio : MonoBehaviour
             switch (aux)
             {
                 case 0:
-                    arrow = Instantiate(arrowU_, commandBar_);
+                    if (GameManager.GetInstance().getMiauMode())
+                        arrow = Instantiate(arrowU_Miau, commandBar_);
+                    else
+                        arrow = Instantiate(arrowU_, commandBar_);
+
                     arrow.transform.position = new Vector3(commandBar_.GetChild(0).transform.position.x, commandBar_.position.y, commandBar_.position.z);
                     break;
                 case 1:
-                    arrow = Instantiate(arrowD_, commandBar_);
+                    if (GameManager.GetInstance().getMiauMode())
+                        arrow = Instantiate(arrowD_Miau, commandBar_);
+                    else
+                        arrow = Instantiate(arrowD_, commandBar_);
+
                     arrow.transform.position = new Vector3(commandBar_.GetChild(0).transform.position.x, commandBar_.position.y, commandBar_.position.z);
                     break;
                 case 2:
-                    arrow = Instantiate(arrowL_, commandBar_);
+                    if (GameManager.GetInstance().getMiauMode())
+                        arrow = Instantiate(arrowL_Miau, commandBar_);
+                    else
+                        arrow = Instantiate(arrowL_, commandBar_);
                     arrow.transform.position = new Vector3(commandBar_.GetChild(0).transform.position.x, commandBar_.position.y, commandBar_.position.z);
                     break;
                 case 3:
-                    arrow = Instantiate(arrowR_, commandBar_);
+                    if (GameManager.GetInstance().getMiauMode())
+                        arrow = Instantiate(arrowR_Miau, commandBar_);
+                    else
+                        arrow = Instantiate(arrowR_, commandBar_);
+
                     arrow.transform.position = new Vector3(commandBar_.GetChild(0).transform.position.x, commandBar_.position.y, commandBar_.position.z);
                     break;
             }
+
             gameObject.SendMessage("Sing", vocal);
             arrowsMauricio_.Add(new Pair<int, float>(aux, timer_));
             arrowObjects.Add(arrow);

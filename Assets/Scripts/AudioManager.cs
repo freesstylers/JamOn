@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public AudioClip[] minionDeath;
     public AudioClip[] minionScream;
+    public AudioClip[] minionScreamMiau;
 
     float timeElapsed;
     float time;
@@ -25,22 +26,38 @@ public class AudioManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-            source.clip = minionScream[0];
+            if (GameManager.GetInstance().getMiauMode())
+                source.clip = minionScreamMiau[Random.Range(0, minionScreamMiau.Length)];
+            else
+                source.clip = minionScream[0];
+
             source.Play();
         }
         else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            source.clip = minionScream[1];
+            if (GameManager.GetInstance().getMiauMode())
+                source.clip = minionScreamMiau[Random.Range(0, minionScreamMiau.Length)];
+            else
+                source.clip = minionScream[1];
+            
             source.Play();
         }
         else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            source.clip = minionScream[2];
+            if (GameManager.GetInstance().getMiauMode())
+                source.clip = minionScreamMiau[Random.Range(0, minionScreamMiau.Length)];
+            else
+                source.clip = minionScream[2];
+            
             source.Play();
         }
         else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
-            source.clip = minionScream[3];
+            if (GameManager.GetInstance().getMiauMode())
+                source.clip = minionScreamMiau[Random.Range(0, minionScreamMiau.Length)];
+            else
+                source.clip = minionScream[3];
+            
             source.Play();
         }
 

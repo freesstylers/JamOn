@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Cinematica : MonoBehaviour
 {
-    public AudioClip[] audios;
+    public AudioClip[] audiosFish;
+    public AudioClip[] audiosMiau;
     public Sprite[] images;
 
     public int[] textToChangeImage = { 0,1 };
@@ -20,7 +21,8 @@ public class Cinematica : MonoBehaviour
     static string text2 = "Jose jose jose jose jose";
     static string text3 = "JOSE JOSE JOSE JOSE JOSE";
     
-    string[] texts = { text1, text2, text3 };
+    static string[] texts = { text1, text2, text3 };
+    string[][] cinematica = { texts };
 
     float t = 0.0f;
     //float tText = 0.0f;
@@ -39,6 +41,9 @@ public class Cinematica : MonoBehaviour
         mauriçioHablame = gameObject.GetComponent<AudioSource>();
         //screenImage.material = scaleGray;
         screenImage.sprite = images[currentImage];
+
+        if (GameManager.GetInstance().getMiauMode())
+            MiauMode();
     }
 
     // Update is called once per frame
@@ -75,7 +80,15 @@ public class Cinematica : MonoBehaviour
 
                     if (i % 3 == 0)
                     {
-                        mauriçioHablame.clip = audios[Random.Range(0, audios.Length)];
+                        if (GameManager.GetInstance().getMiauMode())
+                        {
+                            mauriçioHablame.clip = audiosMiau[Random.Range(0, audiosMiau.Length)];
+                        }
+                        else
+                        {
+                            mauriçioHablame.clip = audiosFish[Random.Range(0, audiosFish.Length)];
+                        }
+
                         mauriçioHablame.Play();
                     }
 
@@ -93,6 +106,23 @@ public class Cinematica : MonoBehaviour
                     t = delayEntreTextos;
                 }
             }
+        }
+    }
+
+    void MiauMode()
+    {
+        for (int i = 0; i < texts.Length; i++) //Para cada texto
+        {
+            string[] words = texts[i].Split(' ');
+
+            string fin = "";
+
+            for (int j = 0; j < words.Length; j++)
+            {
+                fin += "Miau ";
+            }
+
+            texts[i] = fin;
         }
     }
 }
