@@ -41,6 +41,9 @@ public class GameManager : MonoBehaviour
     public float GetFinalScore() {
         float res = scores_[0] + scores_[1] + scores_[2];
         if (PlayerPrefs.GetFloat("bestScore") < res) PlayerPrefs.SetFloat("bestScore", res);
+        scores_[0] = 0.0f;
+        scores_[1] = 0.0f;
+        scores_[2] = 0.0f;
         return res; 
     }
     public float GetLevelScore(int level) { return scores_[level]; }
