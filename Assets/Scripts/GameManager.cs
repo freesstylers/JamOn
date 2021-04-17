@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
         return levelScenes[level];
     }
 
-    protected bool miauMode = false;
+    protected bool miauMode = true;
 
     public void setMiauMode(bool value)
     {
