@@ -2027,6 +2027,10 @@ PrefabInstance:
       propertyPath: enemySpawner
       value: 
       objectReference: {fileID: 99198083}
+    - target: {fileID: 2855296962331959738, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
+      propertyPath: commandsPerBattle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5495819561934809331, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
       propertyPath: arrowsCorrect.Array.size
       value: 4
