@@ -50,7 +50,7 @@ public class EnemySpawner : MonoBehaviour
         //TOOD: hacer que algunos enemigos se unan a la causa KEKW
         float percentage = GameManager.GetInstance().GetPatronPerformance();
         GameManager.GetInstance().SetPatronPerformance(0.0f);
-        float final = 0.3f * (percentage / 100.0f);
+        float final = 0.2f * (percentage / 100.0f);
         int bucle = Mathf.RoundToInt(enemies.Count * (1.0f-final));
         for (int i = 0; i < bucle; i++)
         {
