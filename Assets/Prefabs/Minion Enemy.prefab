@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intervaloX: 1
   intervaloY: 0.1
-  intervaloXB: 0.3
+  intervaloXB: 1.5
   intervaloYB: 0.5
   timeSpawn: 1
   timeBattle: 1
