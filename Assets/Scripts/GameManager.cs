@@ -64,6 +64,18 @@ public class GameManager : MonoBehaviour
 
     protected int level_ = 0; //0,1,2
 
+    protected int cinematica = 0; //0,1,2...
+
+    public void setCinematica (int value)
+    {
+        cinematica = value;
+    }
+
+    public int getCinematica()
+    {
+        return cinematica;
+    }
+
     protected int combo_ = 1;
     public int GetCombo() { return combo_; }
     public void AddCombo() { combo_++; }
@@ -99,7 +111,7 @@ public class GameManager : MonoBehaviour
         return levelScenes[level];
     }
 
-    protected bool miauMode = true;
+    protected bool miauMode = false;
 
     public void setMiauMode(bool value)
     {

@@ -21,8 +21,11 @@ public class Cinematica : MonoBehaviour
     static string text2 = "Jose jose jose jose jose";
     static string text3 = "JOSE JOSE JOSE JOSE JOSE";
     
-    static string[] texts = { text1, text2, text3 };
-    string[][] cinematica = { texts };
+    static string[] textsCinematica0 = { text1, text2, text3 };
+    static string[] textsCinematica1 = { text3, text1, text2 };
+    string[][] cinematicas = { textsCinematica0, textsCinematica1 };
+
+    string[] texts;
 
     float t = 0.0f;
     //float tText = 0.0f;
@@ -41,6 +44,8 @@ public class Cinematica : MonoBehaviour
         mauriçioHablame = gameObject.GetComponent<AudioSource>();
         //screenImage.material = scaleGray;
         screenImage.sprite = images[currentImage];
+
+        texts = cinematicas[GameManager.GetInstance().getCinematica()];
 
         if (GameManager.GetInstance().getMiauMode())
             MiauMode();
