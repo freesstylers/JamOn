@@ -427,6 +427,7 @@ MonoBehaviour:
   - {fileID: 7137596556644173555, guid: f2b29caee15c0a24cbfb0de2ff5cb3a0, type: 3}
   - {fileID: 6986295319257821281, guid: 81bac9d0448944546b56659498526cee, type: 3}
   enemy: 4
+  mauriciusPosition: {fileID: 1038455811}
   minionBehaviour: {fileID: 1038455809}
 --- !u!4 &99198084
 Transform:
@@ -2024,11 +2025,11 @@ PrefabInstance:
     - target: {fileID: 2855296962331959738, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
       propertyPath: arrowL_
       value: 
-      objectReference: {fileID: 4363553105533531484, guid: 7ccec7088c9e5e047b413c3240c06cf9, type: 3}
+      objectReference: {fileID: 4363553105533531484, guid: bb9002a3dd644b84d806e32b56dea1ee, type: 3}
     - target: {fileID: 2855296962331959738, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
       propertyPath: arrowR_
       value: 
-      objectReference: {fileID: 1627307472213931429, guid: bb9002a3dd644b84d806e32b56dea1ee, type: 3}
+      objectReference: {fileID: 1627307472213931429, guid: 7ccec7088c9e5e047b413c3240c06cf9, type: 3}
     - target: {fileID: 2855296962331959740, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
