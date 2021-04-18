@@ -45,7 +45,7 @@ public class TestColor : MonoBehaviour
                 SwapColor(i, GameManager.GetInstance().getColors()[i]);
             }
 
-            mColorSwapTex.Apply();
+            //mColorSwapTex.Apply();
         }
     }
 
