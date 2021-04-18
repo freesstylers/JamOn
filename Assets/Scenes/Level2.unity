@@ -2577,6 +2577,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2196633815064490643, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269227743878181979, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
 --- !u!114 &70028082303777920 stripped
@@ -2665,6 +2673,10 @@ PrefabInstance:
       propertyPath: enemyPrefabs.Array.data[1]
       value: 
       objectReference: {fileID: 6348013675020906088, guid: 2a2b4c6ccb8e208438fefe246466f243, type: 3}
+    - target: {fileID: 5104372080085145021, guid: d5885f4613ca59d47a073760c8a9440f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5885f4613ca59d47a073760c8a9440f, type: 3}
 --- !u!1001 &5495819562770382043

@@ -8,7 +8,7 @@ public class Blood : MonoBehaviour
     public float time;
     public TrailRenderer trail;
     public SpriteRenderer sprite;
-    Color[] colors = { Color.red, Color.gray, new Color(0, 0, 0, 0) };
+    Color[] colors = {Color.gray, Color.red, new Color(0, 0, 0, 0) };
 
     float timer = 0;
 

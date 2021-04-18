@@ -2506,6 +2506,10 @@ PrefabInstance:
       propertyPath: battlePosition
       value: 
       objectReference: {fileID: 626346945}
+    - target: {fileID: 5104372080085145021, guid: d5885f4613ca59d47a073760c8a9440f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5885f4613ca59d47a073760c8a9440f, type: 3}
 --- !u!114 &1736024361 stripped

@@ -3548,7 +3548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 257.35742}
+  m_AnchoredPosition: {x: 0, y: 299}
   m_SizeDelta: {x: 960, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848037818
@@ -3571,7 +3571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 368263267df370f4e954a42e8d3df70b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3a81c15305403a4e92d028980b9cb64, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7441,7 +7441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 77.322296}
+  m_AnchoredPosition: {x: 0, y: 61.322308}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1551750753
@@ -9420,8 +9420,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Pablo Garc\xEDa Grossi\nGonzalo Cidoncha P\xE9rez\nGuillermo S\xE1nchez
     De Lamadrid\nIgnacio Ory Alonso\nJose Mart\xEDn Serrano\n\xC1lvar Juli\xE1n De
-    Diego\nJavi Pog Gerino\n\nSpecial Thanks To:\n\nMauri\xE7io Verde Hoja\nMaurizio
-    De Jorio\nMauricio Colmenero y su mujer Rei Evangelion\nIslas Mauricio"
+    Diego\nJavi\n\nSpecial Thanks To:\n\nMauri\xE7io Verde Hoja\nMaurizio De Jorio\nMauricio
+    Colmenero y su mujer Rei Evangelion\nIslas Mauricio"
 --- !u!222 &1980214611
 CanvasRenderer:
   m_ObjectHideFlags: 0
