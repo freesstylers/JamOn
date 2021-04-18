@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
             int rnd = Random.Range(0, enemyPrefabs.Length);
             GameObject obj = Instantiate(enemyPrefabs[rnd], transform);
             obj.AddComponent<MoveAround>().enabled = false;
-            obj.GetComponent<EnemyController>().setBattlePosition(battlePosition);
+            obj.GetComponent<EnemyController>().setBattlePosition(battlePosition, mauriciusPosition);
             enemies.Add(obj);
         }
     }
@@ -90,7 +90,7 @@ public class EnemySpawner : MonoBehaviour
     {
         foreach (GameObject item in enemies)
         {
-            item.GetComponent<EnemyController>().setBattlePosition(battlePosition);
+            item.GetComponent<EnemyController>().setBattlePosition(battlePosition, mauriciusPosition);
         }
     }
     private void playDeathSound()

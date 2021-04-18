@@ -2652,7 +2652,7 @@ PrefabInstance:
     - target: {fileID: 5104372079280733391, guid: d5885f4613ca59d47a073760c8a9440f, type: 3}
       propertyPath: mauriciusPosition
       value: 
-      objectReference: {fileID: 5495819562770382044}
+      objectReference: {fileID: 1038455811}
     - target: {fileID: 5104372079280733391, guid: d5885f4613ca59d47a073760c8a9440f, type: 3}
       propertyPath: minionBehaviour
       value: 
