@@ -184,12 +184,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void Awake()
     {
-        _instancia.SetValues();
+        ChangeColors();
     }
 
-    Color[] colors = new Color[256];
+    private void Start()
+    {
+        _instancia.SetValues();      
+    }
+
+    public Color[] colors = new Color[256];
 
     void ChangeColors()
     {

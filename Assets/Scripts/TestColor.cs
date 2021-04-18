@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestColor : MonoBehaviour
 {
-    public SpriteRenderer mSpriteRenderer;
+    SpriteRenderer mSpriteRenderer;
   
     Texture2D mColorSwapTex;
     Color[] mSpriteColors;
@@ -33,23 +33,26 @@ public class TestColor : MonoBehaviour
     }
 
     private void Start()
-    {       
+    {
+        mSpriteRenderer = GetComponent<SpriteRenderer>();
 
         InitColorSwapTex();
+      
+        for (int i = 0; i < 255; i++)
+        {
+            SwapColor(i, GameManager.GetInstance().getColors()[i]);
+        }
 
-        StartCoroutine(colorChange());
+        mColorSwapTex.Apply();
     }
 
-    IEnumerator colorChange()
+    public void swapNewColors()
     {
-        while (true)
+        for (int i = 0; i < 255; i++)
         {
-            yield return new WaitForSeconds(1);
-            for (int i = 0; i < 255; i++)
-            {
-                SwapColor(i, Random.ColorHSV());
-            }
-            mColorSwapTex.Apply();
+            SwapColor(i, GameManager.GetInstance().getColors()[i]);
         }
+
+        mColorSwapTex.Apply();
     }
 }
