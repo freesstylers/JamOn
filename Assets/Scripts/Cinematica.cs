@@ -63,13 +63,15 @@ public class Cinematica : MonoBehaviour
     int i = 0;
     int currentText = 0;
 
-    float delayLetra = 0.15f;
+    public float delayLetra = 0.015f;
     float delayEntreTextos = -0.75f;
+
+    bool betweenTexts = false;
 
     AudioSource mauriçioHablame;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         mauriçioHablame = gameObject.GetComponent<AudioSource>();
         screenImage.material = scaleGray;
@@ -89,6 +91,17 @@ public class Cinematica : MonoBehaviour
     {
         t += Time.deltaTime;
 
+        if(betweenTexts && t >= 0)
+        {
+            if (currentImage < Images.Length && currentImage < textToChangeImage)
+                UpdateImage(currentText);
+
+            betweenTexts = false;
+
+            if (currentText < texts.Length)
+                screenText.text = "";
+        }
+
         if (currentText < texts.Length)
             UpdateText();
         
@@ -98,9 +111,6 @@ public class Cinematica : MonoBehaviour
             SceneManager.LoadSceneAsync(GameManager.GetInstance().getLevelScene(GameManager.GetInstance().getLevel()));
             return;
         }
-
-        if (currentImage < Images.Length && currentImage < textToChangeImage)
-            UpdateImage(currentText);
     }
 
     void UpdateImage(int text)
@@ -108,7 +118,7 @@ public class Cinematica : MonoBehaviour
         if (text == textToChangeImage)
         {
             currentImage++;
-            screenImage.sprite = Images[GameManager.GetInstance().getCinematica()][currentImage/2];
+            screenImage.sprite = Images[GameManager.GetInstance().getCinematica()][currentImage/2 + 1];
         }
     }
 
@@ -145,8 +155,7 @@ public class Cinematica : MonoBehaviour
 
                     i = 0;
 
-                    if (currentText < texts.Length)
-                        screenText.text = "";
+                    betweenTexts = true;
 
                     t = delayEntreTextos;
                 }

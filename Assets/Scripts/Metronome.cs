@@ -18,6 +18,7 @@ public class Metronome : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bpm = GameManager.GetInstance().getBPM(GameManager.GetInstance().getLevel());
         _actualTime = (bpm / 60);
         pointA = transform.localEulerAngles + new Vector3(0f, 0f, 60f);
         pointB = transform.localEulerAngles + new Vector3(0f, 0f, -60f);
@@ -26,6 +27,7 @@ public class Metronome : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bpm = GameManager.GetInstance().getBPM(GameManager.GetInstance().getLevel());
         _timer += Time.deltaTime;
         _actualTime = (bpm / 60);
         if((1 / _actualTime) - _timer <= 0.1f)
