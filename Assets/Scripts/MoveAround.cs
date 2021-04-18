@@ -47,8 +47,10 @@ public class MoveAround : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.GetInstance().paused) return;
+
         if (dead) return;
-        sprite.sortingOrder = (int)(-transform.position.y * 10);
+        sprite.sortingOrder = (int)Mathf.Round(-transform.position.y * 100);
         
         if (!jumpin && !sideForce)
         {
@@ -189,7 +191,7 @@ public class MoveAround : MonoBehaviour
     public void Kill()
     {
         dead = true;
-        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        rb.velocity = Vector3.zero;
         GetComponent<Animator>().SetTrigger("Dead");
         Invoke("DestroyGameObject", timeDying);
     }

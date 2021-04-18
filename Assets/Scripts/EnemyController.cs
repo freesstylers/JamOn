@@ -32,6 +32,8 @@ public class EnemyController : MonoBehaviour
     
     void Update()
     {
+        if (GameManager.GetInstance().paused) return;
+
         if (dead) return;
         sprite.sortingOrder = (int)(-transform.position.y * 10);
         transform.position = Vector2.Lerp(ini, fin, actualTime / time);

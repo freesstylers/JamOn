@@ -133,6 +133,8 @@ public class Mauriçio : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.GetInstance().paused) return;
+
         if (lose)// Juego perdido
         {
             Losing();

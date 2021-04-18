@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 218962751561571693}
   - component: {fileID: 3716207374997218433}
   - component: {fileID: 7627389174896227155}
+  - component: {fileID: -2634071023072855766}
   m_Layer: 0
   m_Name: YellowMinionEnemy
   m_TagString: Untagged
@@ -52,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,3 +124,15 @@ MonoBehaviour:
   timeBattle: 1
   timeDying: 1
   totalAnimTime: 0.5
+--- !u!114 &-2634071023072855766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218962751561571694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

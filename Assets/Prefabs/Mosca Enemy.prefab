@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6149890492627117673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137596556644173555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6918724428927687581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,6 +67,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6349237908797202265, guid: 678ca1a30913e214991a999ea0778d63, type: 3}
+    - target: {fileID: 218962751561571693, guid: 9ac6e3bc45d5e9040ad24102de5c1a00, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
     - target: {fileID: 218962751561571694, guid: 9ac6e3bc45d5e9040ad24102de5c1a00, type: 3}
       propertyPath: m_Name
       value: Mosca Enemy
@@ -65,3 +81,8 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: f575fd00903d47e40a5c8e0ecc8274f3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ac6e3bc45d5e9040ad24102de5c1a00, type: 3}
+--- !u!1 &7137596556644173555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 218962751561571694, guid: 9ac6e3bc45d5e9040ad24102de5c1a00, type: 3}
+  m_PrefabInstance: {fileID: 6918724428927687581}
+  m_PrefabAsset: {fileID: 0}

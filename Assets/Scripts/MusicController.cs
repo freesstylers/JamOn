@@ -16,7 +16,9 @@ public class MusicController : MonoBehaviour
 
     private void Update()
     {
-        if(GameManager.GetInstance().GetLose() && audio_.isPlaying)
+        if (GameManager.GetInstance().paused) return;
+
+        if (GameManager.GetInstance().GetLose() && audio_.isPlaying)
         {
             audio_.Stop();
         }
