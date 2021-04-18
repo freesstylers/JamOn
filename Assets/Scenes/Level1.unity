@@ -2658,7 +2658,7 @@ PrefabInstance:
       objectReference: {fileID: 1155861341}
     - target: {fileID: 2855296962331959738, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
       propertyPath: commandsPerBattle
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2855296962331959738, guid: 033a6cacc0d9e9647bac5dc84ea93681, type: 3}
       propertyPath: arrowL_

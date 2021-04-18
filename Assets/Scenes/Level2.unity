@@ -2530,7 +2530,7 @@ PrefabInstance:
       objectReference: {fileID: 2096142637}
     - target: {fileID: 70028080607517559, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
       propertyPath: hp
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 70028080607517559, guid: 235fe8f6225cd0247a50c0e940cb7a77, type: 3}
       propertyPath: hpSlider
