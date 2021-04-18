@@ -9,9 +9,11 @@ public class InputPause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {       
-        if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                elPutoPanel.SetActive(true);
-         }     
+        if (!GameManager.GetInstance().paused && Input.GetKeyDown(KeyCode.Escape))
+        {
+            elPutoPanel.SetActive(true);
+
+            GameManager.GetInstance().Pause();
+        }     
     }
 }

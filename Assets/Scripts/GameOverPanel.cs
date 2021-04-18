@@ -14,7 +14,9 @@ public class GameOverPanel : MonoBehaviour
 
     void Update()
     {
-        if(GameManager.GetInstance().GetLose())
+        if (GameManager.GetInstance().paused) return;
+
+        if (GameManager.GetInstance().GetLose())
         {
             if (!completed)
             {

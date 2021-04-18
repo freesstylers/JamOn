@@ -19,6 +19,7 @@ public class MauricioSing : MonoBehaviour
         if (src == null)
             Debug.Log("No tengo AudioSource");
     }
+
     // Update is called once per frame
     void Sing(int vocal)
     {

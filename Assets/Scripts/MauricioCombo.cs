@@ -19,6 +19,8 @@ public class MauricioCombo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.GetInstance().paused) return;
+
         if (GameManager.GetInstance().GetCombo() >= 10)
         {
             anim.SetBool("Combo10", true);

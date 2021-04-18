@@ -47,6 +47,8 @@ public class MoveAround : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.GetInstance().paused) return;
+
         if (dead) return;
         sprite.sortingOrder = (int)Mathf.Round(-transform.position.y * 100);
         
