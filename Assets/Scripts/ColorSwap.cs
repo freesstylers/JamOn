@@ -7,6 +7,7 @@ public class ColorSwap : MonoBehaviour
 
     public void Random()
     {
-        GameManager.GetInstance().RandomizeSprites();
+        if(GameManager.GetInstance().getDiscoMode())
+            GameManager.GetInstance().RandomizeSprites();
     }
 }
