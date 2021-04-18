@@ -16,6 +16,7 @@ public class PlayTransition : SimpleTransition
 
     public Text[] textToFade;
     public Image[] buttonsToFade;
+    public Image[] imagesToFade;
 
     public Transform throne;
     public sleppeScript cultist1;
@@ -165,10 +166,6 @@ public class PlayTransition : SimpleTransition
                 else
                 {
                     state++;
-                    GameObject.Destroy(cultist1.gameObject);
-                    GameObject.Destroy(cultist2.gameObject);
-
-                    cultist1 = cultist2 = null;
                 }
                 break;
 
@@ -194,6 +191,9 @@ public class PlayTransition : SimpleTransition
             i.color = c;
 
         foreach (Text i in textToFade)
+            i.color = c;
+
+        foreach (Image i in imagesToFade)
             i.color = c;
 
         if (t >= fadeTime)

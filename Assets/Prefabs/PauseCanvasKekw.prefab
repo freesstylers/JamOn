@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -216, y: -154}
-  m_SizeDelta: {x: 282.96204, y: 261.95105}
+  m_SizeDelta: {x: 282, y: 282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8409858143298076786
 CanvasRenderer:
@@ -118,7 +118,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8409858143298076787}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Options, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &8409858143918312379
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +159,7 @@ RectTransform:
   m_GameObject: {fileID: 8409858143918312379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8409858144566378463}
   m_RootOrder: 3
@@ -155,7 +167,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 223, y: -152.9701}
-  m_SizeDelta: {x: 282.96204, y: 261.95105}
+  m_SizeDelta: {x: 282, y: 282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8409858143918312383
 CanvasRenderer:
@@ -185,7 +197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0c8aaa9a40453c1478d5e359839bc226, type: 3}
+  m_Sprite: {fileID: 7635563162873571100, guid: ee138a491af95fd458d8adfbbaf5cfa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -223,8 +235,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 2a7d8c7b10f1d0241abe60260624f2ca, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 5cf0e4412de7bb34099099b6a9e59779, type: 3}
+    m_HighlightedSprite: {fileID: -7803240742065075551, guid: ee138a491af95fd458d8adfbbaf5cfa9, type: 3}
+    m_PressedSprite: {fileID: -930632838449507081, guid: ee138a491af95fd458d8adfbbaf5cfa9, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -287,7 +299,7 @@ Canvas:
   m_GameObject: {fileID: 8409858144520506199}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -297,7 +309,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 500
   m_TargetDisplay: 0
 --- !u!114 &8409858144520506197
 MonoBehaviour:
@@ -369,7 +381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8409858144566378463
 RectTransform:
   m_ObjectHideFlags: 0

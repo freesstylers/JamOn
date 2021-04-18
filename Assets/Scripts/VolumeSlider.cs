@@ -24,6 +24,10 @@ public class VolumeSlider : MonoBehaviour
 
         PlayerPrefs.SetFloat(mixerVar, sliderValue);
         PlayerPrefs.Save();
+
+        float pog = PlayerPrefs.GetFloat(mixerVar);
+
+        pog++;
     }
 
     public void Noise()
