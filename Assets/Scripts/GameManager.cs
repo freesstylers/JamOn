@@ -56,6 +56,11 @@ public class GameManager : MonoBehaviour
 
     public int getBPM(int level) { return bpm_[level]; }
 
+    public void addBPM(int level, int bpm)
+    {
+        bpm_[level] += bpm;
+    }
+
     // Constructor
     // Lo ocultamos el constructor para no poder crear nuevos objetos "sin control"
     protected GameManager() {}
@@ -100,7 +105,12 @@ public class GameManager : MonoBehaviour
     public int[] getLevelPatrons (int level) { return levels[level];  }
 
     public int getLevel()   {   return level_;    }
-    public void advanceLevel()   { level_++;    }
+    public void advanceLevel()   { 
+        level_++;
+        bpm_[0] = 135;
+        bpm_[1] = 125;
+        bpm_[2] = 110;
+    }
 
     public void setCurrentPatron(int value) { currentPatron = value; }
 

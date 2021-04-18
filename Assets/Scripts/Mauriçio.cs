@@ -103,8 +103,19 @@ public class Mauriçio : MonoBehaviour
 
     private void Start()
     {
+        SetNewBPM();
+
+        barBackup = commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color;
+
+        patrones = GameManager.GetInstance().getLevelPatrons(GameManager.GetInstance().getLevel()); //Con esto se sacan la lista de notas que tendrá cada patron del nivel
+
+        GameManager.GetInstance().setCurrentPatron(0);
+    }
+
+    private void SetNewBPM()
+    {
         bpm = GameManager.GetInstance().getBPM(level_);
-        
+
         delayCommandingPlayer = -1.0f * (60.0f / bpm); //Espera en estado player que hay desde que sale de Commanding hasta que empieza el ciclo de notas
         advanceTime = -6.0f * (60.0f / bpm); //Tiempo que se queda en player antes de saltar a Battle
         delayBattleAdvance = -1.0f * (60.0f / bpm); //Tiempo que va a estar en Advance
@@ -114,11 +125,7 @@ public class Mauriçio : MonoBehaviour
 
         margin = 0.3f * (60.0f / bpm);
 
-        barBackup = commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color;
-
-        patrones = GameManager.GetInstance().getLevelPatrons(GameManager.GetInstance().getLevel()); //Con esto se sacan la lista de notas que tendrá cada patron del nivel
-
-        GameManager.GetInstance().setCurrentPatron(0);
+        Debug.Log(bpm);
     }
 
     void Update()
@@ -318,9 +325,15 @@ public class Mauriçio : MonoBehaviour
             if (!lose)
             {
                 if (numCommands >= commandsPerBattle)
+                {
                     ExitPlayerState();
+                    GameManager.GetInstance().addBPM(level_, 1*(level_+1));
+                    SetNewBPM();
+                }
                 else
+                {
                     PrepareCommandFromPlayer();
+                }
             }
 
             comboCounter_ = 0;
