@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Pair<T, U>
 {
@@ -103,6 +104,8 @@ public class Mauriçio : MonoBehaviour
 
     private void Start()
     {
+        level_ = GameManager.GetInstance().getLevel();
+
         SetNewBPM();
 
         barBackup = commandBar_.GetChild(0).GetComponent<SpriteRenderer>().color;
@@ -130,7 +133,11 @@ public class Mauriçio : MonoBehaviour
 
     void Update()
     {
-        if (lose) return; // Juego perdido
+        if (lose)// Juego perdido
+        {
+            Losing();
+            return;
+        }
         if (currentPatron < patrones.Length)
         {
             Phase phase = GameManager.GetInstance().GetPhase();
@@ -218,6 +225,14 @@ public class Mauriçio : MonoBehaviour
                 gameObject.transform.Translate(new Vector3(2.0f * Time.deltaTime, 0, 0));
                 MauriçiusJr.Translate(new Vector3(2.0f * Time.deltaTime, 0, 0));
             }
+        }
+    }
+
+    void Losing()
+    {
+        if(Input.anyKeyDown)
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
@@ -334,6 +349,10 @@ public class Mauriçio : MonoBehaviour
                 {
                     PrepareCommandFromPlayer();
                 }
+            }
+            else
+            {
+                GameManager.GetInstance().SetLose(true);
             }
 
             comboCounter_ = 0;

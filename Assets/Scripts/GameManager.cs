@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public enum Phase { COMMANDING, PLAYER, BATTLE, ADVANCE, ENDLEVEL1, ENDLEVEL2 }
+public enum Phase { COMMANDING, PLAYER, BATTLE, ADVANCE, ENDLEVEL1, ENDLEVEL2}
 
 // ------------------------
 // Clase Game Manager
@@ -31,6 +31,13 @@ public class GameManager : MonoBehaviour
         // si no existia, en este punto ya la habra creado
         return _instancia;
     }
+
+    bool lose_ = false;
+
+    public bool GetLose() { 
+        return lose_; 
+    }
+    public void SetLose(bool lose) { lose_ = lose; }
 
     protected int BPM_;
     Phase phase_ = Phase.ADVANCE;
@@ -66,8 +73,8 @@ public class GameManager : MonoBehaviour
     protected GameManager() {}
 
     static public int[] level1 = { 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4};
-    static public int[] level2 = { 2, 2, 3, 3, 3, 4, 4, 4, 5};
-    static public int[] level3 = { 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5};
+    static public int[] level2 = { 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5};
+    static public int[] level3 = { 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6};
 
     static public int[][] levels = { level1, level2, level3 };
 

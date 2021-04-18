@@ -13,4 +13,12 @@ public class MusicController : MonoBehaviour
         audio_.clip = songs_[GameManager.GetInstance().getLevel()];
         audio_.Play();
     }
+
+    private void Update()
+    {
+        if(GameManager.GetInstance().GetLose() && audio_.isPlaying)
+        {
+            audio_.Stop();
+        }
+    }
 }
