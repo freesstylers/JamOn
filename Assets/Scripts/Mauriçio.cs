@@ -96,7 +96,10 @@ public class Mauriçio : MonoBehaviour
 
     int comboCounter_ = 0;
 
+    // Control de las fases de una batalla
     int numCommands = 0;
+
+    bool lose = false;
 
     private void Start()
     {
@@ -120,6 +123,7 @@ public class Mauriçio : MonoBehaviour
 
     void Update()
     {
+        if (lose) return; // Juego perdido
         if (currentPatron < patrones.Length)
         {
             Phase phase = GameManager.GetInstance().GetPhase();
@@ -307,13 +311,15 @@ public class Mauriçio : MonoBehaviour
         }
         else
         {
+
+            if (comboCounter_ == arrowsMauricio_.Count) GameManager.GetInstance().AddCombo();
+            else if(numCommands <= commandsPerBattle) lose =  enemySpawner.HarmMauricius(); // Devuelve si ha muerto
             numCommands++;
             if (numCommands >= commandsPerBattle)
                 ExitPlayerState();
             else
                 PrepareCommandFromPlayer();
-                
-            if (comboCounter_ == arrowsMauricio_.Count) GameManager.GetInstance().AddCombo();
+
             comboCounter_ = 0;
         }
     }

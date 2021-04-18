@@ -187,7 +187,7 @@ MonoBehaviour:
   minTime: 1
   maxTime: 2
   timeBattle: 1
-  timeDying: 0.5
+  timeDying: 1
   totalAnimTime: 0.5
 --- !u!50 &8174717488207463007
 Rigidbody2D:

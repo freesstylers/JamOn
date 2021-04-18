@@ -14,12 +14,13 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] enemyPrefabs;
     [Tooltip("Enemigo a seleccionar")]
     public Enemies enemy;
+    [Tooltip("Posicion de Maurisius para atacarle")]
+    [SerializeField]
+    Transform mauriciusPosition;
 
     public MinionBehaviour minionBehaviour;
 
     List<GameObject> enemies = new List<GameObject>();
-
-    int waveHP = 3;
 
     void Start()
     {
@@ -67,5 +68,25 @@ public class EnemySpawner : MonoBehaviour
         }
         minionBehaviour.AddMinions(enemies);
         enemies.Clear();
+    }
+
+    public bool HarmMauricius()
+    {
+        minionBehaviour.Damage();
+        if (minionBehaviour.GetHP() <= 0)
+        {
+            battlePosition = mauriciusPosition;
+            ChangeBattlePosition();
+            return true;
+        }
+        return false;
+    }
+
+    private void ChangeBattlePosition()
+    {
+        foreach (GameObject item in enemies)
+        {
+            item.GetComponent<EnemyController>().setBattlePosition(battlePosition);
+        }
     }
 }

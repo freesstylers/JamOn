@@ -40,6 +40,7 @@ public class MinionBehaviour : MonoBehaviour
 
     public void Damage()
     {
+        if (hp <= 0) return;
         int bucle = colectivo.Count / hp;
         for (int i = 0; i < bucle; i++)
         {
@@ -71,10 +72,15 @@ public class MinionBehaviour : MonoBehaviour
             e.AddComponent<Rigidbody2D>().isKinematic = true;
             Destroy(e.GetComponent<EnemyController>());
             MoveAround m = e.GetComponent<MoveAround>();
-            colectivo[0].GetComponent<MoveAround>().SetVaribles(m);
+            esbirro.GetComponent<MoveAround>().SetVaribles(m);
             m.enabled = true;
             m.setBattlePosition(battlePosition);
             colectivo.Add(e);
         }
+    }
+
+    public int GetHP()
+    {
+        return hp;
     }
 }
