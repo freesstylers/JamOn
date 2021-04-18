@@ -6,11 +6,14 @@ public class EnemyController : MonoBehaviour
 {
     public float intervaloX, intervaloY, intervaloXB, intervaloYB;
     public float timeSpawn, timeBattle, timeDying;
+
+    public GameObject blood;
     float time;
     float actualTime = 0;
 
     public float totalAnimTime;
     Transform battlePosition;
+    Transform mauriciusPos;
 
     Vector2 fin;
     Vector2 ini;
@@ -35,7 +38,7 @@ public class EnemyController : MonoBehaviour
         if (GameManager.GetInstance().paused) return;
 
         if (dead) return;
-        sprite.sortingOrder = (int)(-transform.position.y * 10);
+        sprite.sortingOrder = (int)(-transform.position.y * 100);
         transform.position = Vector2.Lerp(ini, fin, actualTime / time);
 
         actualTime += Time.deltaTime;
@@ -68,14 +71,17 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void setBattlePosition(Transform pos)
+    public void setBattlePosition(Transform pos, Transform mauri)
     {
         battlePosition = pos;
+        mauriciusPos = mauri;
     }
 
     public void Kill()
     {
         dead = true;
+        GameObject obj = Instantiate(blood, gameObject.transform.position, Quaternion.identity);
+        obj.GetComponent<Blood>().mauricius = mauriciusPos.GetChild(0).transform;
         GetComponent<Animator>().SetTrigger("Dead");
         Invoke("DestroyGameObject", timeDying);
     }

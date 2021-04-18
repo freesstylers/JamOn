@@ -123,6 +123,7 @@ MonoBehaviour:
   timeSpawn: 1
   timeBattle: 1
   timeDying: 1
+  blood: {fileID: 1421695834769154492, guid: a7e99f7dc9b2b7244902b3bec714154c, type: 3}
   totalAnimTime: 0.5
 --- !u!114 &5183289247242572834
 MonoBehaviour:
