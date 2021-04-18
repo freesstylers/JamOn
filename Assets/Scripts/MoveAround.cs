@@ -38,6 +38,9 @@ public class MoveAround : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        float x = transform.parent.position.x;
+        float y = transform.parent.position.y;
+        fin = new Vector2(Random.Range(x - intervaloX, x + intervaloX), Random.Range(y - intervaloY, y + intervaloY));
         NewPosition();
         NewTime();        
     }

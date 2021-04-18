@@ -70,6 +70,8 @@ public class Cinematica : MonoBehaviour
 
     AudioSource mauriçioHablame;
 
+    bool changingScene = false;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -105,8 +107,9 @@ public class Cinematica : MonoBehaviour
         if (currentText < texts.Length)
             UpdateText();
         
-        else
+        else if (!changingScene)
         {
+            changingScene = true;
             GameManager.GetInstance().setCinematica(GameManager.GetInstance().getCinematica() + 1);
             SceneManager.LoadSceneAsync(GameManager.GetInstance().getLevelScene(GameManager.GetInstance().getLevel()));
             return;
