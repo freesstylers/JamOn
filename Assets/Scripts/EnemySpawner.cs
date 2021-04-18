@@ -33,7 +33,8 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < inicio; i++)
         {
-            GameObject obj = Instantiate(enemyPrefabs[(int)enemy], transform);
+            int rnd = Random.Range(0, enemyPrefabs.Length);
+            GameObject obj = Instantiate(enemyPrefabs[rnd], transform);
             obj.AddComponent<MoveAround>().enabled = false;
             obj.GetComponent<EnemyController>().setBattlePosition(battlePosition);
             enemies.Add(obj);
