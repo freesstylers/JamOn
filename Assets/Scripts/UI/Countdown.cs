@@ -43,5 +43,7 @@ public class Countdown : MonoBehaviour
     {
         gameObject.SetActive(false);
         if (panel != null ) panel.SetActive(false);
+
+        GameManager.GetInstance().Pause();
     }
 }

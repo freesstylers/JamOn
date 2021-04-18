@@ -19,6 +19,8 @@ public class RealisticMove : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.GetInstance().paused) return;
+
         time += sentido * Time.deltaTime;
         gameObject.transform.rotation = Quaternion.Euler(0.0f, 0.0f, Vector3.Lerp(ini, fin, time).z);
         if (time < 0)

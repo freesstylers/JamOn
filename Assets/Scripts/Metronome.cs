@@ -27,6 +27,8 @@ public class Metronome : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.GetInstance().paused) return;
+
         bpm = GameManager.GetInstance().getBPM(GameManager.GetInstance().getLevel());
         _timer += Time.deltaTime;
         _actualTime = (bpm / 60);

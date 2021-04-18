@@ -14,6 +14,8 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.GetInstance().paused) return;
+
         sprite.sortingOrder = GetComponentInParent<SpriteRenderer>().sortingOrder;    
         
         if (GameManager.GetInstance().GetPhase() == Phase.PLAYER && !attacking)
