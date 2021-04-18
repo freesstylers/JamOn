@@ -23,8 +23,6 @@ public class GameManager : MonoBehaviour
             go.AddComponent<GameManager>();
             _instancia = go.GetComponent<GameManager>();
             DontDestroyOnLoad(go);
-
-            _instancia.SetValues();
         }
 
         // devolvemos la instancia
@@ -170,13 +168,15 @@ public class GameManager : MonoBehaviour
 
         if (mixer)
         {
-            mixer.SetFloat("MusicVol", PlayerPrefs.GetFloat("MusicVol", 0.75f));
-            mixer.SetFloat("SFXVol", PlayerPrefs.GetFloat("SFXVol", 0.75f));
+            float mus = PlayerPrefs.GetFloat("MusicVol", 0.75f);
+
+            mixer.SetFloat("MusicVol", Mathf.Log10(mus) * 20);
+            mixer.SetFloat("SFXVol", Mathf.Log10(PlayerPrefs.GetFloat("SFXVol", 0.75f)) * 20);
         }
     }
 
-    private void Awake()
+    private void Start()
     {
-        //if (!_instancia) GetInstance();
+        _instancia.SetValues();
     }
 }

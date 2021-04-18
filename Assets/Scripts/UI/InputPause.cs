@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputPause : MonoBehaviour
 {
     [SerializeField] GameObject elPutoPanel;
+
     // Update is called once per frame
     void Update()
     {       
