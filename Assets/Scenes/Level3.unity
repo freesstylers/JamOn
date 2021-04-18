@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 71692778}
   - component: {fileID: 71692779}
   - component: {fileID: 71692780}
+  - component: {fileID: 71692781}
   m_Layer: 0
   m_Name: Cartel
   m_TagString: Untagged
@@ -293,7 +294,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -385,6 +386,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b366003b6268243a56a04887b772c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &71692781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71692774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &122617770
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +409,7 @@ GameObject:
   - component: {fileID: 122617771}
   - component: {fileID: 122617773}
   - component: {fileID: 122617772}
+  - component: {fileID: 122617774}
   m_Layer: 0
   m_Name: Capa4
   m_TagString: Untagged
@@ -451,7 +465,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -483,6 +497,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &122617774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122617770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &165017345
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +520,7 @@ GameObject:
   - component: {fileID: 165017347}
   - component: {fileID: 165017346}
   - component: {fileID: 165017348}
+  - component: {fileID: 165017349}
   m_Layer: 0
   m_Name: Capa0
   m_TagString: Untagged
@@ -520,7 +547,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -581,6 +608,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0
   offset: 19.2
+--- !u!114 &165017349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165017345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &259372501 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5033526213132017476, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
@@ -848,6 +887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 561542388}
   - component: {fileID: 561542389}
+  - component: {fileID: 561542390}
   m_Layer: 0
   m_Name: FondoPlan (1)
   m_TagString: Untagged
@@ -888,7 +928,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -920,6 +960,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &561542390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561542387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &613068214
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,6 +1024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 669253134}
   - component: {fileID: 669253135}
+  - component: {fileID: 669253136}
   m_Layer: 0
   m_Name: Piedras Test (1)
   m_TagString: Untagged
@@ -1012,7 +1065,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1044,6 +1097,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &669253136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669253133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &793590332 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8224636091986426011, guid: a55c88841301f7a45baa291e612172cb, type: 3}
@@ -1065,6 +1130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 897942449}
   - component: {fileID: 897942450}
+  - component: {fileID: 897942451}
   m_Layer: 0
   m_Name: Piedras Test (1)
   m_TagString: Untagged
@@ -1105,7 +1171,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1137,6 +1203,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &897942451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897942448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &969124654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1311,6 +1389,7 @@ GameObject:
   - component: {fileID: 1037234307}
   - component: {fileID: 1037234306}
   - component: {fileID: 1037234305}
+  - component: {fileID: 1037234308}
   m_Layer: 0
   m_Name: Suelo
   m_TagString: Untagged
@@ -1351,7 +1430,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1398,6 +1477,18 @@ Transform:
   m_Father: {fileID: 613068215}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1037234308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037234304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1038455809 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3574942408374144685, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
@@ -1425,6 +1516,7 @@ GameObject:
   - component: {fileID: 1211839060}
   - component: {fileID: 1211839062}
   - component: {fileID: 1211839061}
+  - component: {fileID: 1211839063}
   m_Layer: 0
   m_Name: Capa5
   m_TagString: Untagged
@@ -1480,7 +1572,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1512,6 +1604,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1211839063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211839059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1427285377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1770,6 +1874,7 @@ GameObject:
   - component: {fileID: 1512895897}
   - component: {fileID: 1512895896}
   - component: {fileID: 1512895895}
+  - component: {fileID: 1512895898}
   m_Layer: 0
   m_Name: Capa1
   m_TagString: Untagged
@@ -1810,7 +1915,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1857,6 +1962,18 @@ Transform:
   m_Father: {fileID: 613068215}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512895898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512895894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1527451126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,6 +1984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1527451127}
   - component: {fileID: 1527451128}
+  - component: {fileID: 1527451129}
   m_Layer: 0
   m_Name: FondoPlan (1)
   m_TagString: Untagged
@@ -1907,7 +2025,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1939,6 +2057,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1527451129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527451126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1538637020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,6 +2385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608324259}
   - component: {fileID: 1608324260}
+  - component: {fileID: 1608324261}
   m_Layer: 0
   m_Name: FondoPlan (1)
   m_TagString: Untagged
@@ -2295,7 +2426,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2327,6 +2458,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1608324261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608324258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1689407870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,6 +2480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689407871}
   - component: {fileID: 1689407872}
+  - component: {fileID: 1689407873}
   m_Layer: 0
   m_Name: Piedras Test (1)
   m_TagString: Untagged
@@ -2377,7 +2521,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2409,6 +2553,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1689407873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689407870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1736024358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2499,6 +2655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1739789860}
   - component: {fileID: 1739789861}
+  - component: {fileID: 1739789862}
   m_Layer: 0
   m_Name: TestMontanas (1)
   m_TagString: Untagged
@@ -2539,7 +2696,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2571,6 +2728,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1739789862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739789859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1837043076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5659275097651711409, guid: 6113bf671b062094b82b6458d6f835f8, type: 3}
@@ -2587,6 +2756,7 @@ GameObject:
   - component: {fileID: 1842675088}
   - component: {fileID: 1842675087}
   - component: {fileID: 1842675089}
+  - component: {fileID: 1842675090}
   m_Layer: 0
   m_Name: Capa3
   m_TagString: Untagged
@@ -2613,7 +2783,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2674,6 +2844,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.15
   offset: 19.2
+--- !u!114 &1842675090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842675086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1843447372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,6 +2867,7 @@ GameObject:
   - component: {fileID: 1843447375}
   - component: {fileID: 1843447374}
   - component: {fileID: 1843447373}
+  - component: {fileID: 1843447376}
   m_Layer: 0
   m_Name: Capa2
   m_TagString: Untagged
@@ -2725,7 +2908,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2772,6 +2955,18 @@ Transform:
   m_Father: {fileID: 613068215}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1843447376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843447372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2019095224 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 850998300, guid: 6113bf671b062094b82b6458d6f835f8, type: 3}
