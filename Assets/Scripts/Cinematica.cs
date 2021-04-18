@@ -110,8 +110,14 @@ public class Cinematica : MonoBehaviour
         else if (!changingScene)
         {
             changingScene = true;
-            GameManager.GetInstance().setCinematica(GameManager.GetInstance().getCinematica() + 1);
-            SceneManager.LoadSceneAsync(GameManager.GetInstance().getLevelScene(GameManager.GetInstance().getLevel()));
+
+            if (GameManager.GetInstance().getCinematica() < 3)
+            {
+                GameManager.GetInstance().setCinematica(GameManager.GetInstance().getCinematica() + 1);
+                SceneManager.LoadSceneAsync(GameManager.GetInstance().getLevelScene(GameManager.GetInstance().getLevel()));
+            }
+            else
+                SceneManager.LoadSceneAsync("LevelEnd");
             return;
         }
     }

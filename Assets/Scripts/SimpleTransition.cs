@@ -11,4 +11,13 @@ public class SimpleTransition : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(scene);
     }
+
+
+    public void LoadSceneDeleteGamemanager()
+    {
+        SceneManager.LoadSceneAsync(scene);
+
+        GameManager.GetInstance().reset();
+    }
+
 }

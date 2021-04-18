@@ -9,6 +9,6 @@ public class HiScore : MonoBehaviour
 
     void Start()
     {
-        txt.text = "Hi Score: " + Mathf.RoundToInt(PlayerPrefs.GetFloat("bestScore", 0)).ToString("D9");
+        txt.text = "Hi Score: " + Mathf.RoundToInt(PlayerPrefs.GetFloat("bestScore", 0)).ToString("D8");
     }
 }

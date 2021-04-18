@@ -21,17 +21,10 @@ public class ChangeLevel : MonoBehaviour
     {
         GameManager.GetInstance().setCurrentPatron(-1); //Reset de patron
         GameManager.GetInstance().SetPhase(Phase.ADVANCE); //Reset de fase
-
-        if (GameManager.GetInstance().getLevel() < 2)
-        {
-            GameManager.GetInstance().advanceLevel(); //Avanza el nivel
-            SceneManager.LoadSceneAsync("Cinematicas");
-        }
-        else
-        {
-            //SceneManager.LoadSceneAsync(sceneToTransitionTo)
-            //Escena final?
-        }
+        
+        
+        GameManager.GetInstance().advanceLevel(); //Avanza el nivel
+        SceneManager.LoadSceneAsync("Cinematicas");
 
     }
 }

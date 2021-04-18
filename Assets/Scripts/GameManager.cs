@@ -72,13 +72,13 @@ public class GameManager : MonoBehaviour
     // Lo ocultamos el constructor para no poder crear nuevos objetos "sin control"
     protected GameManager() {}
 
-    static public int[] level1 = { 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4};
-    static public int[] level2 = { 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5};
-    static public int[] level3 = { 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6};
+    static public int[] level1 = { 2 , 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4};
+    static public int[] level2 = { 2 , 2, 3, 3, 3, 4, 4, 4, 5};
+    static public int[] level3 = { 3 , 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5};
 
     static public int[][] levels = { level1, level2, level3 };
 
-    public string[] levelScenes = { "Level1", "Level2", "Level3"};
+    public string[] levelScenes = { "Level1", "Level2", "Level3" };
 
     protected int level_ = 0; //0,1,2
 
@@ -231,4 +231,9 @@ public class GameManager : MonoBehaviour
         return colors;
     }
 
+    public void reset()
+    {
+        Destroy(_instancia.gameObject);
+        _instancia = null;
+    }
 }

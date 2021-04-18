@@ -35,18 +35,17 @@ public class PointCount : MonoBehaviour
             float progress = timer / duration;
             counter = (int)Mathf.Lerp(start, target, progress);
 
-            txt.text = counter.ToString("D9");
+            txt.text = counter.ToString("D8");
 
             yield return null;
         }
 
         counter = target;
-        txt.text = counter.ToString();
+        txt.text = counter.ToString("D8");
     }
 
-    private void Update()
+    private void Awake()
     {
-        //if (Input.GetKeyDown(KeyCode.M))
-        //    StartCounting(Random.Range(0, 100000));
+        StartCounting(Mathf.RoundToInt(GameManager.GetInstance().GetFinalScore()));
     }
 }
