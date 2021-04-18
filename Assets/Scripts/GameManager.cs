@@ -165,6 +165,15 @@ public class GameManager : MonoBehaviour
                 r.swapNewColors();
             }
         }
+        else
+        {
+            TestColor[] renderers = FindObjectsOfType<TestColor>();
+
+            foreach (TestColor r in renderers)
+            {
+                r.InitColorSwapTex();
+            }
+        }
     }
 
     public bool getDiscoMode()
