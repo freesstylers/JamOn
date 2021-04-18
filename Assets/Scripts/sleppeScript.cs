@@ -21,4 +21,20 @@ public class sleppeScript : MonoBehaviour
 
         anim.Play("sleppe", 0, (float)startFrame / (float)maxFrames);
     }
+
+    public void WakeUp()
+    {
+        anim.speed = 1;
+        anim.SetTrigger("!");
+    }
+
+    public void Jump()
+    {
+        anim.SetTrigger("fuck");
+    }
+
+    public bool IsPlaying()
+    {
+        return anim.GetCurrentAnimatorStateInfo(0).IsName("wake");
+    }
 }

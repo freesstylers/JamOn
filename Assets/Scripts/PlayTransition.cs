@@ -7,6 +7,10 @@ using UnityEngine.UI;
 public class PlayTransition : SimpleTransition
 {
     public float fadeTime = 2.0f;
+    public float moveTime = 2.0f;
+    public float jumpTime = 2.0f;
+
+    int jumpDir = 1;
 
     float t = 0.0f;
 
@@ -14,7 +18,16 @@ public class PlayTransition : SimpleTransition
     public Image[] buttonsToFade;
 
     public Transform throne;
-    public Transform cultist1;
+    public sleppeScript cultist1;
+    public sleppeScript cultist2;
+
+    public Transform marabunta;
+    public Vector3 marabuntaInit;
+    public Vector3 marabuntaEnd;
+
+    public float originalHeight;
+    public float jumpHeight;
+    public float heightAfterJump;
 
     enum AnimState { NONE, FADING, KNOCK, WAKE, OPENDOOR, COMEIN, THRONEUP, COMEOUT, END };
 
@@ -47,13 +60,21 @@ public class PlayTransition : SimpleTransition
 
             case AnimState.KNOCK:
                 knock.Play();
+
+                cultist1.WakeUp();
+                cultist2.WakeUp();
+
                 state++;
                 break;
 
             case AnimState.WAKE:
-                if(!knock.isPlaying)
+                if (!knock.isPlaying && !cultist1.IsPlaying() && !cultist2.IsPlaying())
                 {
+                    cultist1.Jump();
+                    cultist2.Jump();
+
                     wake.Play();
+
                     state++;
                 }
                 break;
@@ -62,31 +83,92 @@ public class PlayTransition : SimpleTransition
                 if (!wake.isPlaying)
                 {
                     open.Play();
+                }
+
+                if (!open.isPlaying)
+                {
+                    walkk.Play();
+                    t = 0;
                     state++;
                 }
                 break;
 
             case AnimState.COMEIN:
-                if (!open.isPlaying)
+
+                if (t < moveTime)
                 {
-                    walkk.Play();
-                    state++;
+                    marabunta.localPosition = Vector3.Lerp(marabuntaInit, marabuntaEnd, t / moveTime);
+                    t += Time.deltaTime;
                 }
+                else
+                {
+                    state++;
+                    GameObject.Destroy(cultist1.gameObject);
+                    GameObject.Destroy(cultist2.gameObject);
+
+                    cultist1 = cultist2 = null;
+                }
+
                 break;
 
             case AnimState.THRONEUP:
-                if (!walkk.isPlaying)
+
+                if (walkk.isPlaying)
                 {
+                    walkk.Stop();
                     throneup.Play();
-                    state++;
+                    marabunta.localScale = new Vector3(-marabunta.localScale.x, marabunta.localScale.y, marabunta.localScale.z);
+
+                    throne.SetParent(marabunta);
+                    t = 0;
+                }
+
+                if(t < jumpTime / 2.0f)
+                {
+                    if (jumpDir == 1)
+                    {
+                        float y = Mathf.Lerp(originalHeight, jumpHeight, t / (jumpTime / 2.0f));
+                        throne.localPosition = new Vector3(throne.localPosition.x, y, throne.localPosition.z);
+                    }
+                    else
+                    {
+                        float y = Mathf.Lerp(jumpHeight, heightAfterJump, t / (jumpTime / 2.0f));
+                        throne.localPosition = new Vector3(throne.localPosition.x, y, throne.localPosition.z);
+                    }
+
+                    t += Time.deltaTime;
+                }
+                else
+                {
+                    if(jumpDir == 1)
+                    {
+                        t = 0;
+                        jumpDir = -1;
+
+                        throne.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 200;
+                    }
+                    else
+                    {
+                        walkk.Play();
+                        t = 0;
+                        state++;
+                    }
                 }
                 break;
 
             case AnimState.COMEOUT:
-                if (!throneup.isPlaying)
+                if (t < moveTime)
                 {
-                    walkk.Play();
+                    marabunta.localPosition = Vector3.Lerp(marabuntaEnd, marabuntaInit, t / moveTime);
+                    t += Time.deltaTime;
+                }
+                else
+                {
                     state++;
+                    GameObject.Destroy(cultist1.gameObject);
+                    GameObject.Destroy(cultist2.gameObject);
+
+                    cultist1 = cultist2 = null;
                 }
                 break;
 
