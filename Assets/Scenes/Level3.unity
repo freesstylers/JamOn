@@ -877,6 +877,23 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 4917069718193026254, guid: 5e5911d3a81550542bdd1fda1c03e526, type: 3}
   m_PrefabInstance: {fileID: 486105674}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &533521398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3574942406690602302, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+  m_PrefabInstance: {fileID: 3574942406794258853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &533521400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533521398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df178cc4344d5b4429944b9513feb5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &561542387
 GameObject:
   m_ObjectHideFlags: 0
@@ -3029,6 +3046,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3574942406690602296, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 482349a4b26809f4497c439b15687136, type: 2}
     - target: {fileID: 3574942408374144674, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
       propertyPath: m_Name
       value: Mauricius Jr Renacido
@@ -3089,7 +3110,8 @@ PrefabInstance:
       propertyPath: hpSlider
       value: 
       objectReference: {fileID: 259372501}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3889193658205381023, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
 --- !u!1001 &5495819562770382043
 PrefabInstance:
