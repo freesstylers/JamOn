@@ -312,13 +312,16 @@ public class Mauriçio : MonoBehaviour
         else
         {
 
+            numCommands++;
             if (comboCounter_ == arrowsMauricio_.Count) GameManager.GetInstance().AddCombo();
             else if(numCommands <= commandsPerBattle) lose =  enemySpawner.HarmMauricius(); // Devuelve si ha muerto
-            numCommands++;
-            if (numCommands >= commandsPerBattle)
-                ExitPlayerState();
-            else
-                PrepareCommandFromPlayer();
+            if (!lose)
+            {
+                if (numCommands >= commandsPerBattle)
+                    ExitPlayerState();
+                else
+                    PrepareCommandFromPlayer();
+            }
 
             comboCounter_ = 0;
         }
