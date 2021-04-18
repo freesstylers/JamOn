@@ -186,6 +186,7 @@ public class MoveAround : MonoBehaviour
     public void Kill()
     {
         dead = true;
+        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         GetComponent<Animator>().SetTrigger("Dead");
         Invoke("DestroyGameObject", timeDying);
     }
