@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameOverPanel : MonoBehaviour
 {
-
+    bool completed = false;
     private void Start()
     {
         Color aux = GetComponent<SpriteRenderer>().color;
@@ -16,6 +16,11 @@ public class GameOverPanel : MonoBehaviour
     {
         if(GameManager.GetInstance().GetLose())
         {
+            if (!completed)
+            {
+                completed = true;
+                GetComponent<AudioSource>().Play();
+            }
             Color aux = GetComponent<SpriteRenderer>().color;
             if (aux.a < 1.0f)
             {

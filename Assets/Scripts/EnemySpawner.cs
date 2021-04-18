@@ -14,6 +14,8 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] enemyPrefabs;
     [Tooltip("Enemigo a seleccionar")]
     public Enemies enemy;
+    [Tooltip("Sonido de Muerte Enemigos")]
+    public AudioClip[] clips;
     [Tooltip("Posicion de Maurisius para atacarle")]
     [SerializeField]
     Transform mauriciusPosition;
@@ -44,7 +46,7 @@ public class EnemySpawner : MonoBehaviour
     public void Kill(int rounds, int reclutar)
     {
         // TODO: reclutar indica el numero de esbirros que se reclutan
-
+        playDeathSound();
         int bucle = inicio / rounds;
         for (int i = 0; i < bucle; i++)
         {
@@ -61,6 +63,7 @@ public class EnemySpawner : MonoBehaviour
         GameManager.GetInstance().SetPatronPerformance(0.0f);
         float final = 0.2f * (percentage / 100.0f);
         int bucle = Mathf.RoundToInt(enemies.Count * (1.0f-final));
+        playDeathSound();
         for (int i = 0; i < bucle; i++)
         {
             GameObject obj = enemies[0];
@@ -89,5 +92,10 @@ public class EnemySpawner : MonoBehaviour
         {
             item.GetComponent<EnemyController>().setBattlePosition(battlePosition);
         }
+    }
+    private void playDeathSound()
+    {
+        GetComponent<AudioSource>().clip = clips[Random.Range(0, 3)];
+        GetComponent<AudioSource>().Play();
     }
 }
