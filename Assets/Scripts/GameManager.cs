@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
         return _instancia;
     }
 
+
+
     bool lose_ = false;
 
     public bool GetLose() { 
@@ -186,4 +188,20 @@ public class GameManager : MonoBehaviour
     {
         _instancia.SetValues();
     }
+
+    Color[] colors = new Color[256];
+
+    void ChangeColors()
+    {
+        for (int i = 0; i < 255; i++)
+        {
+            colors[i] = Random.ColorHSV();
+        }
+    }
+
+    public Color[] getColors()
+    {
+        return colors;
+    }
+
 }
