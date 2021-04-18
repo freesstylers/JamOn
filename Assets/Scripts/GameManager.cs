@@ -72,9 +72,9 @@ public class GameManager : MonoBehaviour
     // Lo ocultamos el constructor para no poder crear nuevos objetos "sin control"
     protected GameManager() {}
     
-    static public int[] level1 = { 2 , 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4};
-    static public int[] level2 = { 2 , 2, 3, 3, 3, 4, 4, 4, 5};
-    static public int[] level3 = { 3 , 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5};
+    static public int[] level1 = { 2, 2, 2, 3, 3, 3, 4, 4, 4};
+    static public int[] level2 = { 2, 3, 3, 3, 4, 4, 4, 5, 5};
+    static public int[] level3 = { 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6};
 
     static public int[][] levels = { level1, level2, level3 };
 

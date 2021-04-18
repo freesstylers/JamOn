@@ -603,6 +603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Over
       objectReference: {fileID: 0}
+    - target: {fileID: 3463867052822890736, guid: 9ffb66d2d93e1a447bc34fa20b458b82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3463867052822890737, guid: 9ffb66d2d93e1a447bc34fa20b458b82, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2814,6 +2818,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1140723236928069608, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3158860759745702106, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
       propertyPath: m_Camera
       value: 
@@ -2832,6 +2840,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3393594088483759945, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
       propertyPath: m_AnchoredPosition.x
+      value: -1.800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393594088483759945, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.8000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393594088483759945, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 47.44191
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393594088483759945, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 26.61995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3455124805136046851, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 97a3547a4584b1e409ff85cd7d4166a6, type: 3}
+    - target: {fileID: 3455124805136046851, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+      propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3574942408374144674, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
@@ -2894,6 +2922,22 @@ PrefabInstance:
       propertyPath: hpSlider
       value: 
       objectReference: {fileID: 259372501}
+    - target: {fileID: 6667070660146568373, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609065516475716888, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609065516475716888, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609065516475716888, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 494e270c5160df3439be82ea718a0e18, type: 3}
 --- !u!1001 &5495819562770382043
