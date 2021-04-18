@@ -9420,7 +9420,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Pablo Garc\xEDa Grossi\nGonzalo Cidoncha P\xE9rez\nGuillermo S\xE1nchez
     De Lamadrid\nIgnacio Ory Alonso\nJose Mart\xEDn Serrano\n\xC1lvar Juli\xE1n De
-    Diego\nJavi Javi Javi\n\nSpecial Thanks To:\n\nMauri\xE7io Verde Hoja\nMaurizio
+    Diego\nJavi Pog Gerino\n\nSpecial Thanks To:\n\nMauri\xE7io Verde Hoja\nMaurizio
     De Jorio\nMauricio Colmenero y su mujer Rei Evangelion\nIslas Mauricio"
 --- !u!222 &1980214611
 CanvasRenderer:
@@ -9663,9 +9663,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 0.41
-  m_Text: 'Cerditos
-
-    -------------'
+  m_Text: "Cr\xE9ditos\n-------------"
 --- !u!222 &5480493480430296016
 CanvasRenderer:
   m_ObjectHideFlags: 0
