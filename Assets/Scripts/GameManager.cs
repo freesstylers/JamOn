@@ -217,12 +217,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        ChangeColors();
     }
 
     private void Start()
     {
-        _instancia.SetValues();      
+        _instancia.SetValues();
+
+        _instancia.ChangeColors();
     }
 
     public Color[] colors = new Color[256];
