@@ -43,4 +43,22 @@ public class BotonAnim : MonoBehaviour
     {
         countDown.SetActive(true);
     }   
+
+    public void Opsione()
+    {
+        //Options button animation
+        LeanTween.moveY(options, -moveOptions, 0.6f).setEase(easyType);
+
+        //Menu button animation
+        LeanTween.moveY(menu, -moveOptions, 0.6f).setEase(easyType);
+    }
+
+    public void NoOpsione()
+    {
+        //Options button animation
+        LeanTween.moveY(options, moveOptions, 0.6f).setEase(easyType);
+
+        //Menu button animation
+        LeanTween.moveY(menu, moveOptions, 0.6f).setEase(easyType);
+    }
 }
