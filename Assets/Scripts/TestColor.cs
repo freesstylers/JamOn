@@ -37,13 +37,16 @@ public class TestColor : MonoBehaviour
         mSpriteRenderer = GetComponent<SpriteRenderer>();
 
         InitColorSwapTex();
-      
-        for (int i = 0; i < 255; i++)
-        {
-            SwapColor(i, GameManager.GetInstance().getColors()[i]);
-        }
 
-        mColorSwapTex.Apply();
+        if (GameManager.GetInstance().getDiscoMode())
+        {
+            for (int i = 0; i < 255; i++)
+            {
+                SwapColor(i, GameManager.GetInstance().getColors()[i]);
+            }
+
+            mColorSwapTex.Apply();
+        }
     }
 
     public void swapNewColors()

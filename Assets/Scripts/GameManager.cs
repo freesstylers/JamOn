@@ -155,11 +155,33 @@ public class GameManager : MonoBehaviour
         discoMode = value;
         PlayerPrefs.SetInt("DiscoMode", value ? 1 : 0);
         PlayerPrefs.Save();
+
+        if (discoMode)
+        {
+            TestColor[] renderers = FindObjectsOfType<TestColor>();
+
+            foreach(TestColor r in renderers)
+            {
+                r.swapNewColors();
+            }
+        }
     }
 
     public bool getDiscoMode()
     {
         return discoMode;
+    }
+
+    public void RandomizeSprites()
+    {
+        ChangeColors();
+
+        TestColor[] renderers = FindObjectsOfType<TestColor>();
+
+        foreach (TestColor r in renderers)
+        {
+            r.swapNewColors();
+        }
     }
 
     public AudioMixer mixer;

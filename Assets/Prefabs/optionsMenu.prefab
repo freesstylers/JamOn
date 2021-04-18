@@ -647,6 +647,7 @@ GameObject:
   - component: {fileID: 6683929499549561245}
   - component: {fileID: 6683929499549561242}
   - component: {fileID: 6683929499549561243}
+  - component: {fileID: 6722128049671343843}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -754,7 +755,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6683929499549561242}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6722128049671343843}
+        m_TargetAssemblyTypeName: ColorSwap, Assembly-CSharp
+        m_MethodName: Random
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6722128049671343843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683929499549561241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec1b5365414e9d4bb46c45df4eb3287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6683929499570322479
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 459.05032, y: -628.0243}
+  m_AnchoredPosition: {x: 459.05032, y: -515.88696}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6683929499673834313
@@ -1767,7 +1792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 459.05032, y: -62.108257}
+  m_AnchoredPosition: {x: 459.05032, y: -49.64855}
   m_SizeDelta: {x: 100, y: 75.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2755392964009747138
@@ -2206,7 +2231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6683929500982694881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2370,6 +2395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6683929501231669891}
   - component: {fileID: 6683929501231669890}
+  - component: {fileID: 682984759912805021}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -2444,6 +2470,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!114 &682984759912805021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683929501231669888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b780dd452dfd05a4bb16c87534275e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  toggle: {fileID: 6683929501231669890}
+  miau: {fileID: 0}
+  blub: {fileID: 0}
 --- !u!1 &6683929501335557229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,7 +2738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 459.05032, y: -199.47476}
+  m_AnchoredPosition: {x: 459.05032, y: -162.09564}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6683929501566383310
@@ -3159,7 +3201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22756806182109258, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -343.99127
+      value: -281.69275
       objectReference: {fileID: 0}
     - target: {fileID: 22756806182109258, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3281,7 +3323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22756806182109258, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -483.5078
+      value: -396.28986
       objectReference: {fileID: 0}
     - target: {fileID: 22756806182109258, guid: 5124af1636b9c6945b0c386189582c10, type: 3}
       propertyPath: m_SizeDelta.x
