@@ -1212,11 +1212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6508829457688506132, guid: a55c88841301f7a45baa291e612172cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: Options, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6508829457688506132, guid: a55c88841301f7a45baa291e612172cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6508829457688506132, guid: a55c88841301f7a45baa291e612172cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -1225,10 +1225,10 @@ PrefabInstance:
     - target: {fileID: 6508829457688506132, guid: a55c88841301f7a45baa291e612172cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1636531500}
+      objectReference: {fileID: 1044683067}
     - target: {fileID: 6508829457688506132, guid: a55c88841301f7a45baa291e612172cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
+      value: Toggle
       objectReference: {fileID: 0}
     - target: {fileID: 6508829457688506132, guid: a55c88841301f7a45baa291e612172cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1248,6 +1248,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a55c88841301f7a45baa291e612172cb, type: 3}
+--- !u!114 &1044683067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8224636091986426011, guid: a55c88841301f7a45baa291e612172cb, type: 3}
+  m_PrefabInstance: {fileID: 1044683066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f72c11b840787641bee7ca6e7040a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1445730516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,11 +2073,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1636531500 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8224636091986426006, guid: a55c88841301f7a45baa291e612172cb, type: 3}
-  m_PrefabInstance: {fileID: 1044683066}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1689407870
 GameObject:
   m_ObjectHideFlags: 0
