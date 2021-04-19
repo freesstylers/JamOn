@@ -144,7 +144,7 @@ public class Mauriçio : MonoBehaviour
         {
             Phase phase = GameManager.GetInstance().GetPhase();
 
-            textPhase_.text = phase.ToString();
+            //textPhase_.text = phase.ToString();
 
             timer_ += Time.deltaTime;
 
@@ -235,6 +235,8 @@ public class Mauriçio : MonoBehaviour
         if(Input.anyKeyDown)
         {
             SceneManager.LoadScene("MainMenu");
+
+            GameManager.GetInstance().reset();
         }
     }
 

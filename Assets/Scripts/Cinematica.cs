@@ -24,33 +24,36 @@ public class Cinematica : MonoBehaviour
 
     public Material scaleGray;
 
-    static string c1_text1 = "Esta es la historia de un antiguo culto, los adoradores de...";
-    static string c1_text2 = "\"El Gran Mauricius\", que resulta ser el pez que tienes delante";
-    static string c1_text3 = "El deber de mis esbirros ahora es reclutar nuevos adeptos";
-    static string c1_text4 = "Así podremos llevar a cabo el ritual del nacimiento";
-    static string c1_text5 = "Para ello, deberán escoltar al feto allá donde vayan";
-    static string c1_text6 = "Si siguen mis indicaciones, no habrá quien pueda detenernos...";
+    static string c1_text1 = "Amigos, amigas de la Secta Mauriçiana, yo, Mauriçius, tengo algo que comunicarles";
+    static string c1_text2 = "¡He comprado un feto!";
+    static string c1_text3 = "Sin embargo, requiere de una gran cantidad de sangre y almas para El Nacimiento";
+    static string c1_text4 = "Solo así, mi hijo, Mauriçius Jr. podrá cumplir con su cometido";
+    static string c1_text5 = "Para ello, deberéis escoltar al feto hacia su destino";
+    static string c1_text6 = "Si seguís mis indicaciones, no habrá quien pueda detenernos...";
     
     static string c2_text1 = "Magnífico. Hemos conseguido todas las almas necesarias para llevar acabo el ritual";
     static string c2_text2 = "El siguiente paso es recolectar toda la sangre posible";
     static string c2_text3 = "Estoy seguro de que encontraremos muchos alegres donantes por el camino";
-    static string c2_text4 = "Todo el planeta pagará por la terrible ofensa cometida a Mauricius";
-    static string c2_text5 = "Los del piso de arriba debieron pensárselo dos veces antes de...";
+    static string c2_text4 = "Todo el planeta pagará por la terrible ofensa cometida a Mauriçius";
+    static string c2_text5 = "Los del piso de arriba debieron pensárselo dos veces antes de";
     static string c2_text6 = "ponerse a mover muebles en plena hora de la siesta...";
 
-    static string c3_text1 = "Ya está todo listo para llevar a cabo \"El Nacimiento\"";
+    static string c3_text1 = "Ya está todo listo para llevar a cabo El Nacimiento";
     static string c3_text2 = "Cuando demos a luz al feto de la bestia primigénea, todo será erradicado del universo";
-    static string c3_text3 = "No hay esperanza para aquellos que osan molestar ligeramente a Mauricius";
-    static string c3_text4 = "¡Que comience el ritual!";
+    static string c3_text3 = "...";
+    static string c3_text4 = "¡BIENVENIDO A LA VIDA MAURIÇIUS JUNIOR!";
+    static string c3_text5 = "...";
+    static string c3_text6 = "Joder, qué feo es...";
+    static string c3_text7 = "Bueno, ¡Que comience la fiesta!";
     
-    static string c4_text1 = "Bueno ya hemos llegado a Las Vegas";
-    static string c4_text2 = "Ahora que mi hijo ya ha nacido";
-    static string c4_text3 = "Por fin podré celebrar decentemente el día de llevar a tu hijo al trabajo";
+    static string c4_text1 = "Repiñas... ¡Pero si hemos llegado a Las Vegas!";
+    static string c4_text2 = "Creo que el casino Mauriçius Palace se encuentra por aquí cerca ";
+    static string c4_text3 = "Al fin podré celebrar decentemente el día de llevar a tu hijo al trabajo";
     static string c4_text4 = "THE END";
 
     static string[] textsCinematica0 = { c1_text1, c1_text2, c1_text3, c1_text4, c1_text5, c1_text6 };
     static string[] textsCinematica1 = { c2_text1, c2_text2, c2_text3, c2_text4, c2_text5, c2_text6 };
-    static string[] textsCinematica2 = { c3_text1, c3_text2, c3_text3, c3_text4};
+    static string[] textsCinematica2 = { c3_text1, c3_text2, c3_text3, c3_text4, c3_text5, c3_text6, c3_text7};
     static string[] textsCinematica3 = { c4_text1, c4_text2, c4_text3, c4_text4};
     
     string[][] cinematicas = { textsCinematica0, textsCinematica1, textsCinematica2, textsCinematica3 };

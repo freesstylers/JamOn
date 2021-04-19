@@ -72,9 +72,9 @@ public class GameManager : MonoBehaviour
     // Lo ocultamos el constructor para no poder crear nuevos objetos "sin control"
     protected GameManager() {}
     
-    static public int[] level1 = { 2 , 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4};
-    static public int[] level2 = { 2 , 2, 3, 3, 3, 4, 4, 4, 5};
-    static public int[] level3 = { 3 , 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5};
+    static public int[] level1 = { 2, 2, 2, 3, 3, 3, 4, 4, 4};
+    static public int[] level2 = { 2, 3, 3, 3, 4, 4, 4, 5, 5};
+    static public int[] level3 = { 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6};
 
     static public int[][] levels = { level1, level2, level3 };
 
@@ -165,6 +165,15 @@ public class GameManager : MonoBehaviour
                 r.swapNewColors();
             }
         }
+        else
+        {
+            TestColor[] renderers = FindObjectsOfType<TestColor>();
+
+            foreach (TestColor r in renderers)
+            {
+                r.InitColorSwapTex();
+            }
+        }
     }
 
     public bool getDiscoMode()
@@ -208,12 +217,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        ChangeColors();
     }
 
     private void Start()
     {
-        _instancia.SetValues();      
+        _instancia.SetValues();
+
+        _instancia.ChangeColors();
     }
 
     public Color[] colors = new Color[256];

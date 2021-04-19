@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MinionBehaviour : MonoBehaviour
 {
@@ -11,10 +12,15 @@ public class MinionBehaviour : MonoBehaviour
     [Tooltip("Lugar de pelea del esbirro")]
     public Transform battlePosition;
     public int hp;
+    int maxHp;
+
+    public Slider hpSlider;
 
     List<GameObject> colectivo = new List<GameObject>();
     void Start()
     {
+        maxHp = hp;
+
         for (int i = 0; i < inicio; i++)
         {
             GameObject obj = Instantiate(esbirro, transform);
@@ -49,6 +55,8 @@ public class MinionBehaviour : MonoBehaviour
             obj.GetComponent<MoveAround>().Kill();
         }
         hp--;
+
+        if (hpSlider) hpSlider.value = (float)hp / (float)maxHp; 
     }
 
     // Añade n minions del mismo tipo (el basico)
